@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Karla|Muli");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -51,7 +52,17 @@ table {
   border-spacing: 0;
 }
 
-/* line 6, ../sass/main.scss */
+/* line 9, ../sass/main.scss */
 body {
-  background: red;
+  font-family: "Karla", sans-serif;
+}
+
+/* line 13, ../sass/main.scss */
+.font-1 {
+  font-family: "Karla", sans-serif !important;
+}
+
+/* line 16, ../sass/main.scss */
+.font-2 {
+  font-family: "Muli", sans-serif !important;
 }
