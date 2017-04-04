@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Karla|Muli");
+@import url("https://fonts.googleapis.com/css?family=Karla|Muli:400,900");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -52,17 +52,394 @@ table {
   border-spacing: 0;
 }
 
-/* line 9, ../sass/main.scss */
+/* line 17, ../sass/main.scss */
 body {
+  font-size: 24px;
   font-family: "Karla", sans-serif;
 }
 
-/* line 13, ../sass/main.scss */
+/* line 22, ../sass/main.scss */
 .font-1 {
   font-family: "Karla", sans-serif !important;
 }
 
-/* line 16, ../sass/main.scss */
+/* line 25, ../sass/main.scss */
 .font-2 {
   font-family: "Muli", sans-serif !important;
+}
+
+/* line 29, ../sass/main.scss */
+.relative {
+  position: relative;
+}
+
+/* line 33, ../sass/main.scss */
+.slick-track {
+  height: 100%;
+}
+/* line 35, ../sass/main.scss */
+.slick-track .slick-slide {
+  height: 100vh;
+  position: relative;
+}
+
+/* line 41, ../sass/main.scss */
+.vertical-align {
+  top: 50%;
+  position: relative;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* line 48, ../sass/main.scss */
+.site header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 20px 0;
+  position: absolute;
+}
+/* line 55, ../sass/main.scss */
+.site header .logo {
+  height: 63px;
+}
+/* line 58, ../sass/main.scss */
+.site header .links, .site header .pipe, .site header .header-menu {
+  vertical-align: middle;
+  display: inline-block;
+}
+/* line 64, ../sass/main.scss */
+.site header .links ul li {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 68, ../sass/main.scss */
+.site header .links ul li a {
+  display: block;
+}
+/* line 70, ../sass/main.scss */
+.site header .links ul li a img {
+  height: 63px;
+}
+/* line 77, ../sass/main.scss */
+.site header .pipe {
+  width: 3px;
+  height: 30px;
+  margin: 0 10px;
+  background: #FFF;
+}
+/* line 83, ../sass/main.scss */
+.site header .header-menu {
+  color: #FFF;
+}
+/* line 85, ../sass/main.scss */
+.site header .header-menu span, .site header .header-menu img {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 89, ../sass/main.scss */
+.site header .header-menu img {
+  height: 63px;
+}
+/* line 94, ../sass/main.scss */
+.site .home-section {
+  width: 100%;
+  height: 100vh;
+  background: #5EAD5E;
+}
+/* line 98, ../sass/main.scss */
+.site .home-section .home-carousel {
+  z-index: 2;
+  height: 100%;
+  position: relative;
+}
+/* line 102, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card {
+  height: 100%;
+}
+/* line 104, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card .container {
+  z-index: 2;
+  height: 100vh;
+  position: relative;
+}
+/* line 108, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card .container .vertical-align {
+  width: 50%;
+}
+/* line 110, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card .container .vertical-align h2 {
+  color: #fff;
+  font-weight: 600;
+  font-family: "Muli", sans-serif;
+  font-size: 75px;
+}
+/* line 116, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card .container .vertical-align .line {
+  height: 2px;
+  margin: 30px 0;
+  background: #FFF;
+  width: 105px;
+}
+/* line 122, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card .container .vertical-align p {
+  color: #FFF;
+}
+/* line 125, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card .container .vertical-align a {
+  display: block;
+  margin-top: 10px;
+  -moz-transform: translateX(-10px);
+  -ms-transform: translateX(-10px);
+  -webkit-transform: translateX(-10px);
+  transform: translateX(-10px);
+}
+/* line 135, ../sass/main.scss */
+.site .home-section .home-carousel .carousel-card .background {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: center center no-repeat;
+  background-size: cover;
+}
+/* line 147, ../sass/main.scss */
+.site .home-section .home-carousel-nav {
+  z-index: 3;
+  left: 20px;
+  right: 20px;
+  bottom: 70px;
+  position: absolute;
+}
+/* line 153, ../sass/main.scss */
+.site .home-section .home-carousel-nav .bar-active {
+  top: -3px;
+  left: 15px;
+  right: 15px;
+  z-index: 3;
+  width: 25%;
+  position: absolute;
+}
+/* line 160, ../sass/main.scss */
+.site .home-section .home-carousel-nav .bar-active .padding {
+  padding: 0 10%;
+}
+/* line 162, ../sass/main.scss */
+.site .home-section .home-carousel-nav .bar-active .padding span {
+  width: 100%;
+  height: 6px;
+  display: block;
+  background: #FFF;
+}
+/* line 170, ../sass/main.scss */
+.site .home-section .home-carousel-nav ul {
+  font-size: 0;
+  border-top: 1px solid #FFF;
+}
+/* line 173, ../sass/main.scss */
+.site .home-section .home-carousel-nav ul li {
+  width: 25%;
+  text-align: center;
+  vertical-align: top;
+  display: inline-block;
+}
+/* line 178, ../sass/main.scss */
+.site .home-section .home-carousel-nav ul li span {
+  cursor: pointer;
+  color: #FFF;
+  margin: 0 auto;
+  display: block;
+  padding: 20px 0;
+  max-width: 140px;
+  position: relative;
+  font-size: 19.5px;
+}
+/* line 192, ../sass/main.scss */
+.site .home-section .cta-section {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  position: absolute;
+}
+/* line 198, ../sass/main.scss */
+.site .home-section .cta-section p {
+  cursor: pointer;
+  text-align: center;
+}
+/* line 201, ../sass/main.scss */
+.site .home-section .cta-section p img {
+  height: 54px;
+}
+/* line 207, ../sass/main.scss */
+.site .home-calculator {
+  position: relative;
+}
+/* line 211, ../sass/main.scss */
+.site .home-calculator .title {
+  top: 75px;
+  z-index: 4;
+  right: 13%;
+  color: #FFF;
+  font-weight: 900;
+  position: absolute;
+  padding: 10px 15px;
+  letter-spacing: 1px;
+  font-family: "Muli", sans-serif;
+  text-transform: uppercase;
+  background: #5EAD5E;
+  font-size: 57px;
+}
+/* line 225, ../sass/main.scss */
+.site .home-calculator .content {
+  z-index: 2;
+  width: 70%;
+  position: relative;
+  background: #E6E6E6;
+}
+/* line 230, ../sass/main.scss */
+.site .home-calculator .content form {
+  padding: 180px 30px 100px;
+}
+/* line 232, ../sass/main.scss */
+.site .home-calculator .content form input {
+  border: 0;
+  width: 100%;
+  padding: 10px 15px;
+  display: block;
+  margin-bottom: 20px;
+}
+/* line 240, ../sass/main.scss */
+.site .home-calculator .content:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  left: -100%;
+  position: absolute;
+  background: #E6E6E6;
+}
+/* line 249, ../sass/main.scss */
+.site .home-calculator .alt-image {
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("/assets/images/home/01_isaosa_img_home_productos6.jpg") top right no-repeat;
+  background-size: cover;
+}
+/* line 260, ../sass/main.scss */
+.site .home-sections {
+  position: relative;
+  overflow: hidden;
+}
+/* line 263, ../sass/main.scss */
+.site .home-sections .title {
+  top: 75px;
+  z-index: 4;
+  left: 50%;
+  margin-left: -581px;
+  color: #FFF;
+  font-weight: 900;
+  position: absolute;
+  padding: 10px 15px;
+  letter-spacing: 1px;
+  font-family: "Muli", sans-serif;
+  text-transform: uppercase;
+  background: #E79542;
+  font-size: 57px;
+}
+/* line 278, ../sass/main.scss */
+.site .home-sections .content {
+  z-index: 2;
+  width: 70%;
+  float: right;
+  padding: 20px;
+  position: relative;
+  background: #E79542;
+}
+/* line 285, ../sass/main.scss */
+.site .home-sections .content .grid {
+  overflow: hidden;
+}
+/* line 287, ../sass/main.scss */
+.site .home-sections .content .grid .element {
+  width: 50%;
+  padding: 10px;
+  float: left;
+}
+/* line 291, ../sass/main.scss */
+.site .home-sections .content .grid .element h3 {
+  margin: 0;
+  color: #fff;
+  font-weight: 900;
+  font-family: "Muli", sans-serif;
+  font-size: 34.5px;
+}
+/* line 298, ../sass/main.scss */
+.site .home-sections .content .grid .element .line {
+  height: 2px;
+  width: 100px;
+  margin: 15px 0;
+  background: #FFF;
+}
+/* line 304, ../sass/main.scss */
+.site .home-sections .content .grid .element p {
+  color: #fff;
+}
+/* line 307, ../sass/main.scss */
+.site .home-sections .content .grid .element a {
+  display: block;
+  text-align: right;
+  text-decoration: none;
+  color: #FFF;
+}
+/* line 312, ../sass/main.scss */
+.site .home-sections .content .grid .element a span {
+  opacity: 0;
+  color: #3B3F48;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 21px;
+  -moz-transition: opacity 300ms ease-out;
+  -o-transition: opacity 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out;
+}
+/* line 320, ../sass/main.scss */
+.site .home-sections .content .grid .element a img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 45px;
+}
+/* line 326, ../sass/main.scss */
+.site .home-sections .content .grid .element a:hover span {
+  opacity: 1;
+}
+/* line 333, ../sass/main.scss */
+.site .home-sections .content:before {
+  top: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  right: -100%;
+  position: absolute;
+  background: #E79542;
+}
+/* line 343, ../sass/main.scss */
+.site .home-sections .alt-image {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: url("/assets/images/home/02_isaosa_img_home_servicios.jpg") top left no-repeat;
+  background-size: cover;
 }

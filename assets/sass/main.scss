@@ -1,12 +1,21 @@
 @import 'compass/css3';
-@import url('https://fonts.googleapis.com/css?family=Karla|Muli');
+@import url('https://fonts.googleapis.com/css?family=Karla|Muli:400,900');
 
 @import 'reset';
+
+$size-factor: 1.5;
 
 $font-1: 'Karla', sans-serif;
 $font-2: 'Muli', sans-serif;
 
+$color-primary: #5EAD5E;
+$color-secondary: #E79542;
+$color-font: #3B3F48;
+$color-datails: #CCCCCC;
+$color-gray-light: #E6E6E6;
+
 body{
+    font-size: 16px * $size-factor;
     font-family: $font-1;
 }
 
@@ -17,4 +26,330 @@ body{
     font-family: $font-2 !important;
 }
 
+.relative{
+    position: relative;
+}
+
+.slick-track{
+    height: 100%;
+    .slick-slide{
+        height: 100vh;
+        position: relative;
+    }
+}
+
+.vertical-align{
+    top: 50%;
+    position: relative;
+    @include transform(translateY(-50%));
+}
+
+.site{
+    header{
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        padding: 20px 0;
+        position: absolute;
+        .logo{
+            height: 42px * $size-factor;
+        }
+        .links, .pipe, .header-menu{
+            vertical-align: middle;
+            display: inline-block;
+        }
+        .links{
+            ul{
+                li{
+                    //margin: 0 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    a{
+                        display: block;
+                        img{
+                            height: 42px * $size-factor;
+                        }
+                    }
+                }
+            }
+        }
+        .pipe{
+            width: 2px * $size-factor;
+            height: 20px * $size-factor;
+            margin: 0 10px;
+            background: #FFF;
+        }
+        .header-menu{
+            color: #FFF;
+            span, img{
+                display: inline-block;
+                vertical-align: middle;
+            }
+            img{
+                height: 42px * $size-factor;
+            }
+        }
+    }
+    .home-section{
+        width: 100%;
+        height: 100vh;
+        background: $color-primary;
+        .home-carousel{
+            z-index: 2;
+            height: 100%;
+            position: relative;
+            .carousel-card{
+                height: 100%;
+                .container{
+                    z-index: 2;
+                    height: 100vh;
+                    position: relative;
+                    .vertical-align{
+                        width: 50%;
+                        h2{
+                            color: #fff;
+                            font-weight: 600;
+                            font-family: $font-2;
+                            font-size: 50px * $size-factor;
+                        }
+                        .line{
+                            height: 2px;
+                            margin: 30px 0;
+                            background: #FFF;
+                            width: 70px * $size-factor;
+                        }
+                        p{
+                            color: #FFF;
+                        }
+                        a{
+                            display: block;
+                            margin-top: 10px;
+                            @include transform(translateX(-10px));
+                            img{
+                                //height: 19px * $size-factor;
+                            }
+                        }
+                    }
+                }
+                .background{
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    position: absolute;
+                    background: center center no-repeat;
+                    background-size: cover;
+                }
+            }
+        }
+        .home-carousel-nav{
+            z-index: 3;
+            left: 20px;
+            right: 20px;
+            bottom: 70px;
+            position: absolute;
+            .bar-active{
+                top: -3px;
+                left: 15px;
+                right: 15px;
+                z-index: 3;
+                width: 25%;
+                position: absolute;
+                .padding{
+                    padding: 0 10%;
+                    span{
+                        width: 100%;
+                        height: 6px;
+                        display: block;
+                        background: #FFF;
+                    }
+                }
+            }
+            ul{
+                font-size: 0;
+                border-top: 1px solid #FFF;
+                li{
+                    width: 25%;
+                    text-align: center;
+                    vertical-align: top;
+                    display: inline-block;
+                    span{
+                        cursor: pointer;
+                        color: #FFF;
+                        margin: 0 auto;
+                        display: block;
+                        padding: 20px 0;
+                        max-width: 140px;
+                        position: relative;
+                        font-size: 13px * $size-factor;
+                    }
+                }
+            }
+        }
+
+        .cta-section{
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+            position: absolute;
+            p{
+                cursor: pointer;
+                text-align: center;
+                img{
+                    height: 36px * $size-factor;
+                }
+            }
+        }
+    }
+    .home-calculator{
+        position: relative;
+        //background: $color-gray-light;
+
+        .title{
+            top: 75px;
+            z-index: 4;
+            right: 13%;
+            color: #FFF;
+            font-weight: 900;
+            position: absolute;
+            padding: 10px 15px;
+            letter-spacing: 1px;
+            font-family: $font-2;
+            text-transform: uppercase;
+            background: $color-primary;
+            font-size: 38px * $size-factor;
+        }
+        .content{
+            z-index: 2;
+            width: 70%;
+            position: relative;
+            background: $color-gray-light;
+            form{
+                padding: 180px 30px 100px;
+                input{
+                    border: 0;
+                    width: 100%;
+                    padding: 10px 15px;
+                    display: block;
+                    margin-bottom: 20px;
+                }
+            }
+            &:before{
+                content: '';
+                width: 100%;
+                height: 100%;
+                left: -100%;
+                position: absolute;
+                background: $color-gray-light;
+            }
+        }
+        .alt-image{
+            z-index: 1;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: url("/assets/images/home/01_isaosa_img_home_productos6.jpg") top right no-repeat;
+            background-size: cover;
+        }
+    }
+    .home-sections{
+        position: relative;
+        overflow: hidden;
+        .title{
+            top: 75px;
+            z-index: 4;
+            left: 50%;
+            margin-left: -581px;
+            color: #FFF;
+            font-weight: 900;
+            position: absolute;
+            padding: 10px 15px;
+            letter-spacing: 1px;
+            font-family: $font-2;
+            text-transform: uppercase;
+            background: $color-secondary;
+            font-size: 38px * $size-factor;
+        }
+        .content{
+            z-index: 2;
+            width: 70%;
+            float: right;
+            padding: 20px;
+            position: relative;
+            background: $color-secondary;
+            .grid{
+                overflow: hidden;
+                .element{
+                    width: 50%;
+                    padding: 10px;
+                    float: left;
+                    h3{
+                        margin: 0;
+                        color: #fff;
+                        font-weight: 900;
+                        font-family: $font-2;
+                        font-size: 23px * $size-factor;
+                    }
+                    .line{
+                        height: 2px;
+                        width: 100px;
+                        margin: 15px 0;
+                        background: #FFF;
+                    }
+                    p{
+                        color: #fff;
+                    }
+                    a{
+                        display: block;
+                        text-align: right;
+                        text-decoration: none;
+                        color: #FFF;
+                        span{
+                            opacity: 0;
+                            color: $color-font;
+                            display: inline-block;
+                            vertical-align: middle;
+                            font-size: 14px * $size-factor;
+                            @include transition(opacity 300ms ease-out);
+                        }
+                        img{
+                            display: inline-block;
+                            vertical-align: middle;
+                            height: 15px * $size-factor * 2;
+                        }
+                        &:hover{
+                            span{
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+            &:before{
+                top: 0;
+                content: '';
+                width: 100%;
+                height: 100%;
+                right: -100%;
+                position: absolute;
+                background: $color-secondary;
+            }
+        }
+        .alt-image{
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            background: url("/assets/images/home/02_isaosa_img_home_servicios.jpg") top left no-repeat;
+            background-size: cover;
+        }
+    }
+}
 
