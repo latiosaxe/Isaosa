@@ -1,5 +1,5 @@
 @import 'compass/css3';
-@import url('https://fonts.googleapis.com/css?family=Karla:700|Muli:400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Muli:400,700,900');
 
 @import 'reset';
 
@@ -15,8 +15,9 @@ $color-datails: #CCCCCC;
 $color-gray-light: #E6E6E6;
 
 body{
-    font-size: 16px * $size-factor;
+    font-weight: 400;
     font-family: $font-1;
+    font-size: 16px * $size-factor;
 }
 
 .font-1{
@@ -91,6 +92,80 @@ body{
     }
 }
 
+.mobile-menu{
+    top: 0;
+    bottom: 0;
+    width: 320px;
+    z-index: 102;
+    right: -320px;
+    padding: 50px;
+    position: fixed;
+    background: rgba(0,0,0,0.75);
+    @include transition( right 300ms ease-in-out);
+    .close{
+        top: 30px;
+        opacity: 1;
+        right: 30px;
+        position: absolute;
+        img{
+            height: 30px;
+            width: 30px;
+        }
+    }
+    a{
+        text-decoration: none;
+        color: #FFF;
+    }
+    &>ul{
+        &>li{
+            padding: 15px 0;
+            a, span{
+                color: #FFF;
+                cursor: pointer;
+                font-size: 18px;
+                text-align: left;
+                position: relative;
+                display: inline-block;
+                text-decoration: none;
+                &:before{
+                    content: '';
+                    left: 0;
+                    width: 0;
+                    height: 1px;
+                    bottom: -10px;
+                    background: #FFF;
+                    position: absolute;
+                    @include transition(width 300ms ease-in-out);
+                }
+                &:hover{
+                    &:before{
+                        width: 100%;
+                    }
+                }
+            }
+            &:hover{
+                ul{
+                    display: block;
+                }
+            }
+            ul{
+                display: none;
+                margin-top: 20px;
+                padding-left: 20px;
+                li{
+                    padding: 5px 0;
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    &.active{
+        right: 0;
+    }
+}
+
 .site{
     header{
         top: 0;
@@ -122,8 +197,16 @@ body{
                     vertical-align: middle;
                     a{
                         display: block;
+                        text-decoration: none;
                         img{
+                            opacity: 1;
                             height: 42px * $size-factor;
+                            @include transition(opacity 300ms ease-in-out);
+                        }
+                        &:hover{
+                            img{
+                                opacity: 0.8;
+                            }
                         }
                     }
                 }
@@ -145,6 +228,15 @@ body{
                 height: 42px * $size-factor;
             }
         }
+        &.block{
+            background: $color-font;
+        }
+    }
+    .fake-header{
+        width: 100%;
+        height: 107px;
+        display: block;
+        position: relative;
     }
     .home-section{
         width: 100%;
@@ -247,6 +339,32 @@ body{
             }
         }
 
+        .nav-users{
+            top: 50%;
+            right: 0;
+            z-index: 10;
+            position: absolute;
+            @include translateY(-50%);
+            ul{
+                li{
+                    text-align: right;
+                    a{
+                        color: #FFF;
+                        font-size: 14px;
+                        display: inline-block;
+                        text-transform: uppercase;
+                        padding: 7px 50px 5px 10px;
+                    }
+                    &.active, &:hover{
+                        a{
+                            background: #FFF;
+                            color: $color-primary;
+                        }
+                    }
+                }
+            }
+        }
+
         .cta-section{
             left: 0;
             right: 0;
@@ -311,7 +429,7 @@ body{
             width: 100%;
             height: 100%;
             position: absolute;
-            background: url("/assets/images/home/01_isaosa_img_home_productos6.jpg") top right no-repeat;
+            background: url('/assets/images/home/01_isaosa_img_home_productos6.jpg') top right no-repeat;
             background-size: cover;
         }
     }
@@ -568,7 +686,7 @@ body{
                     padding: 4%;
                     margin-top: 9%;
                     display: block;
-                    font-weight: 500;
+                    font-weight: 400;
                     line-height: 150%;
                     text-align: center;
                     position: relative;
@@ -784,6 +902,422 @@ body{
             }
         }
     }
+
+
+    .section-site{
+        position: relative;
+        padding-bottom: 100px;
+        h1, h2, h3{
+            font-weight: bold;
+            font-family: $font-2;
+        }
+        h1{
+            padding: 40px 0;
+            color: $color-secondary;
+            font-size: 28px * $size-factor;
+        }
+        h2{
+            color: $color-primary;
+            font-size: 20px * $size-factor;
+        }
+        h3{
+            color: #000;
+            font-size: 20px * $size-factor;
+        }
+        p{
+            font-weight: 400;
+            font-family: $font-1;
+            font-size: 12px * $size-factor;
+        }
+        &.quienes-somos{
+            .col-md-6, .col-md-3{
+                padding: 0;
+            }
+            .col-md-3.text-right{
+                padding-right: 20px;
+            }
+            .col-md-6{
+                padding-left: 30px;
+            }
+            h2,h3{
+                padding-bottom: 20px;
+            }
+            h2{
+                padding-top: 50px;
+            }
+            img{
+                width: 100%;
+            }
+            ul{
+                li{
+                    font-weight: 400;
+                    font-family: $font-2;
+                    padding-bottom: 20px;
+                    text-transform: uppercase;
+                    font-size: 12px * $size-factor;
+                    &:last-of-type{
+                        padding-bottom: 0;
+                    }
+                }
+            }
+            p{
+                line-height: 150%;
+                text-align: justify;
+            }
+            .space-temp{
+                width: 100%;
+                height: 40px;
+            }
+        }
+        &.productos{
+            .sec-menu{
+                &>ul{
+                    &>li{
+                        padding: 10px 0;
+                        position: relative;
+                        &>span{
+                            padding: 10px 0;
+                            color: $color-secondary;
+                            font-size: 13px * $size-factor;
+                        }
+                        ul{
+                            display: none;
+                            padding: 10px 0 20px;
+                            li{
+                                padding: 5px 0;
+                                position: relative;
+                                font-size: 12px * $size-factor;
+                                cursor: pointer;
+                                &:hover{
+                                    &:before{
+                                        top: 0;
+                                        left: -30px;
+                                        content: '';
+                                        width: 30px;
+                                        height: 30px;
+                                        position: absolute;
+                                        background: url('/assets/images/icons/derecha.svg') center center no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                        &:hover{
+                            ul{
+                                display: block;
+                            }
+                            &:before{
+                                top: 0;
+                                right: 0;
+                                content: '';
+                                width: 30px;
+                                height: 30px;
+                                position: absolute;
+                                background: url('/assets/images/icons/desplegar.svg') center center no-repeat;
+                            }
+                        }
+                    }
+                }
+            }
+            .result-list{
+                .element{
+                    margin-bottom: 20px;
+                    position: relative;
+                    .circle{
+                        width: 100%;
+                        cursor: pointer;
+                        overflow: hidden;
+                        position: relative;
+                        padding-bottom: 100%;
+                        @include border-radius(50%);
+                        background: center center no-repeat;
+                        background-size: cover;
+                    }
+                    p{
+                        margin: 0;
+                        padding-top: 25px;
+                        text-align: center;
+                        position: relative;
+                        text-transform: uppercase;
+                        &:before{
+                            top: 5px;
+                            left: 50%;
+                            width: 2px;
+                            content: '';
+                            height: 15px;
+                            position: absolute;
+                            background: $color-font;
+                        }
+                    }
+                    &:hover{
+                        .circle{
+                            &:before{
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                z-index: 1;
+                                content: '';
+                                position: absolute;
+                                background: rgba(0,0,0,0.65);
+                            }
+                            &:after{
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                z-index: 2;
+                                content: '';
+                                margin: auto;
+                                position: absolute;
+                                background: url('/assets/images/icons/mas.svg') center center no-repeat;
+                                background-size: 150px 150px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .single-element-view{
+                .left-moment{
+                    .avatar{
+                        width: 100%;
+                        //overflow: hidden;
+                        position: relative;
+                        padding-bottom: 100%;
+                        @include border-radius(50%);
+                        border: 1px solid $color-font;
+                        background: center center no-repeat;
+                        background-size: cover;
+                        &:before{
+                            left: 50%;
+                            width: 1px;
+                            content: '';
+                            height: 25px;
+                            bottom: -25px;
+                            position: absolute;
+                            background: $color-font;
+                        }
+                    }
+                    p{
+                        padding-top: 30px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        font-size: 11px * $size-factor;
+                    }
+                    .element-details{
+                        margin-top: 20px;
+                        overflow: hidden;
+                        li {
+                            width: 20%;
+                            float: left;
+                            line-height: 100%;
+                            text-align: center;
+                            .circle{
+                                width: 30px;
+                                margin: auto;
+                                height: 30px;
+                                padding: 2px 0;
+                                font-weight: 700;
+                                font-family: $font-2;
+                                color: $color-secondary;
+                                @include border-radius(50%);
+                                font-size: 11px * $size-factor;
+                                border: 1px solid $color-secondary;
+                            }
+                            span{
+                                display: block;
+                                font-family: $font-1;
+                                color: $color-secondary;
+                                font-size: 10px * $size-factor;
+                            }
+                        }
+                    }
+                    .download-label{
+                        width: 100%;
+                        margin: 20px 0;
+                        line-height: 100%;
+                        padding: 7px 10px;
+                        text-align: center;
+                        background: $color-secondary url('/assets/images/icons/descargables.svg') center right no-repeat;
+                        background-size: auto 100%;
+                        span{
+                            color: #FFF;
+                            margin: auto;
+                            padding-right: 20px;
+                            display: inline-block;
+                            text-transform: uppercase;
+                            font-size: 11px * $size-factor;
+                        }
+                    }
+                    .download-list{
+                        li{
+                            position: relative;
+                            padding: 5px 0 5px 10px;
+                            a{
+                                display: block;
+                                font-weight: 400;
+                                color: $color-font;
+                                position: relative;
+                                font-size: 11px * $size-factor;
+                                img{
+                                    height: 17px;
+                                    margin-left: 6px;
+                                    position: relative;
+                                    display: inline-block;
+                                }
+                            }
+                            &:before{
+                                left: 0;
+                                top: 50%;
+                                width: 5px;
+                                height: 1px;
+                                content: '';
+                                position: absolute;
+                                background: $color-font;
+                            }
+                        }
+                    }
+                }
+                .right-moment{
+                    h2 {
+                        color: #000;
+                        font-size: 16px * $size-factor;
+                    }
+
+                    .related{
+                        &>.title{
+                            padding: 5px 0;
+                            color: $color-secondary;
+                            font-size: 12px * $size-factor;
+                            border-bottom: 2px solid #000;
+                        }
+                        .articles{
+                            a{
+                                color: #000;
+                                text-decoration: none;
+                                .image{
+                                    width: 100%;
+                                    margin-top: 10px;
+                                    padding-bottom: 100%;
+                                    background: center center no-repeat;
+                                    background-size: cover;
+                                }
+                                .title{
+                                    line-height: 120%;
+                                    font-size: 9px * $size-factor;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.servicios{
+            padding-bottom: 0;
+            position: relative;
+            .aux-relative{
+                z-index: 2;
+                position: relative;
+                .sec-navigation{
+                    padding: 0;
+                    text-align: right;
+                    position: relative;
+                    h1{
+                        color: #FFF;
+                        margin: 50px 0;
+                        line-height: 100%;
+                        position: relative;
+                        padding: 10px 50px 10px;
+                        background: $color-secondary;
+                        font-size: 30px * $size-factor;
+                        &:before{
+                            top: 0;
+                            bottom: 0;
+                            right: 100%;
+                            left: -100%;
+                            content: '';
+                            position: absolute;
+                            background: $color-secondary;
+                        }
+                    }
+                    ul{
+                        li{
+                            color: #FFF;
+                            cursor: pointer;
+                            font-weight: 700;
+                            position: relative;
+                            font-family: $font-2;
+                            padding: 10px 50px 10px 0;
+                            font-size: 22px * $size-factor;
+                            &:after{
+                                bottom: 0;
+                                content: '';
+                                width: 80px;
+                                height: 2px;
+                                right: 50px;
+                                background: #FFF;
+                                position: absolute;
+                            }
+                            &:hover, &.active{
+                                background: url('/assets/images/icons/derecha.svg') right center #FFF no-repeat;
+                                color: $color-secondary;
+                                &:before{
+                                    top: 0;
+                                    bottom: 0;
+                                    right: 100%;
+                                    left: -100%;
+                                    content: '';
+                                    background: #FFF;
+                                    position: absolute;
+                                }
+                            }
+                        }
+                    }
+                }
+                .orange{
+                    color: #FFF;
+                    font-size: 14px;
+                    line-height: 145%; 
+                    padding: 20px 20px 70px 20px;
+                    background: $color-secondary;
+                    .icon{
+                        width: 100px;
+                        height: 100px;
+                        margin-bottom: 20px;
+                    }
+                    .descriptions{
+                        li{
+                            display: none;
+                            p{
+                                margin-bottom: 20px;
+                            }
+                            &.active{
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+            .background-image{
+                top: 0;
+                left: 0;
+                z-index: 1;
+                right: 55%;
+                height: 600px;
+                position: absolute;
+                background: url('/assets/images/home/02_isaosa_img_home_servicios.jpg') top left no-repeat;
+                background-size: 100% auto;
+            }
+        }
+        .go-up-action{
+            &.center-element{
+                left: 50%;
+                right: initial;
+                margin-left: -25px;
+            }
+        }
+    }
+
     footer{
         color: #FFF;
         padding: 50px 0 20px;
@@ -817,7 +1351,7 @@ body{
         .last{
             font-size: 16px;
             padding: 30px 0 0;
-            position: relative; 
+            position: relative;
             &:after{
                 top: 0;
                 left: 40%;
@@ -830,10 +1364,72 @@ body{
         }
     }
 }
+.tabs{
+    width: 100%;
+    .head{
+        width: 100%;
+        padding: 20px 0 30px;
+        ul{
+            width: 100%;
+            display: table;
+            li {
+                text-align: center;
+                display: table-cell;
+                span{
+                    opacity: 0.8;
+                    cursor: pointer;
+                    color: $color-font;
+                    font-size: 10px * $size-factor;
+                }
+                //&:first-of-type{
+                //    text-align: left;
+                //}
+                //&:last-of-type{
+                //    text-align: right;
+                //}
+                &.active{
+                    opacity: 1;
+                    span{
+                        opacity: 1;
+                        display: block;
+                        position: relative;
+                        color: $color-secondary;
+                        &:before{
+                            left: 0;
+                            right: 0;
+                            height: 2px;
+                            width: 100%;
+                            content: '';
+                            bottom: -5px;
+                            position: absolute;
+                            background: $color-secondary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .body{
+        padding-bottom: 100px;
+        ul{
+            li{
+                display: none;
+                p{
+                    line-height: 150%;
+                    text-align: justify;
+                    font-size: 11px * $size-factor;
+                }
+                &.active{
+                    display: block;
+                }
+            }
+        }
+    }
+}
 
 .margin-botom-0{
     margin-bottom: 0 !important;
 }
 .margin-botom-10{
-    margin-bottom: 10 !important;
+    margin-bottom: 10px !important;
 }

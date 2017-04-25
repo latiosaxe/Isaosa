@@ -10,7 +10,13 @@ ISAOSA.main = (function(){
         _$locations_li,
         _$locations_resume,
 
-        _$go_up_action
+        _$go_up_action,
+        _$header_menu,
+        _$mobile_menu,
+        _$mobile_menu_close,
+
+        _$tabs,
+        _$servicios_tab
 
         ;
 
@@ -29,6 +35,13 @@ ISAOSA.main = (function(){
         });
 
         _$go_up_action = $(".go-up-action");
+
+        _$header_menu = $(".header-menu");
+        _$mobile_menu = $(".mobile-menu");
+        _$mobile_menu_close = _$mobile_menu.find('.close');
+
+        _$tabs = $(".tabs");
+        _$servicios_tab = $(".servicios_tab");
 
         _$home_carousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
             _actualCard = currentSlide;
@@ -52,7 +65,34 @@ ISAOSA.main = (function(){
 
         _$go_up_action.on('click', function () {
             $('html,body').animate({ scrollTop: 0 }, 'slow');
-        })
+        });
+
+        _$header_menu.on('click', function () {
+            _$mobile_menu.addClass('active');
+        });
+        _$mobile_menu_close.on('click', function () {
+            _$mobile_menu.removeClass('active');
+        });
+
+        if(_$tabs){
+            _$tabs.find('.head ul li').on('click', function(){
+                _$tabs.find('.head ul li').removeClass('active');
+                $(this).addClass('active');
+
+                _$tabs.find('.body ul li').removeClass('active');
+                _$tabs.find('.body ul li').eq($(this).index()).addClass('active');
+            });
+        }
+
+        if(_$servicios_tab){
+            _$servicios_tab.find('.head li').on('click', function(){
+                _$servicios_tab.find('.head li').removeClass('active');
+                $(this).addClass('active');
+
+                _$servicios_tab.find('.descriptions li').removeClass('active');
+                _$servicios_tab.find('.descriptions li').eq($(this).index()).addClass('active');
+            });
+        }
     };
     var _initEvents = function _initEvents(){
 
