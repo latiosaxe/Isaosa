@@ -41,10 +41,12 @@
     <header>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <img src="/assets/images/icons/logo.svg" alt="Isaosa" class="logo">
+                <div class="col-md-4 col-sm-6 col-xs-6">
+                    <a href="/">
+                        <img src="/assets/images/icons/logo.svg" alt="Isaosa" class="logo">
+                    </a>
                 </div>
-                <div class="col-md-8 text-right">
+                <div class="col-md-8 col-sm-6 col-xs-6 text-right">
                     <div class="links">
                         <ul>
                             <li><a href="#" target="_blank"><img src="/assets/images/icons/fb.svg" alt="Facebook"></a></li>

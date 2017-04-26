@@ -215,7 +215,7 @@
     <div class="container">
         <div class="relative">
             <div class="head">
-                <p class="title">Nuestras<br/>bodegas</p>
+                <p class="title">Nuestras<br/> bodegas</p>
                 <div class="pipe"></div>
                 <ul class="ul-locations">
                     <li class="active"><span>Manzanillo</span></li>

@@ -255,6 +255,7 @@ body{
                 .container{
                     z-index: 2;
                     height: 100vh;
+                    min-height: 500px;
                     position: relative;
                     .vertical-align{
                         width: 50%;
@@ -466,9 +467,9 @@ body{
             .grid{
                 overflow: hidden;
                 .element{
-                    width: 50%;
-                    padding: 20px;
                     float: left;
+                    width: 49.9%;
+                    padding: 20px;
                     .icon{
                         img{
                             height: 57px * $size-factor;
@@ -1558,4 +1559,243 @@ body{
 }
 .margin-botom-10{
     margin-bottom: 10px !important;
+}
+
+@media (max-width:1400px) {
+    .site .home-sections .title{
+        left: 0;
+        margin-left: 0;
+    }
+}
+
+@media (max-width:1200px) {
+    .site .home-sections .title{
+        font-size: 42px;
+    }
+
+    .site .home-sections .content .grid .element{
+        h3{
+            font-size: 24px;
+        }
+        p{
+            font-size: 14px;
+        }
+        .icon img{
+            height: 65.5px;
+        }
+    }
+
+    .site .home-section .home-carousel .carousel-card .container .vertical-align{
+        h2{
+            font-size: 50px;
+        }
+        .line{
+            margin: 10px 0;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+
+
+    .site .home-section .home-carousel-nav ul li span{
+        font-size: 15px;
+    }
+    .site header .links ul li a img{
+        height: 50px;
+    }
+    .site .home-locations .relative .head{
+        .title{
+            font-size: 42px;
+        }
+        .pipe{
+            margin: 0 15px;
+        }
+        .ul-locations li{
+            font-size: 20px;
+        }
+    }
+    .site .home-news{
+        h4{
+            margin: 70px auto 0;
+        }
+        .cta{
+            padding: 50px 0 70px;
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .site header{
+        .links, .pipe{
+            display: none;
+        }
+    }
+    .site .title{
+        left: 50% !important;
+        top: 30px !important;
+        right: initial !important;
+        margin: 0 auto !important;
+        font-size: 32px !important;
+        display: inline-block !important;
+        @include transform(translateX(-50%));
+    }
+    .site .home-calculator .content form{
+        padding: 110px 30px 40px;
+    }
+    .site .home-sections .content{
+        width: 90%;
+        float: none;
+        margin: 100px auto 50px;
+        &:before{
+            display: none;
+        }
+    }
+    .site .home-locations .relative .head{
+        .title{
+            top: 0 !important;
+            position: relative;
+            text-align: center;
+            left: 50% !important;
+            width: 100% !important;
+            display: block !important;
+            margin-bottom: 30px !important;
+            br{
+                display: none;
+            }
+        }
+        .pipe{
+            display: none;
+        }
+        .resume-block{
+            padding: 10px;
+            p{
+                margin: 0;
+                line-height: 150%;
+            }
+        }
+    }
+    .site .home-news{
+        h4{
+            margin-top: 20px;
+        }
+        .col-md-4{
+            margin-bottom: 30px;
+        }
+    }
+    .site .home-about_us{
+        padding: 20px 0 50px;
+
+        .title{
+            &:before, &:after{
+                display: none;
+            }
+        }
+        .image{
+            width: 48%;
+        }
+        .text{
+            width: 100%;
+            padding: 100px 0 50px 52%;
+        }
+    }
+    .site .home-contact{
+        h4 span{
+            font-size: 32px;
+            &:after{
+                display: none;
+            }
+        }
+        form{
+            padding: 0 10%;
+        }
+    }
+    .site .home-contact .container{
+        padding-bottom: 340px;
+        background-size: 290px auto;
+        background-position: center bottom +40px;
+    }
+
+    .site footer .footer-logo{
+        img{
+            display: block;
+            max-width: 200px;
+            margin: 20px auto;
+        }
+    }
+    .site footer .last{
+        text-align: center;
+    }
+}
+
+@media (max-width:768px)  {
+    .site header .header-menu span{
+        display: none;
+    }
+    .site .home-section .home-carousel-nav{
+        display: none;
+    }
+    .site .home-section .nav-users{
+        left: 50%;
+        top: inherit;
+        bottom: 60px;
+        width: 260px;
+        right: initial;
+        @include transform(translateX(-50%));
+        ul li a{
+            padding: 10px;
+            display: block;
+            text-align: center;
+        }
+    }
+    .site .home-section .home-carousel .carousel-card .container .vertical-align{
+        width: 100%;
+        a{
+            margin: 0;
+        }
+        h2{
+            font-size: 24px;
+        }
+    }
+    .site .home-sections .content .grid .element{
+        width: 99.99%;
+        padding: 20px 0;
+        text-align: center;
+        border: 0 !important;
+        border-bottom: 2px solid #FFF !important;
+        .line, p, .more{
+            display: none;
+        }
+        &:last-of-type{
+            border-bottom: 0 !important;
+        }
+    }
+    .site .home-news .cta{
+        display: none;
+    }
+    .site .home-about_us{
+        .image{
+            width: 100%;
+            height: 550px;
+            position: relative;
+        }
+        .text{
+            display: none;
+        }
+    }
+    .site footer form{
+        text-align: center;
+        span{
+            display: block;
+            margin-bottom: 10px; 
+        }
+    }
+}
+
+@media (max-width:480px)  {
+
+}
+
+@media (max-width:320px)  {
+
 }
