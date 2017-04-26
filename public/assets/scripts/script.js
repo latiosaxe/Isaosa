@@ -17,7 +17,11 @@ ISAOSA.main = (function(){
 
         _$tabs,
         _$servicios_tab,
-        _$fake_select
+        _$fake_select,
+
+        _$product_elements,
+        _$product_list,
+        _$product_result
 
         ;
 
@@ -44,6 +48,10 @@ ISAOSA.main = (function(){
         _$tabs = $(".tabs");
         _$servicios_tab = $(".servicios_tab");
         // _$fake_select = $(".fake-select");
+
+        _$product_elements = $(".productos .result-list .element");
+        _$product_list = $(".productos .result-list");
+        _$product_result = $(".productos .single-element-view");
 
         _$home_carousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
             _actualCard = currentSlide;
@@ -93,6 +101,16 @@ ISAOSA.main = (function(){
 
                 _$servicios_tab.find('.descriptions li').removeClass('active');
                 _$servicios_tab.find('.descriptions li').eq($(this).index()).addClass('active');
+            });
+        }
+
+        if(_$product_elements){
+            _$product_elements.on('click', function () {
+                _$product_list.fadeOut(1000, function () {
+                    setTimeout(function () {
+                        _$product_result.hide().removeClass('hidden').fadeIn(1000); 
+                    }, 300);
+                });
             });
         }
 

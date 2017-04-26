@@ -167,11 +167,7 @@
                     </div>
                 </div>
 
-                <br>
-                <br>
-                <br>
-
-                <div class="row single-element-view">
+                <div class="row single-element-view hidden">
                     <div class="col-md-4 left-moment">
                         <div class="avatar" style="background-image: url('/assets/images/extras/accesointerno.jpg')"></div>
                         <p>Contiene</p>
