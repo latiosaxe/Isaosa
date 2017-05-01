@@ -10,6 +10,7 @@
                     <p>Nuevas tecnologías que permiten mayor eficiencia y control en la entrega de nutrientes al suelo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                        <span>Leer más</span>
                     </a>
                 </div>
             </div>
@@ -23,6 +24,7 @@
                     <p>Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento de sus cultivos.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                        <span>Leer más</span>
                     </a>
                 </div>
             </div>
@@ -36,6 +38,7 @@
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                        <span>Leer más</span>
                     </a>
                 </div>
             </div>
@@ -49,6 +52,7 @@
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                        <span>Leer más</span>
                     </a>
                 </div>
             </div>
@@ -62,6 +66,7 @@
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                        <span>Leer más</span>
                     </a>
                 </div>
             </div>
@@ -75,6 +80,7 @@
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                        <span>Leer más</span>
                     </a>
                 </div>
             </div>
@@ -88,6 +94,7 @@
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                        <span>Leer más</span>
                     </a>
                 </div>
             </div>
@@ -125,13 +132,13 @@
 
     <div class="nav-users">
         <ul>
-            <li class="active"><a href="#">Ingreso de clientes</a></li>
+            <li><a href="#">Ingreso de clientes</a></li>
             <li><a href="#">Solicitud de Crédito</a></li>
             <li><a href="#">Alta de clientes</a></li>
         </ul>
     </div>
 
-    <div class="cta-section">
+    <div class="cta-section goToButton" data-id="home-calculator">
         <p>
             <img src="/assets/images/icons/flecha_abajo.svg" alt="Avanzar">
         </p>
@@ -139,7 +146,7 @@
 </section>
 
 
-<section class="home-calculator">
+<section class="home-calculator" id="home-calculator">
     <div class="container">
         <div class="title">CALCULADORA</div>
         <div class="content">
@@ -159,8 +166,8 @@
 
 <section class="home-sections relative">
     <div class="container full-width">
-        <div class="title">SERVICIOS</div>
         <div class="content">
+            <div class="title">SERVICIOS</div>
             <div class="grid">
                 <div class="element">
                     <div class="icon">
@@ -170,7 +177,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer mas</span> <img src="/assets/images/icons/vermas.svg" alt="Leer mas"></a>
+                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
                 <div class="element">
@@ -181,7 +188,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer mas</span> <img src="/assets/images/icons/vermas.svg" alt="Leer mas"></a>
+                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
                 <div class="element">
@@ -192,7 +199,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer mas</span> <img src="/assets/images/icons/vermas.svg" alt="Leer mas"></a>
+                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
                 <div class="element">
@@ -203,7 +210,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer mas</span> <img src="/assets/images/icons/vermas.svg" alt="Leer mas"></a>
+                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
             </div>
@@ -218,13 +225,13 @@
                 <p class="title">Nuestras<br/> bodegas</p>
                 <div class="pipe"></div>
                 <ul class="ul-locations">
-                    <li class="active"><span>Manzanillo</span></li>
+                    <li><span>Manzanillo</span></li>
                     <li><span>Altamira</span></li>
                     <li><span>Topolobampo</span></li>
-                    <li><span>Tampico</span></li>
+                    <li><span>Támpico</span></li>
                 </ul>
-                <div class="resume-block">
-                    <div class="resume active">
+                <div class="resume-block hidden">
+                    <div class="resume">
                         <p>
                             Carretera Manzanillo - Minatitlán
                         </p><p>
@@ -239,28 +246,30 @@
                     </div>
                     <div class="resume">
                         <p>
-                            Carretera Altamira
+                        Carretera Altamira
                         </p><p>
-                            Km. 6.5 S/N
+                        Puerto Industrial Km. 4
                         </p><p>
-                            C.P. 28876
+                        C.P. 89608
                         </p><p>
-                            Manzanillo, Colima, México
+                        Altamira, Tamaulipas, México
                         </p><p>
-                            Teléfono: (314) 336 4877
+                        Teléfono: (833) 260 9119
                         </p>
                     </div>
                     <div class="resume">
                         <p>
-                            Carretera Topolobampo
+                        TOPOLOBAMPO
                         </p><p>
-                            Km. 6.5 S/N
+                        Recinto Portuario de Topolobampo,
                         </p><p>
-                            C.P. 28876
+                        Patio de Contenedores
                         </p><p>
-                            Manzanillo, Colima, México
+                        C.P. 81370
                         </p><p>
-                            Teléfono: (314) 336 4877
+                        Topolobampo, Ahome, Sinaloa, México
+                        </p><p>
+                        Teléfono: (668) 862 1600
                         </p>
                     </div>
                     <div class="resume">
@@ -381,31 +390,41 @@
         <h4><span>Contacto</span></h4>
         <div class="row">
             <div class="col-md-8">
-                <form onsubmit="return false;">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="text-right">
+                            <a href="#">
+                                Av. Prologación Mariano Otero 3820
+                                Col. Santa Ana Tepetitlán C.P. 45230
+                                Zapopan, Jalisco, México
+                            </a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>
+                            <a href="tel:+52 (33) 5000 1500" class="margin-botom-0">
+                                Tel: +52 (33) 5000 1500
+                            </a>
+                            <a href="mailto:ventas@isaosa.com.mx">
+                                ventas@isaosa.com.mx
+                            </a>
+                        </p>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <form class="form_contact" onsubmit="form_success(); return false;">
                     <div class="row">
                         <div class="col-md-6">
-                            <p class="text-right">
-                                <a href="#">
-                                    Av. Prologación Mariano Otero 3820
-                                    Col. Santa Ana Tepetitlán C.P. 45230
-                                    Zapopan, Jalisco, México
-                                </a>
-                            </p>
-                            <br>
                             <input type="text"  placeholder="NOMBRE">
                             <input type="email" placeholder="CORREO">
                             <input type="text"  placeholder="EMPRESA">
                         </div>
                         <div class="col-md-6">
-                            <p>
-                                <a href="tel:+52 (33) 5000 1500" class="margin-botom-0">
-                                    Tel: +52 (33) 5000 1500
-                                </a>
-                                <a href="mailto:ventas@isaosa.com.mx">
-                                    ventas@isaosa.com.mx
-                                </a>
-                            </p>
-                            <div class="line"></div>
+
                             <br>
                             <p>Mensaje</p>
                             <textarea name="text" id="text" cols="30" rows="10"></textarea>
@@ -417,11 +436,18 @@
                         </div>
                     </div>
                 </form>
+                <div class="succes-message" style="display: none;">
+                    <div class="border">
+                        <p>Recibimos tu mensaje</p>
+                        <div class="line"></div>
+                        <p>En breve nos pondremos en contacto contigo</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="go-up-action">
-        <img src="/assets/images/icons/flecha_abajo.svg" alt="Ir arriba">
+        <img src="/assets/images/icons/ir_arriba.svg" alt="Ir arriba">
     </div>
 </section>
 
@@ -430,21 +456,22 @@
 @section('javascript')
 
     <script>
+        var mapStyle=[{featureType:"water",elementType:"geometry",stylers:[{color:"#e9e9e9"},{lightness:17}]},{featureType:"landscape",elementType:"geometry",stylers:[{color:"#f5f5f5"},{lightness:20}]},{featureType:"road.highway",elementType:"geometry.fill",stylers:[{color:"#ffffff"},{lightness:17}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#ffffff"},{lightness:29},{weight:.2}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#ffffff"},{lightness:18}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#ffffff"},{lightness:16}]},{featureType:"poi",elementType:"geometry",stylers:[{color:"#f5f5f5"},{lightness:21}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#dedede"},{lightness:21}]},{elementType:"labels.text.stroke",stylers:[{visibility:"on"},{color:"#ffffff"},{lightness:16}]},{elementType:"labels.text.fill",stylers:[{saturation:36},{color:"#333333"},{lightness:40}]},{elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"transit",elementType:"geometry",stylers:[{color:"#f2f2f2"},{lightness:19}]},{featureType:"administrative",elementType:"geometry.fill",stylers:[{color:"#fefefe"},{lightness:20}]},{featureType:"administrative",elementType:"geometry.stroke",stylers:[{color:"#fefefe"},{lightness:17},{weight:1.2}]}];
         function initMap() {
             var locations = [
-                        ['Bondi Beach', -33.890542, 151.274856, 4],
-                        ['Coogee Beach', -33.923036, 151.259052, 5],
-                        ['Cronulla Beach', -34.028249, 151.157507, 3],
-                        ['Manly Beach', -33.80010128657071, 151.28747820854187, 2],
-                        ['Maroubra Beach', -33.950198, 151.259302, 1]
+                        ['MANZANILLO', 19.078111, -104.286239, 4],
+                        ['ALTAMIRA', 22.378796, -97.910722, 5],
+                        ['TOPOLOBAMPO', -34.028249, 151.157507, 3],
+                        ['TÁMPICO', -33.80010128657071, 151.28747820854187, 2]
                     ],
-                    MapPosition = {lat: -25.363, lng: 131.044}
+                    MapPosition = {lat: 19.078111, lng: -104.286239}
                     ;
 
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: MapPosition,
                 scrollwheel: false,
                 zoom: 10,
+                styles: mapStyle,
                 mapTypeId: google.maps.MapTypeId.ROADMAP
             });
 
@@ -468,4 +495,11 @@
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4cqGoTfEt52V5IoUO0drBTt17S4gZUak&callback=initMap" type="text/javascript"></script>
+    <script>
+        var form_success = function form_success(){
+            $(".form_contact").slideUp(600, function(){
+                $(".succes-message").slideDown();
+            });
+        }
+    </script>
 @endsection

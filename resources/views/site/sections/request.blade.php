@@ -17,7 +17,7 @@
                     <div class="title">
                         <span>CRÉDITO</span>
                     </div>
-                    <p>Aquí puedes ingresar el número único que se proporciono al realizar tu solicitud de credito y ver el estado actual del mismo</p>
+                    <p>Aquí puedes ingresar el número único que se proporcionó al realizar tu solicitud de crédito y ver el estado actual del mismo</p>
                 </div>
                 <div class="col-md-12">
                     <form onsubmit="return false;">

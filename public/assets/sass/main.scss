@@ -79,6 +79,10 @@ body{
     }
 }
 
+.col-height-100{
+    min-height: 100vh;
+}
+
 .go-up-action{
     width: 50px;
     right: 30px;
@@ -92,7 +96,6 @@ body{
     background: $color-secondary;
     img{
         display: block;
-        @include transform(rotate(180deg));
     }
 }
 
@@ -170,6 +173,51 @@ body{
     }
 }
 
+.profile-user{
+    top: 120px;
+    z-index: 9;
+    right: 20px;
+    text-align: right;
+    position: absolute;
+    .icon{
+        width: 60px;
+        height: 60px;
+        background: url('/assets/images/icons/usuario.svg');
+        background-size: cover;
+    }
+    ul{
+        right: 0;
+        opacity: 0;
+        width: 130px;
+        text-align: right;
+        position: absolute;
+        pointer-events: none;
+        @include transform(translateY(10px));
+        @include transition(all 350ms ease-out);
+        li{
+            a{
+                display: block;
+                font-size: 13px;
+                padding: 4px 5px;
+                background: #FFF;
+                text-decoration: none;
+                color: $color-secondary;
+                &:hover{
+                    color: #FFF;
+                    background: $color-secondary;
+                }
+            }
+        }
+    }
+    &:hover{
+        ul{
+            opacity: 1;
+            pointer-events: all;
+            @include transform(translateY(0));
+        }
+    }
+}
+
 .site{
     header{
         top: 0;
@@ -186,11 +234,40 @@ body{
             display: inline-block;
         }
         .header-menu{
+            text-decoration: none;
             span{
                 font-weight: 600;
                 font-family: $font-1;
                 text-transform: uppercase;
                 font-size: 12px * $size-factor;
+            }
+            .hamburguer-bt{
+                width: 30px;
+                height: 40px;
+                display: inline-block;
+                vertical-align: middle;
+                @include transition(all 300ms ease-out);
+                .hamburguer-bt__stripe {
+                    width: 100%;
+                    height: 5px;
+                    margin: 6px auto;
+                    background: #FFF;
+                    backface-visibility: hidden;
+                    @include transition(all 300ms ease-out);
+                }
+                &.on{
+                    right: 30px;
+                    position: fixed;
+                    .hamburguer-bt__stripe__top {
+                        transform: rotate(45deg) translate(10px, 10px);
+                    }
+                    .hamburguer-bt__stripe__middle {
+                        opacity: 0;
+                    }
+                    .hamburguer-bt__stripe__bottom {
+                        transform: rotate(-45deg) translate(10px, -10px);
+                    }
+                }
             }
         }
         .links{
@@ -276,11 +353,26 @@ body{
                             line-height: 140%;
                         }
                         a{
+                            color: #FFF;
                             display: block;
                             margin-top: 10px;
+                            text-decoration: none;
                             @include transform(translateX(-10px));
                             img{
                                 //height: 19px * $size-factor;
+                                display: inline-block;
+                                vertical-align: middle;
+                            }
+                            span{
+                                opacity: 0;
+                                display: inline-block;
+                                vertical-align: middle;
+                                @include transition(opacity 300ms ease-out);
+                            }
+                            &:hover{
+                                span{
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
@@ -444,14 +536,13 @@ body{
         .title{
             top: 75px;
             z-index: 4;
-            left: 50%;
-            margin-left: -40.7%;;
-            //margin-left: -581px;
+            left: 0;
             color: #FFF;
             font-weight: 900;
             position: absolute;
             padding: 10px 15px;
             letter-spacing: 1px;
+            margin-left: -350px;
             font-family: $font-2;
             text-transform: uppercase;
             background: $color-secondary;
@@ -585,9 +676,15 @@ body{
                         font-size: 16px * $size-factor;
                         span{
                             z-index: 2;
+                            cursor: pointer;
                             background: #FFF;
                             position: relative;
                             padding: 0 10px 0 0;
+                        }
+                        &:hover{
+                            span{
+                                color: $color-secondary;
+                            }
                         }
                         &.active{
                             &:after{
@@ -837,6 +934,21 @@ body{
     }
     .home-contact{
         background: $color-gray-light;
+        a{
+            display: block;
+            line-height: 130%;
+            color: $color-font;
+            margin-bottom: 20px;
+            text-decoration: none;
+            font-size: 14px * $size-factor;
+        }
+        .line{
+            content: '';
+            height: 2px;
+            width: 50px;
+            margin: 10px 0 17px;
+            background: $color-font;
+        }
         .container{
             padding: 40px 0 80px;
             background: url("/assets/images/home/04_isaosa_img_home_contacto.png") center right no-repeat;
@@ -871,21 +983,6 @@ body{
         form{
             width: 100%;
             padding-top: 20px;
-            a{
-                display: block;
-                line-height: 130%;
-                color: $color-font;
-                margin-bottom: 20px;
-                text-decoration: none;
-                font-size: 14px * $size-factor;
-            }
-            .line{
-                content: '';
-                height: 2px;
-                width: 50px;
-                margin: 10px 0 17px;
-                background: $color-font;
-            }
             input{
                 border: 0;
                 width: 100%;
@@ -920,6 +1017,9 @@ body{
             padding: 40px 0;
             color: $color-secondary;
             font-size: 28px * $size-factor;
+            &.title-bold{
+                font-weight: 900;
+            }
         }
         h2{
             color: $color-primary;
@@ -944,11 +1044,27 @@ body{
             .col-md-6{
                 padding-left: 30px;
             }
+            h1{
+                font-weight: 900;
+                &:before{
+                    content: '';
+                    width: 1px;
+                    left: 64px;
+                    z-index: 2;
+                    height: 60px;
+                    bottom: -30px;
+                    position: absolute;
+                    background: $color-secondary;
+                }
+            }
             h2,h3{
                 padding-bottom: 20px;
             }
             h2{
                 padding-top: 50px;
+            }
+            h3{
+                font-weight: 900;
             }
             img{
                 width: 100%;
@@ -971,10 +1087,27 @@ body{
             }
             .space-temp{
                 width: 100%;
-                height: 40px;
+                height: 70px;
             }
         }
         &.productos{
+            h1{
+                color: $color-font;
+                position: relative;
+                .btn{
+                    right: 0;
+                    position: absolute;
+                }
+                &:before{
+                    width: 1px;
+                    left: 107px;
+                    content: '';
+                    height: 40px;
+                    bottom: -4px;
+                    position: absolute;
+                    background: $color-secondary;
+                }
+            }
             .sec-menu{
                 &>ul{
                     &>li{
@@ -995,7 +1128,7 @@ body{
                                 cursor: pointer;
                                 &:hover{
                                     &:before{
-                                        top: 0;
+                                        top: 8px;
                                         left: -30px;
                                         content: '';
                                         width: 30px;
@@ -1074,8 +1207,8 @@ body{
                                 content: '';
                                 margin: auto;
                                 position: absolute;
-                                background: url('/assets/images/icons/mas.svg') center center no-repeat;
-                                background-size: 150px 150px;
+                                background: url('/assets/images/icons/hover_productos.svg') center center no-repeat;
+                                background-size: cover;
                             }
                         }
                     }
@@ -1148,6 +1281,7 @@ body{
                         span{
                             color: #FFF;
                             margin: auto;
+                            font-weight: 700;
                             padding-right: 20px;
                             display: inline-block;
                             text-transform: uppercase;
@@ -1184,6 +1318,14 @@ body{
                     }
                 }
                 .right-moment{
+                    .return_btn{
+                        top: -80px;
+                        width: 100%;
+                        right: 15px;
+                        text-align: right;
+                        position: absolute;
+                        margin-bottom: 20px;
+                    }
                     h2 {
                         color: #000;
                         font-size: 16px * $size-factor;
@@ -1220,6 +1362,10 @@ body{
         &.servicios{
             padding-bottom: 0;
             position: relative;
+            .go-up-action{
+                bottom: 0;
+                right: 45px;
+            }
             .aux-relative{
                 z-index: 2;
                 position: relative;
@@ -1230,9 +1376,10 @@ body{
                     h1{
                         color: #FFF;
                         margin: 50px 0;
+                        font-weight: 900;
                         line-height: 100%;
                         position: relative;
-                        padding: 10px 50px 10px;
+                        padding: 15px 50px 15px;
                         background: $color-secondary;
                         font-size: 30px * $size-factor;
                         &:before{
@@ -1249,7 +1396,8 @@ body{
                         li{
                             color: #FFF;
                             cursor: pointer;
-                            font-weight: 700;
+                            font-weight: 900;
+                            line-height: 120%;
                             position: relative;
                             font-family: $font-2;
                             padding: 10px 50px 10px 0;
@@ -1362,6 +1510,7 @@ body{
             }
 
             h1{
+                font-weight: 900;
                 color: $color-font;
                 margin-bottom: 20px;
                 padding-bottom: 20px;
@@ -1437,27 +1586,35 @@ body{
                 border: 0;
                 margin: 0 5px;
                 padding: 7px 10px;
+                color: $color-font;
+                &:focus{
+                    outline: none;
+                }
             }
             button{
                 img{
                     fill: #FFF;
+                }
+                &:hover{
+                    border: 0;
                 }
             }
         }
         .footer-logo{
             text-align: right;
             img{
-                width: 50%;
+                width: 100%;
+                max-width: 200px;
             }
         }
         .last{
             font-size: 16px;
-            padding: 30px 0 0;
             position: relative;
+            padding: 30px 0 0 100px;
             &:after{
                 top: 0;
-                left: 40%;
                 width: 10%;
+                left: 380px;
                 height: 2px;
                 content: '';
                 background: #FFF;
@@ -1466,6 +1623,32 @@ body{
         }
     }
 }
+
+.succes-message{
+    margin: 0 auto;
+    display: block;
+    max-width: 300px;
+    text-align: center;
+    .border{
+        padding: 20px;
+        font-size: 16px;
+        text-align: left;
+        color: $color-secondary;
+        background: rgba(255,255,255,0.7);
+        border: 2px solid $color-secondary;
+        p{
+            line-height: 120%;
+        }
+        .line{
+            height: 2px;
+            width: 50px;
+            margin: 10px 0;
+            display: block;
+            background: $color-secondary;
+        }
+    }
+}
+
 .fakeFileInput{
     width: 100%;
     margin-bottom: 20px;
@@ -1504,9 +1687,11 @@ body{
                 display: table-cell;
                 span{
                     opacity: 0.8;
+                    margin: 0 auto;
                     cursor: pointer;
                     color: $color-font;
-                    font-size: 10px * $size-factor;
+                    display: inline-block;
+                    font-size: 13px;
                 }
                 //&:first-of-type{
                 //    text-align: left;
@@ -1527,7 +1712,7 @@ body{
                             height: 2px;
                             width: 100%;
                             content: '';
-                            bottom: -5px;
+                            bottom: -8px;
                             position: absolute;
                             background: $color-secondary;
                         }
@@ -1554,6 +1739,9 @@ body{
     }
 }
 
+.margin-0{
+    margin: 0 !important;
+}
 .margin-botom-0{
     margin-bottom: 0 !important;
 }

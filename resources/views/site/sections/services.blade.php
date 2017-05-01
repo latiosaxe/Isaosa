@@ -2,6 +2,16 @@
 @section ('content')
 <div class="fake-header"></div>
 
+
+<div class="profile-user">
+    <div class="icon"></div>
+    <ul>
+        <li><a href="#">Ingreso de clientes</a></li>
+        <li><a href="#">Solicitud de Crédito</a></li>
+        <li><a href="#">Alta de clientes</a></li>
+    </ul>
+</div>
+
 <div class="section-site servicios">
     <div class="container aux-relative">
         <div class="row servicios_tab">
@@ -9,18 +19,23 @@
                 <h1>SERVICIOS</h1>
                 <ul class="head">
                     <li class="active">
-                        <span>PARCELAS DEMOSTRATIVAS</span>
+                        <span>PARCELAS<br/>DEMOSTRATIVAS</span>
                     </li>
                     <li>
-                        <span>ANÁLISIS DEL SUELO</span>
+                        <span>ANÁLISIS<br/>DEL SUELO</span>
                     </li>
                     <li>
-                        <span>ANÁLISIS FOLIAR</span>
+                        <span>ANÁLISIS<br/>FOLIAR</span>
                     </li>
                     <li>
-                        <span>ÁREA TÉCNICA</span>
+                        <span>ÁREA<br/>TÉCNICA</span>
                     </li>
                 </ul>
+
+
+                <div class="go-up-action">
+                    <img src="/assets/images/icons/ir_arriba.svg" alt="Ir arriba">
+                </div>
             </div>
             <div class="col-md-8 orange">
                 <ul class="descriptions">
@@ -146,14 +161,13 @@
     </div>
     <div class="background-image"></div>
 
-    <div class="go-up-action">
-        <img src="/assets/images/icons/flecha_abajo.svg" alt="Ir arriba">
-    </div>
 </div>
 
 @endsection
 @section('javascript')
     <script>
         $('header').addClass('block');
+
+        $(".section-site.servicios .sec-navigation").height($(".section-site.servicios .orange").height());
     </script>
 @endsection

@@ -18,10 +18,12 @@ ISAOSA.main = (function(){
         _$tabs,
         _$servicios_tab,
         _$fake_select,
+        _$goToButton,
 
         _$product_elements,
         _$product_list,
-        _$product_result
+        _$product_result,
+        _$product_return
 
         ;
 
@@ -52,6 +54,9 @@ ISAOSA.main = (function(){
         _$product_elements = $(".productos .result-list .element");
         _$product_list = $(".productos .result-list");
         _$product_result = $(".productos .single-element-view");
+        _$product_return = $(".return_btn .btn")
+
+        _$goToButton = $(".goToButton");
 
         _$home_carousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
             _actualCard = currentSlide;
@@ -67,6 +72,7 @@ ISAOSA.main = (function(){
         });
 
         _$locations_li.on('click', function(){
+            $(".home-locations .head .resume-block").removeClass('hidden');
             _$locations_li.removeClass('active');
             _$locations_li.eq($(this).index()).addClass('active');
             _$locations_resume.removeClass('active');
@@ -78,10 +84,12 @@ ISAOSA.main = (function(){
         });
 
         _$header_menu.on('click', function () {
+            _$header_menu.find('.hamburguer-bt').addClass('on');
             _$mobile_menu.addClass('active');
         });
         _$mobile_menu_close.on('click', function () {
             _$mobile_menu.removeClass('active');
+            _$header_menu.find('.hamburguer-bt').removeClass('on');
         });
 
         if(_$tabs){
@@ -108,12 +116,25 @@ ISAOSA.main = (function(){
             _$product_elements.on('click', function () {
                 _$product_list.fadeOut(1000, function () {
                     setTimeout(function () {
-                        _$product_result.hide().removeClass('hidden').fadeIn(1000); 
+                        _$product_result.hide().removeClass('hidden').fadeIn(1000);
+                    }, 300);
+                });
+            });
+            _$product_return.on('click', function () {
+                _$product_result.fadeOut(1000, function () {
+                    setTimeout(function () {
+                        _$product_list.fadeIn(1000);
                     }, 300);
                 });
             });
         }
 
+        if(_$goToButton){
+            _$goToButton.on('click', function () {
+                var $this = $(this);
+                $('html,body').animate({ scrollTop: $("#"+ $this.data('id')).offset().top }, 'slow');
+            });
+        }
     };
     var _initEvents = function _initEvents(){
 

@@ -4,7 +4,7 @@
 
 <div class="section-site productos">
     <div class="container">
-        <h1>PRODUCTOS</h1>
+        <h1 class="title-bold">PRODUCTOS</h1>
         <div class="row">
             <div class="col-md-3">
                 <div class="sec-menu">
@@ -35,7 +35,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-9">
+            <div class="col-md-9 col-height-100">
                 <div class="row result-list ">
                     <div class="col-md-3 element">
                         <div class="circle" style="background-image: url('/assets/images/extras/accesointerno.jpg')"></div>
@@ -192,6 +192,9 @@
                         </ul>
                     </div>
                     <div class="col-md-8 right-moment">
+                        <div class="return_btn">
+                            <button class="btn">Regresar</button>
+                        </div>
                         <h2>ESN LIBERACIÓN CONTROLADA</h2>
                         <div class="tabs">
                             <div class="head">
