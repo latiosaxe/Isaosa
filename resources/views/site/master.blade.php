@@ -57,7 +57,14 @@
                     <div class="pipe"></div>
                     <a href="#" class="header-menu">
                         <span>Menú</span>
-                        <img src="/assets/images/icons/menu.svg" alt="Menú">
+
+                        <div class="hamburguer-bt">
+                            <div class="hamburguer-bt__stripe hamburguer-bt__stripe__top"></div>
+                            <div class="hamburguer-bt__stripe hamburguer-bt__stripe__middle"></div>
+                            <div class="hamburguer-bt__stripe hamburguer-bt__stripe__bottom"></div>
+                        </div>
+
+                        {{--<img src="/assets/images/icons/menu.svg" alt="Menú">--}}
                     </a>
                 </div>
             </div>
@@ -77,13 +84,13 @@
                             <span>SUSCRÍBETE  A NUESTRO BOLETÍN</span>
                             <input type="email" id="newsletter-email" placeholder="corre@ejemplo.com">
                             <button class="btn just-icon">
-                                <img src="/assets/images/icons/derecha-white.svg" alt="Mandar">
+                                <img src="/assets/images/icons/newsletter_flecha.svg" alt="Mandar">
                             </button>
                         </label>
                     </form>
                 </div>
                 <div class="col-md-3 col-md-offset-1 footer-logo">
-                    <img src="/assets/images/icons/logo.svg" alt="ISAOSA">
+                    <img src="/assets/images/icons/logo_footer.svg" alt="ISAOSA">
                 </div>
             </div>
             <div class="row">

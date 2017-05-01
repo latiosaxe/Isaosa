@@ -4,17 +4,21 @@
 
 <div class="section-site quienes-somos">
     <div class="container">
-        <h1>QUIÉNES SOMOS</h1>
         <div class="row">
+            <div class="col-md-12">
+                <h1>QUIÉNES SOMOS</h1>
+            </div>
+        </div>
+        <div class="row margin-0">
             <div class="col-md-3">
                 <img src="/assets/images/about/quienesomos1.jpg" alt="Quienes sosmos">
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" style="padding-top: 70px">
                 <h3>HISTORIA</h3>
                 <p>ISAOSA es una empresa fundada en 1996. Desde entonces ha estado evolucionando y creciendo comprometidamente con el campo mexicano, en la búsqueda constante e importación de fertilizantes de alta calidad y productos de nuevas tecnologías e innovación, que contribuyan a maximizar la rentabilidad del consumidor final/agricultor, mediante cosechas de alto rendimiento, optimizando costo beneficio.</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-0">
             <div class="col-md-3 text-right">
                 <h2>VALORES</h2>
                 <ul>
@@ -34,7 +38,7 @@
                 <p>Ser una organización de clase mundial, con calidad humana, valores propios, aportando innovación a la fertilización en el agro mexicano, beneficiando a los agricultores y sus familias.</p>
             </div>
         </div>
-        <div class="row">
+        <div class="row margin-0">
             <div class="col-md-3">
                 <img src="/assets/images/about/quienesomos3.jpg" alt="Quienes sosmos">
             </div>
@@ -47,7 +51,7 @@
     </div>
 
     <div class="go-up-action center-element">
-        <img src="/assets/images/icons/flecha_abajo.svg" alt="Ir arriba">
+        <img src="/assets/images/icons/ir_arriba.svg" alt="Ir arriba">
     </div>
 </div>
 
