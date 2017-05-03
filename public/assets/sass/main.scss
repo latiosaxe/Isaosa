@@ -266,7 +266,6 @@ body{
                 }
                 &.on{
                     right: 30px;
-                    position: fixed;
                     .hamburguer-bt__stripe__top {
                         transform: rotate(45deg) translate(10px, 10px);
                     }
@@ -1708,6 +1707,7 @@ body{
                     width: 100%;
                     background: #FFF;
                     padding: 7px 14px;
+                    color: $color-font;
                     font-size: 12px * $size-factor;
                 }
                 .fake-select{
@@ -1717,7 +1717,7 @@ body{
                         content: '';
                         right: 15px;
                         width: 43px;
-                        height: 43px;
+                        height: 36px;
                         position: absolute;
                         pointer-events: none;
                         background: url("/assets/images/icons/dropdown-arrow.svg") center right no-repeat;
@@ -1735,8 +1735,10 @@ body{
                     line-height: 120%;
                     padding: 7px 14px;
                     -moz-appearance: none;
+                    color: $color-font;
                     -webkit-appearance:none;
                     box-shadow: none !important;
+                    font-size: 12px * $size-factor;
                     @include border-radius(0);
                 }
             }
