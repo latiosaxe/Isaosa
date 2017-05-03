@@ -1,6 +1,8 @@
 ISAOSA.main = (function(){
+
     var
         _$body,
+        _$blog_carousel,
         _$home_carousel,
         _$home_carousel_nav,
         _$home_carousel_bar,
@@ -26,7 +28,6 @@ ISAOSA.main = (function(){
         _$product_return
 
         ;
-
     var _initVars = function _initVars(){
         _$body = $('body');
         _$home_carousel = $(".home-carousel");
@@ -37,9 +38,19 @@ ISAOSA.main = (function(){
         _$locations_li = $(".ul-locations li");
         _$locations_resume = $(".home-locations .resume-block .resume");
 
-        _$home_carousel.slick({
-            arrows: false
-        });
+        _$blog_carousel = $(".blog-carousel");
+
+        if(_$blog_carousel){
+            _$blog_carousel.slick({
+
+            });
+        }
+
+        if(_$home_carousel){
+            _$home_carousel.slick({
+                arrows: false
+            });
+        }
 
         _$go_up_action = $(".go-up-action");
 
@@ -54,7 +65,7 @@ ISAOSA.main = (function(){
         _$product_elements = $(".productos .result-list .element");
         _$product_list = $(".productos .result-list");
         _$product_result = $(".productos .single-element-view");
-        _$product_return = $(".return_btn .btn")
+        _$product_return = $(".return_btn .btn");
 
         _$goToButton = $(".goToButton");
 
@@ -67,7 +78,6 @@ ISAOSA.main = (function(){
         });
 
         _$home_carousel_nav.on('click', function () {
-            console.log($(this).index());
             _$home_carousel.slick('slickGoTo', $(this).index());
         });
 
