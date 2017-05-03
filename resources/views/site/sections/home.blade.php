@@ -70,7 +70,7 @@
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos4.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos5.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
@@ -84,7 +84,7 @@
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos4.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos6.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
@@ -98,7 +98,7 @@
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos4.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos7.jpg')"></div> 
         </div>
     </div>
     <div class="home-carousel-nav">
