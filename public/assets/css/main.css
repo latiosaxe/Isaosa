@@ -176,7 +176,7 @@ body {
   width: 320px;
   z-index: 102;
   right: -320px;
-  padding: 50px;
+  padding: 90px 50px 50px 50px;
   position: fixed;
   background: rgba(0, 0, 0, 0.75);
   -moz-transition: right 300ms ease-in-out;
@@ -317,8 +317,8 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 99;
-  padding: 20px 0;
+  z-index: 999;
+  padding: 20px 33px;
   position: absolute;
 }
 /* line 238, ../sass/main.scss */
