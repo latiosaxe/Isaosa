@@ -94,8 +94,16 @@ ISAOSA.main = (function(){
         });
 
         _$header_menu.on('click', function () {
-            _$header_menu.find('.hamburguer-bt').addClass('on');
-            _$mobile_menu.addClass('active');
+            if(_$header_menu.find('.hamburguer-bt').hasClass('on')){
+                _$header_menu.find('.hamburguer-bt').removeClass('on');
+                _$mobile_menu.removeClass('active');
+            }else{
+                _$header_menu.find('.hamburguer-bt').addClass('on');
+                _$mobile_menu.addClass('active');
+            }
+
+            // _$header_menu.find('.hamburguer-bt').addClass('on');
+
         });
         _$mobile_menu_close.on('click', function () {
             _$mobile_menu.removeClass('active');

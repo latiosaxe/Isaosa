@@ -114,7 +114,7 @@ body{
     width: 320px;
     z-index: 102;
     right: -320px;
-    padding: 50px;
+    padding: 90px 50px 50px 50px; 
     position: fixed;
     background: rgba(0,0,0,0.75);
     @include transition( right 300ms ease-in-out);
@@ -232,8 +232,8 @@ body{
         top: 0;
         left: 0;
         right: 0;
-        z-index: 99;
-        padding: 20px 0;
+        z-index: 999;
+        padding: 20px 33px;
         position: absolute;
         .logo{
             height: 42px * $size-factor;
@@ -267,7 +267,7 @@ body{
                 &.on{
                     right: 30px;
                     .hamburguer-bt__stripe__top {
-                        transform: rotate(45deg) translate(10px, 6px); 
+                        transform: rotate(45deg) translate(10px, 6px);
                     }
                     .hamburguer-bt__stripe__middle {
                         opacity: 0;
