@@ -236,7 +236,7 @@ body{
         padding: 20px 33px;
         position: absolute;
         .logo{
-            height: 50px * $size-factor; 
+            height: 50px * $size-factor;
         }
         .links, .pipe, .header-menu{
             vertical-align: middle;
@@ -1828,6 +1828,7 @@ body{
             button{
                 img{
                     fill: #FFF;
+                    height: 25px;
                 }
                 &:hover{
                     border: 0;
@@ -1838,7 +1839,7 @@ body{
             text-align: right;
             img{
                 width: 100%;
-                max-width: 200px;
+                max-width: 170px; 
             }
         }
         .last{

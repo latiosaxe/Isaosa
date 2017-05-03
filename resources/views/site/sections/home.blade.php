@@ -228,7 +228,7 @@
                     <li><span>Manzanillo</span></li>
                     <li><span>Altamira</span></li>
                     <li><span>Topolobampo</span></li>
-                    <li><span>Támpico</span></li>
+                    <li><span>Tampico</span></li>
                 </ul>
                 <div class="resume-block hidden">
                     <div class="resume">
@@ -259,8 +259,6 @@
                     </div>
                     <div class="resume">
                         <p>
-                        TOPOLOBAMPO
-                        </p><p>
                         Recinto Portuario de Topolobampo,
                         </p><p>
                         Patio de Contenedores
@@ -424,8 +422,6 @@
                             <input type="text"  placeholder="EMPRESA">
                         </div>
                         <div class="col-md-6">
-
-                            <br>
                             <p>Mensaje</p>
                             <textarea name="text" id="text" cols="30" rows="10"></textarea>
                         </div>
