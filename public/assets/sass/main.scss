@@ -1716,8 +1716,8 @@ body{
                         top: -1px;
                         content: '';
                         right: 15px;
-                        width: 43px;
-                        height: 43px;
+                        width: 43px; 
+                        height: 36px;
                         position: absolute;
                         pointer-events: none;
                         background: url("/assets/images/icons/dropdown-arrow.svg") center right no-repeat;
@@ -1735,8 +1735,10 @@ body{
                     line-height: 120%;
                     padding: 7px 14px;
                     -moz-appearance: none;
+                    color: $color-font;
                     -webkit-appearance:none;
                     box-shadow: none !important;
+                    font-size: 12px * $size-factor;
                     @include border-radius(0);
                 }
             }
