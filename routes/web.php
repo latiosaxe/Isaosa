@@ -23,7 +23,12 @@ Route::get('/quienes-somos', function () {
 Route::get('/servicios', function () {
     return view('site.sections.services');
 });
-
 Route::get('/solicitud', function () {
     return view('site.sections.request');
+});
+Route::get('/alta-de-clientes', function () {
+    return view('site.sections.clients');
+});
+Route::get('/blog', function () {
+    return view('site.sections.blog');
 });
