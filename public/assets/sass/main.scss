@@ -266,7 +266,6 @@ body{
                 }
                 &.on{
                     right: 30px;
-                    position: fixed;
                     .hamburguer-bt__stripe__top {
                         transform: rotate(45deg) translate(10px, 10px);
                     }
@@ -1708,6 +1707,7 @@ body{
                     width: 100%;
                     background: #FFF;
                     padding: 7px 14px;
+                    color: $color-font;
                     font-size: 12px * $size-factor;
                 }
                 .fake-select{
@@ -1716,7 +1716,7 @@ body{
                         top: -1px;
                         content: '';
                         right: 15px;
-                        width: 43px; 
+                        width: 43px;
                         height: 36px;
                         position: absolute;
                         pointer-events: none;
