@@ -523,7 +523,7 @@ body{
                     }
                     p, span{
                         font-size: 16px;
-                    } 
+                    }
                 }
                 &:before{
                     content: '';
@@ -559,12 +559,12 @@ body{
         .article-list{
             ul{
                 li{
-                    margin-bottom: 24px;
+                    margin-bottom: 18px; 
                     a{
                         display: block;
                         position: relative;
-                        padding-left: 80px;
                         text-decoration: none;
+                        padding: 7px 0 7px 80px;
                         .image{
                             top: 0;
                             left: 0;
@@ -575,11 +575,13 @@ body{
                             background-size: cover;
                         }
                         .title{
+                            display: block;
                             color: #000;
                             font-weight: 700;
                             font-size: 11px * $size-factor;
                         }
                         .date{
+                            display: block;
                             color: #B3B3B3;
                             font-weight: 500;
                             font-style: italic;
@@ -1680,8 +1682,8 @@ body{
                     border: 0;
                     color: #FFF;
                     width: 100%;
-                    padding: 0 15px;
                     font-size: 16px;
+                    padding: 5px 15px;
                     background: #CCCCCC;
                     @include border-radius(15px);
                 }
