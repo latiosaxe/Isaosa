@@ -52,9 +52,8 @@
                         </div>
                         <br>
                         <br>
-
                         <div class="title">
-                            <span>DATOS GENERALES</span>
+                            <span>USUARIOS DEL SITIO WEB</span>
                         </div>
                         <div class="row">
                             <div class="col-md-12 element fake-select margin-botom-20">
