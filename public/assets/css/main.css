@@ -370,7 +370,7 @@ body {
 }
 /* line 269, ../sass/main.scss */
 .site header .header-menu .hamburguer-bt.on .hamburguer-bt__stripe__top {
-  transform: rotate(45deg) translate(10px, 10px);
+  transform: rotate(45deg) translate(10px, 6px);
 }
 /* line 272, ../sass/main.scss */
 .site header .header-menu .hamburguer-bt.on .hamburguer-bt__stripe__middle {
@@ -378,7 +378,7 @@ body {
 }
 /* line 275, ../sass/main.scss */
 .site header .header-menu .hamburguer-bt.on .hamburguer-bt__stripe__bottom {
-  transform: rotate(-45deg) translate(10px, -10px);
+  transform: rotate(-45deg) translate(10px, -6px);
 }
 /* line 283, ../sass/main.scss */
 .site header .links ul li {
