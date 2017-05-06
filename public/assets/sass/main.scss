@@ -419,6 +419,9 @@ body{
             }
         }
     }
+
+
+
     .home-carousel, .blog-carousel{
         z-index: 2;
         height: 100%;
@@ -496,10 +499,24 @@ body{
             color: #fff;
         }
         .slick-prev{
-            left: 10px;
+            left: 18px;
+            width: 20px;
+            height: 33px;
+            background: url('/assets/images/icons/arrow-left-2.svg') center center no-repeat;
+            background-size: cover;
+            &:before{
+                display: none;
+            }
         }
         .slick-next{
-            right: 10px;
+            right: 18px;
+            width: 20px;
+            height: 33px;
+            background: url('/assets/images/icons/arrow-right-2.svg') center center no-repeat;
+            background-size: cover;
+            &:before{
+                display: none;
+            }
         }
         .carousel-card{
             z-index: 2;
@@ -564,7 +581,7 @@ body{
                         display: block;
                         position: relative;
                         text-decoration: none;
-                        padding: 7px 0 7px 80px;
+                        padding: 11px 0 11px 80px;
                         .image{
                             top: 0;
                             left: 0;
@@ -1674,6 +1691,12 @@ body{
                 display: inline-block;
                 text-transform: uppercase;
                 border: 1px solid $color-secondary;
+                &.single-title{
+                    border: 0;
+                    font-size: 24px;
+                    padding: 20px 0;
+                    font-weight: 500;
+                }
             }
             .search-input{
                 margin-top: 50px;
@@ -1701,6 +1724,181 @@ body{
                     height: 25px;
                     background: #FFF;
                     position: absolute;
+                }
+            }
+            .meta{
+                a, .date{
+                    vertical-align: middle;
+                    display: inline-block;
+                }
+                .date{
+                    color: #B3B3B3;
+                    font-size: 13px;
+                }
+                .label{
+                    color: #FFF;
+                    padding: 3px 5px;
+                    display: inline-block;
+                    margin: 10px 10px 10px 0;
+                    @include border-radius(0);
+                    text-transform: uppercase;
+                    background: $color-secondary;
+                }
+            }
+            .post{
+                margin-top: 20px;
+                .wrapper{
+                    width: 70%;
+                    h2{
+                        font-size: 36px;
+                        font-weight: 900;
+                        line-height: 120%;
+                        color: $color-font;
+                        font-family: $font-2;
+                    }
+                    .description{
+                        margin: 15px 0;
+                        padding: 15px 0;
+                        color: $color-font;
+                        position: relative;
+                        &:before, &:after{
+                            content: '';
+                            left: 0;
+                            width: 50%;
+                            height: 2px;
+                            position: absolute;
+                            background: $color-font;
+                        }
+                        &:before{
+                            top: 0;
+                        }
+                        &:after{
+                            bottom: 0;
+                        }
+                    }
+                }
+                .full-text{
+                    p{
+                        color: #808080;
+                        font-size: 16px;
+                        line-height: 130%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            .tags{
+                font-size: 14px;
+                padding: 20px 0;
+                margin-top: 20px;
+                border-top: 2px solid $color-font;
+                span, ul{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                span{
+                    color: #000;
+                    font-weight: 900;
+                    margin-right: 10px;
+                    font-family: $font-2;
+                }
+                ul{
+                    li{
+                        margin-right: 15px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        a{
+                            color: #FFF;
+                            padding: 3px 5px;
+                            background: #b3b3b3;
+                            display: inline-block;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            .featured-image{
+                img{
+                    width: 100%;
+                }
+            }
+            .block-style{
+                padding-top: 30px;
+                position: relative;
+                margin-bottom: 50px;
+                .title{
+                    margin-bottom: 20px;
+                    span{
+                        font-size: 15px;
+                        font-weight: 900;
+                        font-family: $font-2;
+                        display: inline-block;
+                        vertical-align: middle;
+                        text-transform: uppercase;
+                    }
+                    .rec{
+                        width: 20px;
+                        height: 20px;
+                        margin-right: 2px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        background: $color-font;
+                    }
+                }
+                ul{
+                    li{
+                        text-align: left;
+                        position: relative;
+                        padding: 0 0 0 15px;
+                        border-bottom: 1px solid $color-datails;
+                        a{
+                            display: block;
+                            padding: 10px 0;
+                            font-size: 14px;
+                            text-align: left;
+                            font-weight: 700;
+                            color: $color-font;
+                        }
+                        &:before{
+                            left: 3px;
+                            top: 14px;
+                            width: 5px;
+                            height: 5px;
+                            content: '';
+                            overflow: hidden;
+                            position: absolute;
+                            background: $color-font;
+                            @include border-radius(50%);
+                        }
+                        &.label{
+                            padding: 0;
+                            display: block;
+                            a{
+                                color: #FFF;
+                                margin: 10px 0;
+                                padding: 3px 5px;
+                                margin-right: 5px;
+                                display: inline-block;
+                                text-transform: uppercase;
+                                background: $color-secondary;
+                            }
+                            &:before{
+                                display: none;
+                            }
+                        }
+                        &:last-of-type{
+                            border: 0;
+                        }
+                    }
+                }
+                &:before{
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    position: absolute;
+                    background: $color-font;
                 }
             }
         }
