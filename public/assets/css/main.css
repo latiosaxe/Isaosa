@@ -2110,14 +2110,14 @@ body {
 /* line 1815, ../sass/main.scss */
 .site .section-site.blog h1.single-title {
   border: 0;
-  font-size: 24px;
+  font-size: 42px;
   padding: 20px 0;
   font-weight: 900;
   font-family: "Muli", sans-serif;
 }
 /* line 1823, ../sass/main.scss */
 .site .section-site.blog .search-input {
-  margin-top: 45px;
+  margin-top: 52px;
   position: relative;
 }
 /* line 1826, ../sass/main.scss */
