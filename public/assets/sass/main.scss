@@ -2468,8 +2468,14 @@ body{
         text-align: center;
     }
 }
+.mobile-show{
+    display: none;
+}
 
 @media (max-width:768px)  {
+    .mobile-show{
+        display: block;
+    }
     .site header .header-menu span{
         display: none;
     }
@@ -2662,7 +2668,49 @@ body{
         position: relative;
     }
     .site header .header-menu{
-        margin-top: 20px; 
+        margin-top: 20px;
+    }
+
+    .profile-user{
+        display: none;
+    }
+    .site .section-site.servicios .aux-relative{
+        .sec-navigation{
+            display: none;
+        }
+        .orange{
+            width: 300px;
+            margin: 0 auto;
+        }
+    }
+    .site .section-site.servicios .aux-relative .orange .descriptions li{
+        display: block;
+        .icons{
+            margin: 0 auto 20px;
+        }
+    }
+
+    .site{
+        .section-site.servicios{
+            .mobile-show{
+                p{
+                    color: #FFF;
+                    width: 230px;
+                    display: block;
+                    font-size: 25px;
+                    font-weight: 900;
+                    line-height: 100%;
+                    position: relative;
+                    padding: 10px 20px;
+                    text-align: center;
+                    margin: 40px auto 30px;
+                    background: $color-secondary;
+                }
+            }
+        }
+    }
+    .site .section-site.servicios .background-image{
+        right: 0;
     }
 }
 

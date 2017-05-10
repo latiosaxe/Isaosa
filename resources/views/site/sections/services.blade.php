@@ -15,6 +15,9 @@
 <div class="section-site servicios">
     <div class="container aux-relative">
         <div class="row servicios_tab">
+            <div class="mobile-show">
+                <p>SERVICIOS</p>
+            </div>
             <div class="col-md-4 sec-navigation">
                 <h1>SERVICIOS</h1>
                 <ul class="head">
