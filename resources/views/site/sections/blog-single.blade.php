@@ -2,6 +2,24 @@
 @section ('content')
 <div class="fake-header"></div>
 
+<div class="profile-user">
+    <div class="icon"></div>
+    <ul>
+        <li><a href="#">Ingreso de clientes</a></li>
+        <li><a href="#">Solicitud de Crédito</a></li>
+        <li><a href="#">Alta de clientes</a></li>
+    </ul>
+</div>
+
+
+<div class="plug-share">
+    <ul>
+        <li><a href="#" target="_blank"><img src="/assets/images/icons/facebook.svg" alt="Compartir de Facebook"></a></li>
+        <li><a href="#" target="_blank"><img src="/assets/images/icons/twitter.svg" alt="Compartir de Twitter"></a></li>
+        <li><a href="#" target="_blank"><img src="/assets/images/icons/linkedin.svg" alt="Compartir de Linkedin"></a></li>
+    </ul>
+</div>
+
 <div class="section-site blog">
     <div class="container">
         <div class="row">

@@ -235,6 +235,18 @@ body{
         z-index: 999;
         padding: 20px 33px;
         position: absolute;
+
+        .apis{
+            top:0; right: 33px;
+            position: absolute;
+            .block{
+                color: #FFF;
+                font-size: 12px;
+                padding: 5px 10px;
+                background: rgba(0,0,0,0.5);
+            }
+        }
+
         .logo{
             height: 50px * $size-factor;
         }
@@ -339,14 +351,14 @@ body{
             position: absolute;
             .bar-active{
                 top: -3px;
-                left: 1%;
-                right: 1%;
+                //left: 1%;
+                //right: 1%;
                 z-index: 3;
-                width: 12.28%;
+                width: 14.28%;
                 position: absolute;
                 @include transition(margin-left 300ms ease-in-out);
                 .padding{
-                    padding: 0 10%;
+                    //padding: 0 10%;
                     span{
                         width: 100%;
                         height: 6px;
@@ -370,7 +382,8 @@ body{
                         margin: 0 auto;
                         display: block;
                         padding: 20px 0;
-                        max-width: 140px;
+                        //max-width: 140px;
+                        width: 100%;
                         position: relative;
                         font-size: 13px * $size-factor;
                     }
@@ -464,6 +477,7 @@ body{
                         }
                         span{
                             opacity: 0;
+                            font-size: 70%;
                             display: inline-block;
                             vertical-align: middle;
                             @include transition(opacity 300ms ease-out);
@@ -500,8 +514,8 @@ body{
         }
         .slick-prev{
             left: 18px;
-            width: 20px;
-            height: 33px;
+            width: 15px;
+            height: 26px;
             background: url('/assets/images/icons/arrow-left-2.svg') center center no-repeat;
             background-size: cover;
             &:before{
@@ -510,8 +524,8 @@ body{
         }
         .slick-next{
             right: 18px;
-            width: 20px;
-            height: 33px;
+            width: 15px;
+            height: 26px;
             background: url('/assets/images/icons/arrow-right-2.svg') center center no-repeat;
             background-size: cover;
             &:before{
@@ -581,7 +595,7 @@ body{
                         height: 65px;
                         display: block;
                         position: relative;
-                        text-decoration: none; 
+                        text-decoration: none;
                         padding: 7px 0 7px 80px;
                         .image{
                             top: 0;
@@ -591,19 +605,52 @@ body{
                             position: absolute;
                             background: center center no-repeat;
                             background-size: cover;
+                            @include transition(width 300ms ease-in-out);
+                            &:before{
+                                content: '';
+                                z-index: 1;
+                                top: 0;
+                                left: 0;
+                                right: 0;
+                                bottom: 0;
+                                opacity: 0;
+                                position: absolute;
+                                background: rgba(0, 0, 0, 0.5);
+                                @include transition(opacity 300ms ease-in-out);
+                            }
                         }
                         .title{
-                            display: block;
+                            z-index: 2;
                             color: #000;
+                            display: block;
                             font-weight: 700;
+                            position: relative;
                             font-size: 11px * $size-factor;
+                            @include transition(color 300ms ease-in-out);
                         }
                         .date{
+                            z-index: 2;
                             display: block;
                             color: #B3B3B3;
                             font-weight: 500;
                             font-style: italic;
+                            position: relative;
                             font-size: 11px * $size-factor;
+                            @include transition(color 300ms ease-in-out);
+                        }
+                        &:hover{
+                            .image{
+                                width: 100%;
+                                &:before{
+                                    opacity: 1;
+                                }
+                            }
+                            .title{
+                                color: $color-secondary;
+                            }
+                            .date{
+                                color: #FFF;
+                            }
                         }
                     }
                     &:last-of-type{
@@ -622,9 +669,42 @@ body{
             .image{
                 width: 100%;
                 display: block;
+                position: relative;
                 padding-bottom: 100%;
                 background: center center no-repeat;
                 background-size: cover;
+                &:before{
+                    content: '';
+                    opacity: 0;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: 1;
+                    position: absolute;
+                    background: rgba(0,0,0,0.5);
+                }
+                &:after{
+                    content: '';
+                    opacity: 0;
+                    z-index: 2;
+                    right: 10px;
+                    width: 30px;
+                    height: 30px;
+                    bottom: 10px;
+                    position: absolute;
+                    background: url("/assets/images/icons/more.svg") center center no-repeat;
+                    background-size: cover;
+                }
+                &:after, &:before{
+                    @include transition(opacity 350ms ease-in-out);
+                }
+
+                &:hover{
+                    &:before, &:after{
+                        opacity: 1;
+                    }
+                }
             }
             .pre{
                 margin-bottom: 20px;
@@ -1227,6 +1307,27 @@ body{
     }
 
 
+    .plug-share{
+        left: 0;
+        top: 130px;
+        position: fixed;
+        ul{
+            margin: 0;
+            padding: 0;
+            width: 50px;
+            li{
+                width: 100%;
+                list-style: none;
+                a{
+                    display: block;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
     .section-site{
         position: relative;
         padding-bottom: 100px;
@@ -1696,23 +1797,24 @@ body{
                     border: 0;
                     font-size: 24px;
                     padding: 20px 0;
-                    font-weight: 500;
+                    font-weight: 900;
+                    font-family: $font-2;
                 }
             }
             .search-input{
-                margin-top: 50px;
+                margin-top: 45px;
                 position: relative;
                 input{
                     border: 0;
                     color: #FFF;
                     width: 100%;
                     font-size: 16px;
-                    padding: 5px 15px;
+                    padding: 8px 15px;
                     background: #CCCCCC;
                     @include border-radius(15px);
                 }
                 img{
-                    top: 4px;
+                    top: 8px;
                     right: 14px;
                     height: 20px;
                     position: absolute;
@@ -1722,7 +1824,7 @@ body{
                     right: 45px;
                     bottom: 2px;
                     content: '';
-                    height: 25px;
+                    height: 28px;
                     background: #FFF;
                     position: absolute;
                 }
@@ -2198,8 +2300,8 @@ body{
 
 @media (max-width:1400px) {
     .site .home-sections .title{
-        left: 0;
-        margin-left: 0;
+        //left: 0;
+        //margin-left: 0;
     }
 }
 
@@ -2275,6 +2377,10 @@ body{
         display: inline-block !important;
         @include transform(translateX(-50%));
     }
+    .site .home-sections .title{
+        top: -50px !important;
+    }
+
     .site .home-calculator .content form{
         padding: 110px 30px 40px;
     }
@@ -2408,22 +2514,155 @@ body{
     .site .home-news .cta{
         display: none;
     }
-    .site .home-about_us{
-        .image{
-            width: 100%;
-            height: 550px;
-            position: relative;
-        }
-        .text{
-            display: none;
-        }
-    }
+
     .site footer form{
         text-align: center;
         span{
             display: block;
             margin-bottom: 10px;
         }
+    }
+
+    .site .home-carousel .carousel-card .container{
+        text-align: center;
+        .vertical-align .line{
+            margin: 10px auto;
+        }
+        a{
+            display: none !important;
+        }
+    }
+    .site .home-section .nav-users ul li{
+        margin-bottom: 10px;
+        a{
+            background: #FFF;
+            color: $color-primary;
+        }
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    .site .home-section .cta-section{
+        display: none;
+    }
+    .site .home-sections{
+        overflow: visible;
+        .content{
+            margin-top: 70px;
+        }
+        .title{
+            top: -100px !important;
+        }
+        .alt-image{
+            width: 100%;
+        }
+    }
+
+    .site .home-news{
+        .image-circle{
+            width: 200px;
+            height: 200px;
+        }
+        .head h3{
+            font-size: 24px;
+            padding: 10px 20px;
+        }
+        h4{
+            font-size: 18px;
+        }
+        .row{
+            .col-md-4{
+                &:last-of-type{
+                    display: none;
+                }
+            }
+        }
+        .line{
+            top: 70px;
+            height: 35px;
+        }
+    }
+
+    .site .home-about_us{
+        padding: 20px 0 100px;
+        .title{
+            color: #FFF;
+            padding: 10px 20px;
+            font-size: 24px !important;
+            background: $color-primary;
+        }
+        .image{
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 300px;
+            height: 550px;
+            display: block;
+            position: relative;
+            &:before{
+                content: 'HISTORIA MISION VISION PRESENCIA';
+                left: 0;
+                right: 0;
+                margin: auto;
+                width: 180px;
+                bottom: -40px;
+                font-weight: 900;
+                background: #FFF;
+                line-height: 200%;
+                position: absolute;
+                text-align: center;
+                font-family: $font-2;
+                border: 1px solid $color-primary;
+            }
+        }
+        .text{
+            display: none;
+        }
+    }
+
+    .site .home-contact h4 span{
+        padding: 0 0 40px;
+    }
+    .site .home-contact{
+        form{
+            display: none;
+        }
+        .col-md-6, .col-md-8{
+            padding: 0 !important;
+            width: 300px !important;
+            margin: 0 auto !important;
+            text-align: center !important;
+            .text-right{
+                text-align: center !important;
+            }
+        }
+        .line{
+            margin: 0 auto 30px;
+        }
+    }
+
+    .site footer{
+        .footer-logo{
+            display: none;
+        }
+        .last{
+            font-size: 14px;
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+    }
+
+    .go-up-action{
+        left: 0;
+        right: 0;
+        bottom: 20px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+    }
+    .site header .header-menu{
+        margin-top: 20px; 
     }
 }
 

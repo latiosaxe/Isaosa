@@ -10,6 +10,7 @@
     <!--<link rel="stylesheet" href="assets/plugins/owl/assets/owl.carousel.min.css">-->
     <!--<link rel="stylesheet" href="assets/plugins/owl/assets/owl.theme.default.min.css">-->
     <link rel="stylesheet" href="../assets/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
         var ISAOSA = {};
     </script>
@@ -67,6 +68,11 @@
                 </a>
             </div>
         </div>
+        <div class="apis">
+            <div class="block dollar">
+                USD: $<span id="dollar-price"></span> MXN
+            </div>
+        </div>
     </header>
 
     <div class="isaosa-content">
@@ -100,11 +106,29 @@
     </footer>
 </div>
 <script src="../assets/scripts/libs/jquery-3.2.0.min.js"></script>
+<script src="../assets/scripts/libs/money.js"></script>
 <script src="../assets/plugins/slick/slick.min.js"></script>
 <script src="../assets/scripts/script.js"></script>
 <script>
     $(document).ready(function(){
         ISAOSA.main.init();
+
+        var demo = function(data) {
+            fx.rates = data.rates;
+            var rate = fx(1).from("USD").to("MXN");
+            $("#dollar-price").text(rate.toFixed(2));
+            console.log("MXN = $" + rate.toFixed(2));
+        };
+
+        var clima = function (data) {
+            console.log(data);
+        };
+
+        $.getJSON("http://api.fixer.io/latest", demo);
+
+        $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk&callback=clima", function (data) {
+            console.log(data);
+        })
     });
 </script>
 
