@@ -1706,7 +1706,7 @@ body{
                         position: relative;
                         padding: 15px 50px 15px;
                         background: $color-secondary;
-                        font-size: 20px * $size-factor;
+                        font-size: 30px * $size-factor;
                         &:before{
                             top: 0;
                             bottom: 0;
@@ -1729,7 +1729,7 @@ body{
                             font-size: 20px * $size-factor;
                             span{
                                 color: rgba(255, 255, 255, 0.5);
-                                @include transition (color 300ms ease-in-out); 
+                                @include transition (color 300ms ease-in-out);
                             }
                             &:after{
                                 bottom: 0;
