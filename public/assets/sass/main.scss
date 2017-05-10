@@ -1726,7 +1726,11 @@ body{
                             position: relative;
                             font-family: $font-2;
                             padding: 10px 50px 10px 0;
-                            font-size: 22px * $size-factor;
+                            font-size: 20px * $size-factor;
+                            span{
+                                color: rgba(255, 255, 255, 0.5);
+                                @include transition (color 300ms ease-in-out); 
+                            }
                             &:after{
                                 bottom: 0;
                                 content: '';
@@ -1737,8 +1741,8 @@ body{
                                 position: absolute;
                             }
                             &:hover, &.active{
-                                background: url('/assets/images/icons/derecha-white.svg') right center no-repeat;
-                                color: $color-secondary;
+                                //color: $color-secondary;
+                                //color: rgba(255, 255, 255, 0.7);
                                 //&:before{
                                 //    top: 0;
                                 //    bottom: 0;
@@ -1748,6 +1752,17 @@ body{
                                 //    background: #FFF;
                                 //    position: absolute;
                                 //}
+                            }
+                            &:hover{
+                                span{
+                                    color: rgba(255, 255, 255, 0.7);
+                                }
+                            }
+                            &.active{
+                                span{
+                                    color: #FFF;
+                                }
+                                background: url('/assets/images/icons/derecha-white.svg') right center no-repeat;
                             }
                         }
                     }
