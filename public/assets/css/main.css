@@ -2006,7 +2006,7 @@ body {
   position: relative;
   padding: 15px 50px 15px;
   background: #E79542;
-  font-size: 45px;
+  font-size: 30px;
 }
 /* line 1710, ../sass/main.scss */
 .site .section-site.servicios .aux-relative .sec-navigation h1:before {
@@ -2041,18 +2041,8 @@ body {
 }
 /* line 1739, ../sass/main.scss */
 .site .section-site.servicios .aux-relative .sec-navigation ul li:hover, .site .section-site.servicios .aux-relative .sec-navigation ul li.active {
-  background: url("/assets/images/icons/derecha.svg") right center #FFF no-repeat;
+  background: url("/assets/images/icons/derecha-white.svg") right center no-repeat;
   color: #E79542;
-}
-/* line 1742, ../sass/main.scss */
-.site .section-site.servicios .aux-relative .sec-navigation ul li:hover:before, .site .section-site.servicios .aux-relative .sec-navigation ul li.active:before {
-  top: 0;
-  bottom: 0;
-  right: 100%;
-  left: -100%;
-  content: '';
-  background: #FFF;
-  position: absolute;
 }
 /* line 1755, ../sass/main.scss */
 .site .section-site.servicios .aux-relative .orange {
