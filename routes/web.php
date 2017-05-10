@@ -32,3 +32,7 @@ Route::get('/alta-de-clientes', function () {
 Route::get('/blog', function () {
     return view('site.sections.blog');
 });
+
+Route::get('/single', function () {
+    return view('site.sections.blog-single');
+});

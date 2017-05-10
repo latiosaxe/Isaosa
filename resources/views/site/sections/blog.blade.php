@@ -95,9 +95,10 @@
             </div>
         </div>
         <div class="spacing"></div>
+        <div class="spacing"></div>
         <div class="row">
             <div class="col-md-8">
-                <div class="article-preview">
+                <div class="article-preview block-style">
                     <a href="#">
                     <div class="row">
                         <div class="col-md-4">
@@ -179,7 +180,28 @@
                 </div>
             </div>
             <div class="col-md-4">
-
+                <div class="block-style">
+                    <div class="title">
+                        <div class="rec"></div>
+                        <span>Categorías</span>
+                    </div>
+                    <ul>
+                        <li class="label"><a href="#">Eventos</a></li>
+                        <li class="label"><a href="#">Noticias</a></li>
+                        <li class="label"><a href="#">Resultados</a></li>
+                    </ul>
+                </div>
+                <div class="block-style">
+                    <div class="title">
+                        <div class="rec"></div>
+                        <span>Archivos</span>
+                    </div>
+                    <ul>
+                        <li><a href="#">Abril</a></li>
+                        <li><a href="#">Marzo</a></li>
+                        <li><a href="#">Febrero</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
