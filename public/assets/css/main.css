@@ -3127,29 +3127,74 @@ body {
   /* line 2686, ../sass/main.scss */
   .site .section-site.servicios .aux-relative .orange .descriptions li {
     display: block;
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
   }
-  /* line 2688, ../sass/main.scss */
+  /* line 2691, ../sass/main.scss */
+  .site .section-site.servicios .aux-relative .orange .descriptions li .title-2 {
+    color: #FFF;
+    width: 100%;
+    display: block;
+    font-size: 18px;
+    font-weight: 900;
+    text-align: center;
+    font-family: "Muli", sans-serif;
+  }
+  /* line 2700, ../sass/main.scss */
   .site .section-site.servicios .aux-relative .orange .descriptions li .icons {
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
+  }
+  /* line 2703, ../sass/main.scss */
+  .site .section-site.servicios .aux-relative .orange .descriptions li p {
+    display: none;
+  }
+  /* line 2707, ../sass/main.scss */
+  .site .section-site.servicios .aux-relative .orange .descriptions li.active .title-2 {
+    margin-bottom: 15px;
+  }
+  /* line 2710, ../sass/main.scss */
+  .site .section-site.servicios .aux-relative .orange .descriptions li.active p {
+    display: block;
+    font-size: 14px;
+    text-align: justify;
+  }
+  /* line 2716, ../sass/main.scss */
+  .site .section-site.servicios .aux-relative .orange .descriptions li:before {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    width: 50px;
+    height: 2px;
+    margin: auto;
+    background: #FFF;
+    position: absolute;
   }
 
-  /* line 2696, ../sass/main.scss */
+  /* line 2732, ../sass/main.scss */
   .site .section-site.servicios .mobile-show p {
     color: #FFF;
     width: 230px;
     display: block;
     font-size: 25px;
     font-weight: 900;
-    margin: 40px auto 30px;
     line-height: 100%;
     position: relative;
     padding: 10px 20px;
     text-align: center;
+    margin: 40px auto 30px;
     background: #E79542;
   }
 
-  /* line 2712, ../sass/main.scss */
+  /* line 2748, ../sass/main.scss */
   .site .section-site.servicios .background-image {
     right: 0;
+  }
+
+  /* line 2751, ../sass/main.scss */
+  .site .section-site.servicios .aux-relative .orange .icon {
+    display: block;
+    margin: 0 auto 20px;
   }
 }

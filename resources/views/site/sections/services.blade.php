@@ -44,6 +44,9 @@
                 <ul class="descriptions">
                     <li class="active">
                         <img src="/assets/images/icons/parcelas.svg" alt="Parcelas demostrativas" class="icon">
+                        <div class="mobile-show">
+                            <div class="title-2">PARCELAS DEMOSTRATIVAS</div>
+                        </div>
                         <p>Hemos observado en las diversas regiones de Mxico la manera como los productores del campo fertlizan sus cultivos y nos hemos dado cuenta que slo una minora hacen esta labor adecuadamenta. Encontramos productores agrcolas tradicionalistas que tienen 20 o 30 aos. aplicando los mismos fertilizantes en las mismas dosis; por lo regular emplean nitrgeno y fsforo, sin tomar en cuenta que para la produccin se requieren los 13 nutrientes esenciales.</p>
 
                         <p>La reserva de algunos nutrientes en el suelo est disminuyendo, debido al establecimiento de cultivos, tal es el caso del la zona productora de trigo del noroeste, donde los 52 kg de fsforo aplicados son ya insuficientes.</p>
@@ -73,6 +76,9 @@
                     </li>
                     <li>
                         <img src="/assets/images/icons/analisis_foliar.svg" alt="Análisis foliar" class="icon">
+                        <div class="mobile-show">
+                            <div class="title-2">ANÁLISIS DEL SUELO</div>
+                        </div>
                         <p>Hemos observado en las diversas regiones de Mxico la manera como los productores del campo fertlizan sus cultivos y nos hemos dado cuenta que slo una minora hacen esta labor adecuadamenta. Encontramos productores agrcolas tradicionalistas que tienen 20 o 30 aos. aplicando los mismos fertilizantes en las mismas dosis; por lo regular emplean nitrgeno y fsforo, sin tomar en cuenta que para la produccin se requieren los 13 nutrientes esenciales.</p>
 
 
@@ -102,6 +108,9 @@
                     </li>
                     <li>
                         <img src="/assets/images/icons/analisis_suelo.svg" alt="Análisis del suelo" class="icon">
+                        <div class="mobile-show">
+                            <div class="title-2">ANÁLISIS FOLIAR</div>
+                        </div>
                         <p>La base del diseo de la mezcla fsica balanceada es el anlisis de suelo y foliar, por esta razn ISAOSA tienen un convenio con laboratorios A & L de Canad, empresa que tienen experiencia, equipos, metodologa y diagnstico de primer nivel; de esta manera contamos con un diagnstico de suelo y planta altamente confiable. Como productos base para la mezcla fsica balanceada se consideran los de nueva generacin:</p>
                         <p>Hemos observado en las diversas regiones de Mxico la manera como los productores del campo fertlizan sus cultivos y nos hemos dado cuenta que slo una minora hacen esta labor adecuadamenta. Encontramos productores agrcolas tradicionalistas que tienen 20 o 30 aos. aplicando los mismos fertilizantes en las mismas dosis; por lo regular emplean nitrgeno y fsforo, sin tomar en cuenta que para la produccin se requieren los 13 nutrientes esenciales.</p>
 
@@ -131,6 +140,9 @@
                     </li>
                     <li>
                         <img src="/assets/images/icons/analisis_tecnico.svg" alt="Análisis técnico" class="icon">
+                        <div class="mobile-show">
+                            <div class="title-2">ÁREA TÉCNICA</div>
+                        </div>
                         <p>ISAOSA est buscando constantemente en el mercado internacional fertilizantes que contribuyan a elevar la produccin y productividad de los cultivos en el pas y que contaminen menos, como es el caso de la UREA DE LENTA LIBERACION (ESN).</p>
 
                         <p>La reserva de algunos nutrientes en el suelo est disminuyendo, debido al establecimiento de cultivos, tal es el caso del la zona productora de trigo del noroeste, donde los 52 kg de fsforo aplicados son ya insuficientes.</p>

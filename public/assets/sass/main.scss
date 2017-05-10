@@ -2685,8 +2685,44 @@ body{
     }
     .site .section-site.servicios .aux-relative .orange .descriptions li{
         display: block;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        .title-2{
+            color: #FFF;
+            width: 100%;
+            display: block;
+            font-size: 18px;
+            font-weight: 900;
+            text-align: center;
+            font-family: $font-2;
+        }
         .icons{
-            margin: 0 auto 20px;
+            margin: 0 auto 10px;
+        }
+        p{
+            display: none;
+        }
+        &.active{
+            .title-2{
+                margin-bottom: 15px; 
+            }
+            p{
+                display: block;
+                font-size: 14px;
+                text-align: justify;
+            }
+        }
+        &:before{
+            left: 0;
+            right: 0;
+            bottom: 0;
+            content: '';
+            width: 50px;
+            height: 2px;
+            margin: auto;
+            background: #FFF;
+            position: absolute;
         }
     }
 
@@ -2711,6 +2747,10 @@ body{
     }
     .site .section-site.servicios .background-image{
         right: 0;
+    }
+    .site .section-site.servicios .aux-relative .orange .icon{
+        display: block;
+        margin: 0 auto 20px;
     }
 }
 
