@@ -94,7 +94,9 @@
                     </form>
                 </div>
                 <div class="col-md-3 col-md-offset-1 footer-logo">
-                    <img src="/assets/images/icons/logo_footer.svg" alt="ISAOSA">
+                    <a href="/">
+                        <img src="/assets/images/icons/logo_footer.svg" alt="ISAOSA">
+                    </a>
                 </div>
             </div>
             <div class="row">
