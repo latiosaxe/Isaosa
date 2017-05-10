@@ -1311,13 +1311,14 @@ body{
 
 
     .plug-share{
+        z-index: 5;
         left: 0;
         top: 130px;
         position: fixed;
         ul{
             margin: 0;
             padding: 0;
-            width: 50px;
+            width: 35px; 
             li{
                 width: 100%;
                 list-style: none;
