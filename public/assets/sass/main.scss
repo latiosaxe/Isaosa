@@ -559,8 +559,9 @@ body{
         .article-list{
             ul{
                 li{
-                    margin-bottom: 18px; 
+                    margin-bottom: 6px;
                     a{
+                        height: 65px;
                         display: block;
                         position: relative;
                         text-decoration: none;
@@ -568,8 +569,8 @@ body{
                         .image{
                             top: 0;
                             left: 0;
-                            width: 60px;
-                            height: 60px;
+                            width: 65px;
+                            height: 65px;
                             position: absolute;
                             background: center center no-repeat;
                             background-size: cover;
