@@ -13,9 +13,9 @@
 
 <div class="section-site productos">
     <div class="container">
-        <h1 class="title-bold">PRODUCTOS</h1>
+        <h1 class="title-bold title-mobile-orange">PRODUCTOS</h1>
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 no-padding-mobile">
                 <div class="sec-menu">
                     <ul>
                         <li>
@@ -178,6 +178,9 @@
 
                 <div class="row single-element-view hidden">
                     <div class="col-md-4 left-moment">
+                        <div class="mobile-show">
+                            <h2>ESN LIBERACIÓN CONTROLADA</h2>
+                        </div>
                         <div class="avatar" style="background-image: url('/assets/images/extras/accesointerno.jpg')"></div>
                         <p>Contiene</p>
                         <ul class="element-details">
@@ -201,10 +204,10 @@
                         </ul>
                     </div>
                     <div class="col-md-8 right-moment">
-                        <div class="return_btn">
+                        <div class="return_btn desktop-show">
                             <button class="btn">Regresar</button>
                         </div>
-                        <h2>ESN LIBERACIÓN CONTROLADA</h2>
+                        <h2 class="desktop-show">ESN LIBERACIÓN CONTROLADA</h2>
                         <div class="tabs">
                             <div class="head">
                                 <ul>
@@ -224,13 +227,13 @@
                                             El K-Mag se conoce también como Sulfato Doble de Potasio Magnesio. Su aplicación al suelo puede ser manual o mecánica, ya sea en bandas o al voleo. Adecuado para la aplicación directa de arranque o fondo, de cultivos como el maíz, frijol, trigo, sorgo, pastos, etc. El K-Mag es una fuente ideal cuando es necesario suministrar al suelo potasio y magnesio, es muy útil en la elaboración de mezclas físicas.
                                         </p>
                                     </li>
-                                    <li>
+                                    <li data-type="CARACTERÍSTICAS">
                                         <p>Dos</p>
                                     </li>
-                                    <li>
+                                    <li data-type="UTILIDAD">
                                         <p>Tres</p>
                                     </li>
-                                    <li>
+                                    <li data-type="RECOMENDACIONES">
                                         <p>Cuatro</p>
                                     </li>
                                 </ul>

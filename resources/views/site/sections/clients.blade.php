@@ -134,6 +134,14 @@
             </div>
         </form>
     </div>
+
+
+    <div class="mobile-show">
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+    </div>
+
+
     <div class="go-up-action">
         <img src="/assets/images/icons/ir_arriba.svg" alt="Ir arriba">
     </div>

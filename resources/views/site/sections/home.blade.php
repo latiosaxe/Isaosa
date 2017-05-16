@@ -223,70 +223,81 @@
         <div class="relative">
             <div class="head">
                 <p class="title">Nuestras<br/> bodegas</p>
-                <div class="pipe"></div>
-                <ul class="ul-locations">
-                    <li><span>Manzanillo</span></li>
-                    <li><span>Altamira</span></li>
-                    <li><span>Topolobampo</span></li>
-                    <li><span>Tampico</span></li>
-                </ul>
-                <div class="resume-block hidden">
-                    <div class="resume">
-                        <p>
-                            Carretera Manzanillo - Minatitlán
-                        </p><p>
-                            Km. 6.5 S/N
-                        </p><p>
-                            C.P. 28876
-                        </p><p>
-                            Manzanillo, Colima, México
-                        </p><p>
-                            Teléfono: (314) 336 4877
-                        </p>
-                    </div>
-                    <div class="resume">
-                        <p>
-                        Carretera Altamira
-                        </p><p>
-                        Puerto Industrial Km. 4
-                        </p><p>
-                        C.P. 89608
-                        </p><p>
-                        Altamira, Tamaulipas, México
-                        </p><p>
-                        Teléfono: (833) 260 9119
-                        </p>
-                    </div>
-                    <div class="resume">
-                        <p>
-                        Recinto Portuario de Topolobampo,
-                        </p><p>
-                        Patio de Contenedores
-                        </p><p>
-                        C.P. 81370
-                        </p><p>
-                        Topolobampo, Ahome, Sinaloa, México
-                        </p><p>
-                        Teléfono: (668) 862 1600
-                        </p>
-                    </div>
-                    <div class="resume">
-                        <p>
-                            Carretera Tampico
-                        </p><p>
-                            Km. 6.5 S/N
-                        </p><p>
-                            C.P. 28876
-                        </p><p>
-                            Manzanillo, Colima, México
-                        </p><p>
-                            Teléfono: (314) 336 4877
-                        </p>
+                <div class="desktop-show">
+                    <div class="pipe"></div>
+                    <ul class="ul-locations">
+                        <li><span>Manzanillo</span></li>
+                        <li><span>Altamira</span></li>
+                        <li><span>Topolobampo</span></li>
+                        <li><span>Tampico</span></li>
+                    </ul>
+                    <div class="resume-block hidden">
+                        <div class="resume">
+                            <p>
+                                Carretera Manzanillo - Minatitlán
+                            </p><p>
+                                Km. 6.5 S/N
+                            </p><p>
+                                C.P. 28876
+                            </p><p>
+                                Manzanillo, Colima, México
+                            </p><p>
+                                Teléfono: (314) 336 4877
+                            </p>
+                        </div>
+                        <div class="resume">
+                            <p>
+                                Carretera Altamira
+                            </p><p>
+                                Puerto Industrial Km. 4
+                            </p><p>
+                                C.P. 89608
+                            </p><p>
+                                Altamira, Tamaulipas, México
+                            </p><p>
+                                Teléfono: (833) 260 9119
+                            </p>
+                        </div>
+                        <div class="resume">
+                            <p>
+                                Recinto Portuario de Topolobampo,
+                            </p><p>
+                                Patio de Contenedores
+                            </p><p>
+                                C.P. 81370
+                            </p><p>
+                                Topolobampo, Ahome, Sinaloa, México
+                            </p><p>
+                                Teléfono: (668) 862 1600
+                            </p>
+                        </div>
+                        <div class="resume">
+                            <p>
+                                Carretera Tampico
+                            </p><p>
+                                Km. 6.5 S/N
+                            </p><p>
+                                C.P. 28876
+                            </p><p>
+                                Manzanillo, Colima, México
+                            </p><p>
+                                Teléfono: (314) 336 4877
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="body">
-                <div id="map"></div>
+            <div class="desktop-show">
+                <div class="body">
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div class="mobile-show">
+                <div class="mobile-carousel">
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

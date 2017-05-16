@@ -396,6 +396,11 @@
         </form>
     </div>
 
+    <div class="mobile-show">
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+    </div>
+
     <div class="go-up-action">
         <img src="/assets/images/icons/flecha_abajo.svg" alt="Ir arriba">
     </div>

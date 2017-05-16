@@ -73,6 +73,9 @@
                         <p>El nitrgeno de la UREA ESN muestra ser mas eficiente que otras fuentes de nitrgeno, pero se debe combinar con nitrgeno de aportacin rpida, como el CAN-27, SULFONIT, SULFATO DE AMONIO o la misma UREA convencional, para hacer un mejor uso del nitrgeno.</p>
                         <p>zacin balanceada, y con ello lograr el incremento den la produccin de los cultivos</p>
                         <p>Para cereales de grano pequeo, como el trigo, sorgo, cebada y avena, con una sola fetilizacin en la siembra es suficiente para lograr su cosecha, generarando un</p>
+                        <div class="mobile-show">
+                            <div class="close-tab"></div>
+                        </div>
                     </li>
                     <li>
                         <img src="/assets/images/icons/analisis_foliar.svg" alt="Análisis foliar" class="icon">
@@ -105,6 +108,9 @@
                         <p>El nitrgeno de la UREA ESN muestra ser mas eficiente que otras fuentes de nitrgeno, pero se debe combinar con nitrgeno de aportacin rpida, como el CAN-27, SULFONIT, SULFATO DE AMONIO o la misma UREA convencional, para hacer un mejor uso del nitrgeno.</p>
                         <p>zacin balanceada, y con ello lograr el incremento den la produccin de los cultivos</p>
                         <p>Para cereales de grano pequeo, como el trigo, sorgo, cebada y avena, con una sola fetilizacin en la siembra es suficiente para lograr su cosecha, generarando un</p>
+                        <div class="mobile-show">
+                            <div class="close-tab"></div>
+                        </div>
                     </li>
                     <li>
                         <img src="/assets/images/icons/analisis_suelo.svg" alt="Análisis del suelo" class="icon">
@@ -137,6 +143,9 @@
                         <p>El nitrgeno de la UREA ESN muestra ser mas eficiente que otras fuentes de nitrgeno, pero se debe combinar con nitrgeno de aportacin rpida, como el CAN-27, SULFONIT, SULFATO DE AMONIO o la misma UREA convencional, para hacer un mejor uso del nitrgeno.</p>
                         <p>zacin balanceada, y con ello lograr el incremento den la produccin de los cultivos</p>
                         <p>Para cereales de grano pequeo, como el trigo, sorgo, cebada y avena, con una sola fetilizacin en la siembra es suficiente para lograr su cosecha, generarando un</p>
+                        <div class="mobile-show">
+                            <div class="close-tab"></div>
+                        </div>
                     </li>
                     <li>
                         <img src="/assets/images/icons/analisis_tecnico.svg" alt="Análisis técnico" class="icon">
@@ -169,6 +178,9 @@
                         <p>El nitrgeno de la UREA ESN muestra ser mas eficiente que otras fuentes de nitrgeno, pero se debe combinar con nitrgeno de aportacin rpida, como el CAN-27, SULFONIT, SULFATO DE AMONIO o la misma UREA convencional, para hacer un mejor uso del nitrgeno.</p>
                         <p>zacin balanceada, y con ello lograr el incremento den la produccin de los cultivos</p>
                         <p>Para cereales de grano pequeo, como el trigo, sorgo, cebada y avena, con una sola fetilizacin en la siembra es suficiente para lograr su cosecha, generarando un</p>
+                        <div class="mobile-show">
+                            <div class="close-tab"></div>
+                        </div>
                     </li>
                 </ul>
             </div>

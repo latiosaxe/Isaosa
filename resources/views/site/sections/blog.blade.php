@@ -15,17 +15,25 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h1>Noticias</h1>
+                <h1 class="title-mobile-orange">Noticias</h1>
             </div>
-            <div class="col-md-4 text-right">
+            <div class="col-md-4 text-right desktop-show">
                 <form class="search-input" onsubmit="return false;">
                     <input type="text">
                     <img src="/assets/images/icons/buscar.svg" alt="Buscar" class="icon">
                 </form>
             </div>
         </div>
+        <div class="mobile-show">
+            <ul class="alt-blog">
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Resultados</a></li>
+                <li><a href="#">Recientes</a></li>
+            </ul>
+        </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 no-padding-mobile">
                 <div class="blog-carousel">
                     <div class="carousel-card">
                         <div class="container">
@@ -57,7 +65,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 blog-right">
+            <div class="col-md-4 blog-right desktop-show">
                 <div class="orange-first">
                     <div class="block"></div>
                     <span>ENTRADAS MÁS RECIENTES</span>
@@ -103,17 +111,19 @@
                 </div>
             </div>
         </div>
-        <div class="spacing"></div>
-        <div class="spacing"></div>
+        <div class="desktop-show">
+            <div class="spacing"></div>
+            <div class="spacing"></div>
+        </div>
         <div class="row">
             <div class="col-md-8">
                 <div class="article-preview block-style">
                     <a href="#">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-xs-4">
                             <div class="image" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos2.jpg')"></div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-xs-8">
                             <div class="pre">
                                 <div class="label">Eventos</div>
                                 <div class="date">08/03/2017</div>
@@ -134,10 +144,10 @@
                 <div class="article-preview">
                     <a href="#">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-xs-4">
                             <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff3.jpg')"></div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-xs-8">
                             <div class="pre">
                                 <div class="label">Eventos</div>
                                 <div class="date">08/03/2017</div>
@@ -158,10 +168,10 @@
                 <div class="article-preview">
                     <a href="#">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4 col-xs-4">
                             <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff.jpg')"></div>
                         </div>
-                        <div class="col-md-8">
+                        <div class="col-md-8 col-xs-8">
                             <div class="pre">
                                 <div class="label">Eventos</div>
                                 <div class="date">08/03/2017</div>
@@ -188,7 +198,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-4 desktop-show">
                 <div class="block-style">
                     <div class="title">
                         <div class="rec"></div>
@@ -213,6 +223,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="mobile-show">
+        <div class="spacing"></div>
+        <div class="spacing"></div>
     </div>
 
     <div class="go-up-action center-element">

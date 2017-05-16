@@ -11,7 +11,7 @@
         </div>
         <div class="row margin-0">
             <div class="col-md-3">
-                <img src="/assets/images/about/quienesomos1.jpg" alt="Quienes sosmos">
+                <img class="image-negative" src="/assets/images/about/quienesomos1.jpg" alt="Quienes sosmos">
             </div>
             <div class="col-md-6" style="padding-top: 70px">
                 <h3>HISTORIA</h3>
@@ -38,6 +38,9 @@
                 <p>Ser una organización de clase mundial, con calidad humana, valores propios, aportando innovación a la fertilización en el agro mexicano, beneficiando a los agricultores y sus familias.</p>
             </div>
         </div>
+        <div class="mobile-show">
+            <div class="spacing"></div>
+        </div>
         <div class="row margin-0">
             <div class="col-md-3">
                 <img src="/assets/images/about/quienesomos3.jpg" alt="Quienes sosmos">
@@ -48,6 +51,13 @@
                 <p>ISAOSA cuenta con una infraestructura de bodegas de recepción, manejo, envasado y distribución de sus productos con una ubicación estratégica para atender el centro, occidente y norte del país. Las bodegas se localizan en los puertos de Altamira, Manzanillo y Topolobampo, surtiendo los productos por tolva de ferrocarril o transporte terrestre; optimizando así la logística y costos de transporte, con venta directa a costado de buque o directo de las bodegas mencionadas. </p>
             </div>
         </div>
+    </div>
+
+
+    <div class="mobile-show">
+        <div class="spacing"></div>
+        <div class="spacing"></div>
+        <div class="spacing"></div>
     </div>
 
     <div class="go-up-action center-element">

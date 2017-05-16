@@ -12,7 +12,7 @@
 </div>
 
 
-<div class="plug-share">
+<div class="plug-share desktop-show">
     <ul>
         <li><a href="#" target="_blank"><img src="/assets/images/icons/facebook.svg" alt="Compartir de Facebook"></a></li>
         <li><a href="#" target="_blank"><img src="/assets/images/icons/twitter.svg" alt="Compartir de Twitter"></a></li>
@@ -24,28 +24,49 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h1 class="single-title">Noticias</h1>
+                <h1 class="title-mobile-orange">Noticias</h1>
             </div>
-            <div class="col-md-4 text-right">
+            <div class="col-md-4 text-right desktop-show">
                 <form class="search-input" onsubmit="return false;">
                     <input type="text">
                     <img src="/assets/images/icons/buscar.svg" alt="Buscar" class="icon">
                 </form>
             </div>
         </div>
+        <div class="mobile-show">
+            <ul class="alt-blog">
+                <li><a href="#">Eventos</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Resultados</a></li>
+                <li><a href="#">Recientes</a></li>
+            </ul>
+        </div>
         <div class="row">
             <div class="col-md-8">
-               <div class="featured-image">
+               <div class="featured-image desktop-show">
                    <img src="/assets/images/home/01_isaosa_img_home_productos2.jpg" alt="Entrada de blog">
                </div>
-                <div class="spacing"></div>
+                <div class="spacing desktop-show"></div>
                 <div class="meta">
                     <a href="#" class="label">Noticias</a>
                     <div class="date">08/03/2017</div>
+
+                    <div class="mobile-show">
+                        <div class="mobile-share-single">
+                            <ul>
+                                <li><a href="#" target="_blank"><img src="/assets/images/icons/facebook.svg" alt="Compartir de Facebook"></a></li>
+                                <li><a href="#" target="_blank"><img src="/assets/images/icons/twitter.svg" alt="Compartir de Twitter"></a></li>
+                                <li><a href="#" target="_blank"><img src="/assets/images/icons/linkedin.svg" alt="Compartir de Linkedin"></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="post">
                     <div class="wrapper">
                         <h2>NUEVOS ELEMENTOS PARA LOS SUELOS</h2>
+                        <div class="mobile-show">
+                            <img src="/assets/images/home/01_isaosa_img_home_productos2.jpg" class="mobile-image-single" alt="Entrada de blog">
+                        </div>
                         <div class="description">
                             <p>Lorem ipsum dolor sit amet, consectetur cing elit. Praesent elit ipsum, rhoncus vitae sapien in, ornare aliquet justo. Curabitur sit amet conse</p>
                         </div>
@@ -65,7 +86,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-4 blog-right">
+            <div class="col-md-4 blog-right desktop-show">
                 <div class="orange-first">
                     <div class="block"></div>
                     <span>ENTRADAS MÁS RECIENTES</span>
@@ -110,9 +131,12 @@
                     </ul>
                 </div>
 
-                <div class="spacing"></div>
-                <div class="spacing"></div>
-                <div class="block-style">
+                <div class="desktop-show">
+                    <div class="spacing"></div>
+                    <div class="spacing"></div>
+                </div>
+
+                <div class="block-style desktop-show">
                     <div class="title">
                         <div class="rec"></div>
                         <span>Categorías</span>
@@ -151,6 +175,10 @@
 
             </div>
         </div>
+    </div>
+
+    <div class="mobile-show">
+        <div class="spacing"></div>
     </div>
 
     <div class="go-up-action center-element">
