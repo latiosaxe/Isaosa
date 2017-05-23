@@ -227,13 +227,13 @@
                                             El K-Mag se conoce también como Sulfato Doble de Potasio Magnesio. Su aplicación al suelo puede ser manual o mecánica, ya sea en bandas o al voleo. Adecuado para la aplicación directa de arranque o fondo, de cultivos como el maíz, frijol, trigo, sorgo, pastos, etc. El K-Mag es una fuente ideal cuando es necesario suministrar al suelo potasio y magnesio, es muy útil en la elaboración de mezclas físicas.
                                         </p>
                                     </li>
-                                    <li data-type="CARACTERÍSTICAS">
+                                    <li class="mobile-content" data-type="CARACTERÍSTICAS">
                                         <p>Dos</p>
                                     </li>
-                                    <li data-type="UTILIDAD">
+                                    <li class="mobile-content" data-type="UTILIDAD">
                                         <p>Tres</p>
                                     </li>
-                                    <li data-type="RECOMENDACIONES">
+                                    <li class="mobile-content" data-type="RECOMENDACIONES">
                                         <p>Cuatro</p>
                                     </li>
                                 </ul>
@@ -293,5 +293,23 @@
 @section('javascript')
     <script>
         $('header').addClass('block');
+
+        $(".site .section-site.productos .sec-menu > ul > li").on('click', function () {
+            $(".site .section-site.productos .sec-menu > ul > li").removeClass('active');
+            $(this).addClass('active');
+        });
+
+        if($(window).width() <= 768){
+            $(".site .section-site.productos .single-element-view .right-moment .tabs .head ul li.active").on('click', function () {
+                if($(this).hasClass('showed')){
+                    $(this).removeClass('showed');
+                    $(".site .section-site.productos .single-element-view .right-moment .tabs .body ul li.mobile-content").addClass('byebye');
+
+                }else{
+                    $(this).addClass('showed')
+                    $(".site .section-site.productos .single-element-view .right-moment .tabs .body ul li.mobile-content").removeClass('byebye');
+                }
+            });
+        }
     </script>
 @endsection

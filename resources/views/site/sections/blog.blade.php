@@ -55,7 +55,7 @@
                                 <h2>NUEVA GENERACIÓN</h2>
                                 <div class="line"></div>
                                 <p>Nuevas tecnologías que permiten mayor eficiencia y control en la entrega de nutrientes al suelo.</p>
-                                <a href="#">
+                                <a href="/single">
                                     <img src="/assets/images/icons/mas.svg" alt="Leer más">
                                     <span>Leer más</span>
                                 </a>
@@ -73,35 +73,35 @@
                 <div class="article-list">
                     <ul>
                         <li>
-                            <a href="#">
+                            <a href="/single">
                                 <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
                                 <span class="title">ANÁLISIS DEL SUELO</span>
                                 <span class="date">08/03/2017</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/single">
                                 <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
                                 <span class="title">ANÁLISIS DEL SUELO</span>
                                 <span class="date">08/03/2017</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/single">
                                 <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
                                 <span class="title">ANÁLISIS DEL SUELO</span>
                                 <span class="date">08/03/2017</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/single">
                                 <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
                                 <span class="title">ANÁLISIS DEL SUELO</span>
                                 <span class="date">08/03/2017</span>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="/single">
                                 <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
                                 <span class="title">ANÁLISIS DEL SUELO</span>
                                 <span class="date">08/03/2017</span>

@@ -21,12 +21,12 @@
         <img src="/assets/images/icons/cerrar.svg" alt="Cerrar">
     </div>
     <ul>
-        <li><a href="#">PRODUCTOS</a></li>
+        <li><a href="/productos">PRODUCTOS</a></li>
         <li><a href="#">CALCULADORA</a></li>
-        <li><a href="#">SERVICIOS</a></li>
+        <li><a href="/servicios">SERVICIOS</a></li>
         <li><a href="#">BODEGAS</a></li>
-        <li><a href="#">NOTICIAS</a></li>
-        <li><a href="#">QUIÉNES SOMOS</a></li>
+        <li><a href="/blog">NOTICIAS</a></li>
+        <li><a href="/quieres-somos">QUIÉNES SOMOS</a></li>
         <li><a href="#">CONTACTO</a></li>
         <li>
             <span>ACCESO INTERNO</span>
@@ -46,7 +46,7 @@
                     <img src="/assets/images/icons/logo.svg" alt="Isaosa" class="logo">
                 </a>
             </div>
-            <div class="col-md-8 col-sm-6 col-xs-6 text-right">
+            <div class="col-md-8 col-sm-6 col-xs-6 text-right header-margin-up">
                 <div class="links">
                     <ul>
                         <li><a href="#" target="_blank"><img src="/assets/images/icons/fb.svg" alt="Facebook"></a></li>
@@ -71,6 +71,9 @@
         <div class="apis">
             <div class="block dollar">
                 USD: $<span id="dollar-price"></span> MXN
+            </div>
+            <div class="block weather">
+                <ul></ul>
             </div>
         </div>
     </header>
@@ -109,6 +112,7 @@
 </div>
 <script src="../assets/scripts/libs/jquery-3.2.0.min.js"></script>
 <script src="../assets/scripts/libs/money.js"></script>
+<script src="../assets/scripts/libs/jquery.simpleWeather.min.js"></script>
 <script src="../assets/plugins/slick/slick.min.js"></script>
 <script src="../assets/scripts/script.js"></script>
 <script>
@@ -130,7 +134,35 @@
 
         $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk&callback=clima", function (data) {
             console.log(data);
-        })
+        });
+
+
+        var _positions = [
+            ['MANZANILLO',  19.078111, -104.286239, 4],
+            ['ALTAMIRA',    22.378796, -97.910722,  5],
+            ['TOPOLOBAMPO', 25.584447, -109.061701, 3],
+            ['TÁMPICO',     22.227143, -97.8408613, 2]
+        ];
+
+        $.each(_positions, function(index){
+            loadWeather(_positions[index][1]+','+_positions[index][2]);
+        });
+        
+        function loadWeather(location, woeid) {
+            $.simpleWeather({
+                location: location,
+                woeid: woeid,
+                unit: 'c',
+                success: function(weather) {
+                    console.log(weather);
+                    $(".site header .apis .block.weather ul").append('<li><span class="icon"><i class="icon-'+weather.code+'"></i></span> '+ weather.city +' '+ weather.temp+'&deg;'+weather.units.temp+'</li>')
+                },
+                error: function(error) {
+                    $(".site header .apis .block.weather").hide()
+                }
+            });
+        }
+
     });
 </script>
 

@@ -49,7 +49,7 @@
                 <div class="vertical-align">
                     <h2>SOLUBLES</h2>
                     <div class="line"></div>
-                    <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
+                    <p>Maxima tecnología en cada gota</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Leer más</span>
@@ -63,7 +63,7 @@
                 <div class="vertical-align">
                     <h2>FOLIARES</h2>
                     <div class="line"></div>
-                    <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
+                    <p>La mejor nutrición en el menor tiempo</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Leer más</span>
@@ -77,7 +77,7 @@
                 <div class="vertical-align">
                     <h2>NPK ESPECIALIDAD</h2>
                     <div class="line"></div>
-                    <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
+                    <p>Los mejores nutrientes en el mejor balance</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Leer más</span>
@@ -105,7 +105,7 @@
         <div class="container relative">
             <div class="bar-active"><div class="padding"><span></span></div></div>
             <ul>
-                <li>
+                <li class="active">
                     <span href="#">NUEVA GENERACIÓN</span>
                 </li>
                 <li>
@@ -133,6 +133,7 @@
     <div class="nav-users">
         <ul>
             <li><a href="#">Ingreso de clientes</a></li>
+            <li><a href="#">Proveedores</a></li>
             <li><a href="#">Solicitud de Crédito</a></li>
             <li><a href="#">Alta de clientes</a></li>
         </ul>
@@ -503,6 +504,7 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4cqGoTfEt52V5IoUO0drBTt17S4gZUak&callback=initMap" type="text/javascript"></script>
     <script>
+        $(".mobile-menu").addClass('home-special');
         var form_success = function form_success(){
             $(".form_contact").slideUp(600, function(){
                 $(".succes-message").slideDown();

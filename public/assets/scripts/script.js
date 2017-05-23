@@ -4,6 +4,7 @@ ISAOSA.main = (function(){
         _$body,
         _$blog_carousel,
         _$home_carousel,
+        _$home_carousel_nav_ul,
         _$home_carousel_nav,
         _$home_carousel_bar,
         _actualCard = 0,
@@ -34,6 +35,7 @@ ISAOSA.main = (function(){
     var _initVars = function _initVars(){
         _$body = $('body');
         _$home_carousel = $(".home-carousel");
+        _$home_carousel_nav_ul = $(".home-carousel-nav ul");
         _$home_carousel_nav = $(".home-carousel-nav ul li");
         _$home_carousel_bar = $(".home-carousel-nav .bar-active");
         _totalCarouselCards = _$home_carousel_nav.length;
@@ -54,7 +56,20 @@ ISAOSA.main = (function(){
 
         if(_$home_carousel){
             _$home_carousel.slick({
-                arrows: false
+                arrows: false,
+                speed: 300,
+                infinite: true,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            dots: true
+                        }
+                    }
+                ]
             });
         }
 
@@ -77,9 +92,13 @@ ISAOSA.main = (function(){
 
         _$home_carousel.on('afterChange', function(event, slick, currentSlide, nextSlide){
             _actualCard = currentSlide;
-            _$home_carousel_bar.css({
-                'margin-left': currentSlide * (100/_totalCarouselCards) + '%'
-            });
+            // _$home_carousel_bar.css({
+            //     'margin-left': currentSlide * (100/_totalCarouselCards) + '%'
+            // });
+            _$home_carousel_nav.removeClass('active');
+
+            console.log(_$home_carousel_nav_ul.find('li:eq('+ _actualCard +')'));
+            _$home_carousel_nav_ul.find('li:eq('+ _actualCard +')').addClass('active');
             console.log(currentSlide * (100/_totalCarouselCards) + '%');
         });
 
