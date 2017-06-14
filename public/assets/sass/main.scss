@@ -153,6 +153,7 @@ body{
                 position: relative;
                 display: inline-block;
                 text-decoration: none;
+                text-transform: uppercase; 
                 &:before{
                     content: '';
                     left: 0;
