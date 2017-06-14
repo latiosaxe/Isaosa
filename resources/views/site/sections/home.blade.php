@@ -10,25 +10,25 @@
                     <p>Nuevas tecnologías que permiten mayor eficiencia y control en la entrega de nutrientes al suelo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Leer más</span>
+                        <span>Ver productos</span>
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos1.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/nuevas/_1.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
                 <div class="vertical-align">
-                    <h2>MEZCLAS GRANULADAS</h2>
+                    <h2>MEZCLA VALOR AGREGADO</h2>
                     <div class="line"></div>
                     <p>Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento de sus cultivos.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Leer más</span>
+                        <span>Ver productos</span>
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos2.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/nuevas/_2.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
@@ -38,11 +38,11 @@
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Leer más</span>
+                        <span>Ver productos</span>
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos3.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/nuevas/_3.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
@@ -52,11 +52,11 @@
                     <p>Maxima tecnología en cada gota</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Leer más</span>
+                        <span>Ver productos</span>
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos4.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/nuevas/_4.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
@@ -66,11 +66,11 @@
                     <p>La mejor nutrición en el menor tiempo</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Leer más</span>
+                        <span>Ver productos</span>
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos5.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/nuevas/_5.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
@@ -80,11 +80,11 @@
                     <p>Los mejores nutrientes en el mejor balance</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Leer más</span>
+                        <span>Ver productos</span>
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos6.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/nuevas/_6.jpg')"></div>
         </div>
         <div class="carousel-card">
             <div class="container">
@@ -94,11 +94,11 @@
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
                     <a href="#">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Leer más</span>
+                        <span>Ver productos</span>
                     </a>
                 </div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos7.jpg')"></div>
+            <div class="background" style="background-image: url('/assets/images/home/nuevas/_7.jpg')"></div>
         </div>
     </div>
     <div class="home-carousel-nav">
@@ -109,7 +109,7 @@
                     <span href="#">NUEVA GENERACIÓN</span>
                 </li>
                 <li>
-                    <span href="#">MEZCLA GRANULADA</span>
+                    <span href="#">MEZCLA VALOR AGREGADO</span>
                 </li>
                 <li>
                     <span href="#">LÍQUIDOS</span>
@@ -147,23 +147,50 @@
 </section>
 
 
-<section class="home-calculator" id="home-calculator">
+<section class="report">
     <div class="container">
-        <div class="title">CALCULADORA</div>
-        <div class="content">
-            <form onsubmit="return false;">
-                <input type="text" value="Placeholder temporal">
-                <input type="text" value="Placeholder temporal">
-                <input type="text" value="Placeholder temporal">
-                <input type="text" value="Placeholder temporal">
-                <input type="text" value="Placeholder temporal">
-                <input type="text" value="Placeholder temporal">
-                <input type="text" value="Placeholder temporal">
-            </form>
+        <div class="left"><span>Reporte del clima</span></div>
+        <div class="right">
+            <ul>
+                <li>
+                    <a href="#">
+                        México
+                    </a>
+                    <ul>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_nacional_201706.pdf" target="_blank">Junio 2017</a></li>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_nacional_201705.pdf" target="_blank">Mayo 2017</a></li>
+                        <li><a href="http://isaosa.com/boletines/perspectiva_abril_noviembre_2017.pdf" target="_blank">Perspectiva 2017 Abril - Noviembre</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        Chihuahua
+                    </a>
+                    <ul>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201611.pdf" target="_blank">Noviembre 2016</a></li>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201610.pdf" target="_blank">Octubre 2016</a></li>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chiguagua_201609.pdf" target="_blank">Septiembre 2016</a></li>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201608.pdf" target="_blank">Agosto 2016</a></li>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201607.pdf" target="_blank">Julio 2016</a></li>
+                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201606.pdf" target="_blank">Junio 2016</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <div class="alt-image"></div>
     </div>
 </section>
+
+{{--<section class="home-calculator" id="home-calculator">--}}
+    {{--<div class="container">--}}
+        {{--<div class="title">CALCULADORA</div>--}}
+        {{--<div class="content">--}}
+            {{--<form onsubmit="return false;">--}}
+                {{--<input type="text" value="Placeholder temporal">--}}
+            {{--</form>--}}
+        {{--</div>--}}
+        {{--<div class="alt-image"></div>--}}
+    {{--</div>--}}
+{{--</section>--}}
 
 <section class="home-sections relative">
     <div class="container full-width">
@@ -462,7 +489,7 @@
 
 @endsection
 @section('javascript')
-
+    <script src="../assets/scripts/libs/gmaps.js"></script>
     <script>
         var mapStyle=[{featureType:"water",elementType:"geometry",stylers:[{color:"#e9e9e9"},{lightness:17}]},{featureType:"landscape",elementType:"geometry",stylers:[{color:"#f5f5f5"},{lightness:20}]},{featureType:"road.highway",elementType:"geometry.fill",stylers:[{color:"#ffffff"},{lightness:17}]},{featureType:"road.highway",elementType:"geometry.stroke",stylers:[{color:"#ffffff"},{lightness:29},{weight:.2}]},{featureType:"road.arterial",elementType:"geometry",stylers:[{color:"#ffffff"},{lightness:18}]},{featureType:"road.local",elementType:"geometry",stylers:[{color:"#ffffff"},{lightness:16}]},{featureType:"poi",elementType:"geometry",stylers:[{color:"#f5f5f5"},{lightness:21}]},{featureType:"poi.park",elementType:"geometry",stylers:[{color:"#dedede"},{lightness:21}]},{elementType:"labels.text.stroke",stylers:[{visibility:"on"},{color:"#ffffff"},{lightness:16}]},{elementType:"labels.text.fill",stylers:[{saturation:36},{color:"#333333"},{lightness:40}]},{elementType:"labels.icon",stylers:[{visibility:"off"}]},{featureType:"transit",elementType:"geometry",stylers:[{color:"#f2f2f2"},{lightness:19}]},{featureType:"administrative",elementType:"geometry.fill",stylers:[{color:"#fefefe"},{lightness:20}]},{featureType:"administrative",elementType:"geometry.stroke",stylers:[{color:"#fefefe"},{lightness:17},{weight:1.2}]}];
         function initMap() {
@@ -486,12 +513,21 @@
             var infowindow = new google.maps.InfoWindow();
 
             var marker, i;
+            var markerBounds = new google.maps.LatLngBounds();
 
             for (i = 0; i < locations.length; i++) {
+                console.log(locations[i][1]);
+
+                var point = new google.maps.LatLng(locations[i][1], locations[i][2]);
                 marker = new google.maps.Marker({
-                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                    map: map
+                    position: point,
+                    map: map,
+                    infoWindow: {
+                        content: '<p>'+locations[1][0]+'</p>'
+                    }
                 });
+
+                markerBounds.extend(point);
 
                 google.maps.event.addListener(marker, 'click', (function(marker, i) {
                     return function() {
@@ -500,6 +536,28 @@
                     }
                 })(marker, i));
             }
+
+            map.fitBounds(markerBounds);
+
+            $(".ul-locations li").on('click', function () {
+                var index = $(this).index();
+                map.setCenter(new google.maps.LatLng(locations[index][1], locations[index][2]));
+                map.setZoom(14);
+            });
+
+            GMaps.geolocate({
+                success: function(position) {
+//                    map.setCenter(position.coords.latitude, position.coords.longitude);
+                    loadWeather(position.coords.latitude+','+ position.coords.longitude);
+                },
+                error: function(error) {
+//                    alert('Error al localizar: '+error.message);
+                },
+                not_supported: function() {
+//                    alert("Tu navegador no cuenta con posibilidad de geolocalización");
+                }
+            });
+
         }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA4cqGoTfEt52V5IoUO0drBTt17S4gZUak&callback=initMap" type="text/javascript"></script>

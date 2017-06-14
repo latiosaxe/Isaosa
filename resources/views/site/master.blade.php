@@ -34,6 +34,8 @@
                 <li><a href="#">- ISAOSA</a></li>
                 <li><a href="#">- SOLUCIONES</a></li>
                 <li><a href="#">- INSUMOS</a></li>
+                <li><a href="#">- comprobación de gastos</a></li>
+                <li><a href="#">- tarifario de insumos</a></li>
             </ul>
         </li>
     </ul>
@@ -63,7 +65,6 @@
                         <div class="hamburguer-bt__stripe hamburguer-bt__stripe__middle"></div>
                         <div class="hamburguer-bt__stripe hamburguer-bt__stripe__bottom"></div>
                     </div>
-
                     {{--<img src="/assets/images/icons/menu.svg" alt="Menú">--}}
                 </a>
             </div>
@@ -127,15 +128,10 @@
         };
 
         var clima = function (data) {
-            console.log(data);
+
         };
 
         $.getJSON("http://api.fixer.io/latest", demo);
-
-        $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk&callback=clima", function (data) {
-            console.log(data);
-        });
-
 
         var _positions = [
             ['MANZANILLO',  19.078111, -104.286239, 4],
@@ -154,8 +150,7 @@
                 woeid: woeid,
                 unit: 'c',
                 success: function(weather) {
-                    console.log(weather);
-                    $(".site header .apis .block.weather ul").append('<li><span class="icon"><i class="icon-'+weather.code+'"></i></span> '+ weather.city +' '+ weather.temp+'&deg;'+weather.units.temp+'</li>')
+                    $(".site header .apis .block.weather ul").append('<li><a href="http://smn.cna.gob.mx/es/" target="_blank"><span class="icon"><i class="icon-'+weather.code+'"></i></span> '+ weather.city +' '+ weather.temp+'&deg;'+weather.units.temp+'</a></li>')
                 },
                 error: function(error) {
                     $(".site header .apis .block.weather").hide()

@@ -96,10 +96,7 @@ ISAOSA.main = (function(){
             //     'margin-left': currentSlide * (100/_totalCarouselCards) + '%'
             // });
             _$home_carousel_nav.removeClass('active');
-
-            console.log(_$home_carousel_nav_ul.find('li:eq('+ _actualCard +')'));
             _$home_carousel_nav_ul.find('li:eq('+ _actualCard +')').addClass('active');
-            console.log(currentSlide * (100/_totalCarouselCards) + '%');
         });
 
         _$home_carousel_nav.on('click', function () {

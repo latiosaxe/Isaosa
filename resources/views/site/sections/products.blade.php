@@ -35,7 +35,7 @@
                                 <li><span>Kiserita</span></li>
                             </ul>
                         </li>
-                        <li><span>MEZCLA GRANULADA</span></li>
+                        <li><span>MEZCLA VALOR AGREGADO</span></li>
                         <li><span>LÍQUIDOS</span></li>
                         <li><span>SOLUBLES</span></li>
                         <li><span>FOLIARES</span></li>

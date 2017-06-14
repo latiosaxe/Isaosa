@@ -196,6 +196,89 @@ body{
     }
 }
 
+.report{
+    z-index: 99;
+    width: 100%;
+    clear: both;
+    font-size: 35px;
+    padding: 20px 0;
+    position: relative;
+    .left{
+        float: left;
+        span{
+            font-size: 50px;
+            font-weight: bold;
+            padding-right: 50px;
+            display: inline-block;
+            text-transform: uppercase;
+            border-right: 1px solid $color-secondary;
+        }
+    }
+    .right{
+        float: right;
+        &>ul{
+            &>li{
+                margin-left: 20px;
+                padding-left: 20px;
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+                border-left: 1px solid $color-font;
+                &>a{
+                    line-height: 160%;
+                    color: $color-font;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    position: relative;
+                    &:after{
+                        left: 0;
+                        right: 0;
+                        content: '';
+                        width: 20px;
+                        height: 1px;
+                        margin: auto;
+                        bottom: -2px;
+                        position: absolute;
+                        background: $color-font;
+                    }
+                }
+                ul{
+                    left: 50%;
+                    top: 55px;
+                    z-index: 99;
+                    width: 140px;
+                    display: none;
+                    position: absolute;
+                    margin-left: -70px;
+                    pointer-events: none;
+                    background: rgba(0,0,0,0.6);
+                    li{
+                        display: block;
+                        padding: 0 10px;
+                        text-align: center;
+                        a{
+                            color: #FFF;
+                            display: block;
+                            padding: 7px 0;
+                            font-size: 14px;
+                        }
+                    }
+                }
+                &:first-of-type{
+                    border: 0;
+                    padding-left: 0;
+                }
+                &:hover{
+                    ul{
+                        display: block;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .profile-user{
     top: 135px;
     z-index: 9;
@@ -275,6 +358,10 @@ body{
                         margin-left: 10px;
                         display: inline-block;
                         vertical-align: middle;
+                        a{
+                            color: #FFF;
+                            text-decoration: none;
+                        }
                         .icon{
                             width: 20px;
                             text-align: center;
@@ -509,6 +596,7 @@ body{
         position: relative;
         .carousel-card{
             height: 100%;
+            background: #000;
             .container{
                 z-index: 2;
                 height: 100vh;
@@ -564,6 +652,7 @@ body{
                 left: 0;
                 right: 0;
                 bottom: 0;
+                opacity: 0.7; 
                 position: absolute;
                 background: center center no-repeat;
                 background-size: cover;
@@ -2560,6 +2649,10 @@ body{
     .site footer .last{
         text-align: center;
     }
+
+    .report .left span, .report .right > ul > li > a{
+        font-size: 24px;
+    }
 }
 .mobile-show{
     display: none;
@@ -2573,9 +2666,8 @@ body{
     display: none;
 }
 @media (max-width:768px){
-
     .site header .apis{
-        display: none; 
+        display: none;
     }
 
     .slick-dots{
@@ -3361,6 +3453,20 @@ body{
     .mobile-menu > ul > li{
         padding: 9px 0;
     }
+    .report{
+        padding: 20px 0 50px;
+        .left span{
+            font-size: 19px;
+        }
+        .right > ul > li{
+            margin-left: 10px;
+            padding-left: 10px;
+            ul{
+                top: 40px;
+            }
+        }
+    }
+
 }
 
 @media (max-width:480px)  {
@@ -3368,6 +3474,30 @@ body{
         span{
             font-size: 13px;
             line-height: 120%;
+        }
+    }
+
+    .report{
+        padding: 20px 0 50px;
+        .left, .right{
+            float: none;
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+        .left{
+            span{
+                border: 0;
+                padding: 0 0 10px 0;
+            }
+        }
+
+        .right > ul > li{
+            border: 0;
+            width: 100%;
+            &>a{
+                font-size: 18px;
+            }
         }
     }
 }
