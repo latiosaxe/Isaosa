@@ -121,9 +121,10 @@ body{
 .mobile-menu{
     top: 0;
     bottom: 0;
-    width: 320px;
+    width: 100%;
     z-index: 102;
-    right: -320px;
+    right: -100%;
+    overflow: auto;
     position: fixed;
     background: rgba(0,0,0,0.75);
     padding: 110px 50px 50px 50px;
@@ -153,7 +154,7 @@ body{
                 position: relative;
                 display: inline-block;
                 text-decoration: none;
-                text-transform: uppercase; 
+                text-transform: uppercase;
                 &:before{
                     content: '';
                     left: 0;
@@ -189,8 +190,8 @@ body{
         }
     }
     &.home-special{
-        width: 370px;
-        right: -370px;
+        width: 100%;
+        right: -100%;
     }
     &.active{
         right: 0;
@@ -1098,6 +1099,10 @@ body{
         }
     }
     .home-locations{
+        .desktop-show{
+            display: inline-block;
+            vertical-align: middle;
+        }
         .relative{
             .head{
                 font-size: 0;
@@ -1629,10 +1634,7 @@ body{
                                 }
                             }
                         }
-                        &.active{
-                            ul{
-                                display: block;
-                            }
+                        &:hover{
                             &:before{
                                 top: 8px;
                                 right: 0;
@@ -1640,7 +1642,18 @@ body{
                                 width: 30px;
                                 height: 30px;
                                 position: absolute;
+                                @include transform(rotate(0deg));
+                                @include transition(transform 150ms ease-out);
                                 background: url('/assets/images/icons/desplegar.svg') center center no-repeat;
+                            }
+                        }
+                        &.active{
+                            ul{
+                                display: block;
+                            }
+
+                            &:before{
+                                @include transform(rotate(180deg));
                             }
                         }
                     }
@@ -3417,6 +3430,10 @@ body{
         }
     }
 
+    .site .home-locations .desktop-show{
+        display: none;
+    }
+
     .mobile-menu > ul > li{
         padding: 0;
         a{
@@ -3467,7 +3484,39 @@ body{
             }
         }
     }
-
+    .site .home-locations .relative .head .title{
+        margin-bottom: 0 !important;
+    }
+    .mobile-carousel{
+        padding-bottom: 50px;
+        .circles{
+            .circle{
+                width: 100%;
+                .resume{
+                    color: #FFF;
+                    width: 280px;
+                    padding: 20px;
+                    height: 280px;
+                    display: block;
+                    margin: 0 auto;
+                    font-size: 20px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    text-align: center;
+                    background: $color-secondary;
+                }
+            }
+        }
+        .slick-track .slick-slide{
+            height: auto;
+        }
+        .slick-dots{
+            bottom: -40px;    
+            li button:before{
+                color: #000;
+            }
+        }
+    }
 }
 
 @media (max-width:480px)  {

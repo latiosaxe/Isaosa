@@ -29,7 +29,9 @@ ISAOSA.main = (function(){
         _$product_elements,
         _$product_list,
         _$product_result,
-        _$product_return
+        _$product_return,
+
+        _$mobile_carousel
 
         ;
     var _initVars = function _initVars(){
@@ -47,6 +49,8 @@ ISAOSA.main = (function(){
 
         _$close_tab = $(".close-tab");
         _$open_tab = $(".site .section-site.servicios .descriptions li .title-2, .site .section-site.servicios .descriptions li .icon")
+
+        _$mobile_carousel = $(".mobile-carousel ul");
 
         if(_$blog_carousel){
             _$blog_carousel.slick({
@@ -66,11 +70,23 @@ ISAOSA.main = (function(){
                     {
                         breakpoint: 768,
                         settings: {
-                            dots: true
+                            dots: false
                         }
                     }
                 ]
             });
+        }
+
+        if(_$mobile_carousel){
+            _$mobile_carousel.slick({
+                arrows: false,
+                speed: 300,
+                infinite: true,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                dots: true
+            })
         }
 
         _$go_up_action = $(".go-up-action");

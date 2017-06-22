@@ -6,6 +6,7 @@
     <div class="icon"></div>
     <ul>
         <li><a href="#">Ingreso de clientes</a></li>
+        <li><a href="#">Proveedores</a></li>
         <li><a href="#">Solicitud de Crédito</a></li>
         <li><a href="#">Alta de clientes</a></li>
     </ul>
@@ -295,8 +296,13 @@
         $('header').addClass('block');
 
         $(".site .section-site.productos .sec-menu > ul > li").on('click', function () {
-            $(".site .section-site.productos .sec-menu > ul > li").removeClass('active');
-            $(this).addClass('active');
+            if($(this).hasClass('active')){
+                $(this).removeClass('active');
+            }else{
+                $(".site .section-site.productos .sec-menu > ul > li").removeClass('active');
+                $(this).addClass('active');
+            }
+
         });
 
         if($(window).width() <= 768){

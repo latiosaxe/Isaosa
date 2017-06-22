@@ -14,8 +14,23 @@
     <script>
         var ISAOSA = {};
     </script>
+    <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="ISAOSA" />
+    <meta property="og:description"   content="ISAOSA nutrientes agrícolas" />
+    <meta property="og:image"         content="/assets/images/home/nuevas/_5.jpg" />
 </head>
 <body>
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.9&appId=105419609517426";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="mobile-menu">
     <div class="close" style="opacity:0;">
         <img src="/assets/images/icons/cerrar.svg" alt="Cerrar">

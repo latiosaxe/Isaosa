@@ -2,11 +2,11 @@
 @section ('content')
 <div class="fake-header"></div>
 
-
 <div class="profile-user">
     <div class="icon"></div>
     <ul>
         <li><a href="#">Ingreso de clientes</a></li>
+        <li><a href="#">Proveedores</a></li>
         <li><a href="#">Solicitud de Crédito</a></li>
         <li><a href="#">Alta de clientes</a></li>
     </ul>

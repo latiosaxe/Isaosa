@@ -139,7 +139,7 @@
         </ul>
     </div>
 
-    <div class="cta-section goToButton" data-id="home-calculator">
+    <div class="cta-section goToButton" data-id="report-section">
         <p>
             <img src="/assets/images/icons/flecha_abajo.svg" alt="Avanzar">
         </p>
@@ -147,7 +147,7 @@
 </section>
 
 
-<section class="report">
+<section class="report" id="report-section">
     <div class="container">
         <div class="left"><span>Reporte del clima</span></div>
         <div class="right">
@@ -322,8 +322,75 @@
             </div>
             <div class="mobile-show">
                 <div class="mobile-carousel">
-                    <ul>
-                        <li></li>
+                    <ul class="circles">
+                        <li class="circle">
+                            <div class="resume">
+                                <div class="vertical-align">
+                                    <p>
+                                        Carretera Manzanillo - Minatitlán
+                                    </p><p>
+                                        Km. 6.5 S/N
+                                    </p><p>
+                                        C.P. 28876
+                                    </p><p>
+                                        Manzanillo, Colima, México
+                                    </p><p>
+                                        Teléfono: (314) 336 4877
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="circle">
+                            <div class="resume">
+                                <div class="vertical-align">
+                                    <p>
+                                        Carretera Altamira
+                                    </p><p>
+                                        Puerto Industrial Km. 4
+                                    </p><p>
+                                        C.P. 89608
+                                    </p><p>
+                                        Altamira, Tamaulipas, México
+                                    </p><p>
+                                        Teléfono: (833) 260 9119
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="circle">
+                            <div class="resume">
+                                <div class="vertical-align">
+                                    <p>
+                                        Recinto Portuario de Topolobampo,
+                                    </p><p>
+                                        Patio de Contenedores
+                                    </p><p>
+                                        C.P. 81370
+                                    </p><p>
+                                        Topolobampo, Ahome, Sinaloa, México
+                                    </p><p>
+                                        Teléfono: (668) 862 1600
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="circle">
+                            <div class="resume">
+                                <div class="vertical-align">
+                                    <p>
+                                        Carretera Tampico
+                                    </p><p>
+                                        Km. 6.5 S/N
+                                    </p><p>
+                                        C.P. 28876
+                                    </p><p>
+                                        Manzanillo, Colima, México
+                                    </p><p>
+                                        Teléfono: (314) 336 4877
+                                    </p>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </div>

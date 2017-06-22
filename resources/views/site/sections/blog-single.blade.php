@@ -6,6 +6,7 @@
     <div class="icon"></div>
     <ul>
         <li><a href="#">Ingreso de clientes</a></li>
+        <li><a href="#">Proveedores</a></li>
         <li><a href="#">Solicitud de Crédito</a></li>
         <li><a href="#">Alta de clientes</a></li>
     </ul>
@@ -158,6 +159,10 @@
                         <li><a href="#">Febrero</a></li>
                     </ul>
                 </div>
+
+                <!-- Your like button code -->
+                <div class="fb-like" data-href="https://www.facebook.com/ISAOSA-164861660285225/" data-width="200" data-layout="button" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                <br><br>
                 <a class="twitter-timeline" data-lang="es" data-height="500" href="https://twitter.com/isaosa_mexico">Tweets by isaosa_mexico</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
         </div>
