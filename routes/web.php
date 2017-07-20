@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('site.sections.home');
-});
+Route::resource('/', 'HomeController');
 
 
 Route::resource('productos', 'ProductController');

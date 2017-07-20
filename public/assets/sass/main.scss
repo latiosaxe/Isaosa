@@ -1229,6 +1229,19 @@ body{
                 }
             }
         }
+        .fake-center{
+            width: 100%;
+            font-size: 0;
+            margin: 0 auto;
+            text-align: center;
+            display: inline-block;
+            .quad{
+                float: none;
+                vertical-align: top;
+                display: inline-block;
+                width: 33.33%;
+            }
+        }
         .image-circle{
             margin: 0 auto;
             display: block;
@@ -1237,7 +1250,7 @@ body{
             width: 207px * $size-factor;
             height: 207px * $size-factor;
             @include border-radius(50%);
-            background: center center no-repeat;
+            background: center center no-repeat $color-font;
             background-size: cover;
             .overlay{
                 top: 0;
@@ -1280,7 +1293,7 @@ body{
         .line{
             left: 0;
             right: 0;
-            top: 60%;
+            top: 300px;
             width: 1px;
             z-index: 3;
             margin: auto;

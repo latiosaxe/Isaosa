@@ -194,7 +194,26 @@
 @section('javascript')
     <script>
         $('header').addClass('block');
-
         $(".section-site.servicios .sec-navigation").height($(".section-site.servicios .orange").height());
+        var type = getParameterByName('type');
+        console.log(parseInt(type));
+
+        if(type>0){
+            console.log("Parametro");
+//            $(".site .section-site.servicios .aux-relative .sec-navigation ul li").eq(type-1).trigger('click');
+            setTimeout(function () {
+                $(".site .section-site.servicios .aux-relative .sec-navigation ul li").eq(type-1).trigger('click')
+            }, 300);
+        }
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
     </script>
 @endsection

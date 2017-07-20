@@ -205,7 +205,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
+                        <a href="/servicios?type=1"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
                 <div class="element">
@@ -216,7 +216,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
+                        <a href="/servicios?type=2"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
                 <div class="element">
@@ -227,7 +227,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
+                        <a href="/servicios?type=3"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
                 <div class="element">
@@ -238,7 +238,7 @@
                     <div class="line"></div>
                     <p>Hemos observado en las diversas.</p>
                     <div class="more">
-                        <a href="#"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
+                        <a href="/servicios?type=4"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
                     </div>
                 </div>
             </div>
@@ -407,54 +407,28 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="image-circle" style="background-image: url('/assets/images/home/04_isaosa_img_home_contacto.png')">
-                    <div class="overlay">
-                        <a href="#">
-                            <p>
-                                Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento.
-                            </p>
-                            <p>
-                                <img src="/assets/images/icons/vermas.svg" alt="Ver mas">
-                            </p>
-                        </a>
+            <div class="fake-center">
+            @foreach( $news as $new)
+                <div class="quad">
+                    {{--style="background-image: url('/assets/images/home/04_isaosa_img_home_contacto.png')"--}}
+                    <div class="image-circle">
+                        <div class="overlay">
+                            <a href="#">
+                                <p>
+                                    {{ $new->description }}
+                                </p>
+                                <p>
+                                    <img src="/assets/images/icons/vermas.svg" alt="Ver mas">
+                                </p>
+                            </a>
+                        </div>
                     </div>
+                    <div class="line"></div>
+                    <h4>{{ $new->title }}</h4>
                 </div>
-                <div class="line"></div>
-                <h4>Análisis del suelo</h4>
+            @endforeach
             </div>
-            <div class="col-md-4">
-                <div class="image-circle" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')">
-                    <div class="overlay">
-                        <a href="#">
-                            <p>
-                                Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento.
-                            </p>
-                            <p>
-                                <img src="/assets/images/icons/vermas.svg" alt="Ver mas">
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <h4>PROPIEDADES DE LA TIERRA</h4>
-            </div>
-            <div class="col-md-4">
-                <div class="image-circle" style="background-image: url('/assets/images/extras/isaosa_img_stuff5.jpg')">
-                    <div class="overlay">
-                        <a href="#">
-                            <p>
-                                Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento.
-                            </p>
-                            <p>
-                                <img src="/assets/images/icons/vermas.svg" alt="Ver mas">
-                            </p>
-                        </a>
-                    </div>
-                </div>
-                <div class="line"></div>
-                <h4>PEQUEÑAS COSECHAS</h4>
-            </div>
+
         </div>
         <div class="row">
             <div class="col-md-12">
