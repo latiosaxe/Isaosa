@@ -36,36 +36,28 @@
         <div class="row">
             <div class="col-md-8 no-padding-mobile">
                 <div class="blog-carousel">
-                    <div class="carousel-card">
-                        <div class="container">
-                            <div class="vertical-align">
-                                <h2>NUEVOS ELEMENTOS</h2>
-                                <div class="line"></div>
-                                <p>Lorem ipsum dolor sit amet, consectetur cing elit. Praesent elit ipsum, rhoncus vitae sapien in, ornare aliquet justo. Curabitur sit amet conse</p>
-                                <a href="#">
-                                    <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                                    <span>Leer más</span>
-                                </a>
+
+                    @foreach( $news as $new)
+                        <div class="carousel-card">
+                            <div class="container">
+                                <div class="vertical-align">
+                                    <h2>{{ $new->title }}</h2>
+                                    <div class="line"></div>
+                                    <p>{{ $new->description }}</p>
+                                    <a href="/publicacion/{{ $new->id }}">
+                                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                                        <span>Leer más</span>
+                                    </a>
+                                </div>
                             </div>
+                            {{--background-image: url('/assets/images/home/01_isaosa_img_home_productos2.jpg')--}}
+                            <div class="background" style=""></div>
                         </div>
-                        <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos2.jpg')"></div>
-                    </div>
-                    <div class="carousel-card">
-                        <div class="container">
-                            <div class="vertical-align">
-                                <h2>NUEVA GENERACIÓN</h2>
-                                <div class="line"></div>
-                                <p>Nuevas tecnologías que permiten mayor eficiencia y control en la entrega de nutrientes al suelo.</p>
-                                <a href="/single">
-                                    <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                                    <span>Leer más</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="background" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos2.jpg')"></div>
-                    </div>
+                    @endforeach
+
                 </div>
             </div>
+
             <div class="col-md-4 blog-right desktop-show">
                 <div class="orange-first">
                     <div class="block"></div>
@@ -73,41 +65,18 @@
                 </div>
                 <div class="article-list">
                     <ul>
-                        <li>
-                            <a href="/single">
-                                <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
-                                <span class="title">ANÁLISIS DEL SUELO</span>
-                                <span class="date">08/03/2017</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/single">
-                                <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
-                                <span class="title">ANÁLISIS DEL SUELO</span>
-                                <span class="date">08/03/2017</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/single">
-                                <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
-                                <span class="title">ANÁLISIS DEL SUELO</span>
-                                <span class="date">08/03/2017</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/single">
-                                <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
-                                <span class="title">ANÁLISIS DEL SUELO</span>
-                                <span class="date">08/03/2017</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/single">
-                                <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"></div>
-                                <span class="title">ANÁLISIS DEL SUELO</span>
-                                <span class="date">08/03/2017</span>
-                            </a>
-                        </li>
+                        @foreach( $news as $new)
+                            <li>
+                                <a href="/publicacion/{{ $new->id }}">
+                                    {{--style="background-image: url('/assets/images/extras/isaosa_img_stuff4.jpg')"--}}
+                                    <div class="image"></div>
+                                    <span class="title">{{ $new->title }}</span>
+                                    <span class="date">
+                                        {{ \Carbon\Carbon::parse($new->datetime_created)->format('d/m/Y')}}
+                                    </span>
+                                </a>
+                            </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -118,86 +87,89 @@
         </div>
         <div class="row">
             <div class="col-md-8">
-                <div class="article-preview block-style">
-                    <a href="#">
-                    <div class="row">
-                        <div class="col-md-4 col-xs-4">
-                            <div class="image" style="background-image: url('/assets/images/home/01_isaosa_img_home_productos2.jpg')"></div>
-                        </div>
-                        <div class="col-md-8 col-xs-8">
-                            <div class="pre">
-                                <div class="label">Eventos</div>
-                                <div class="date">08/03/2017</div>
+                @foreach( $news as $new)
+                    <div class="article-preview block-style">
+                        <a href="/publicacion/{{ $new->id }}">
+                            <div class="row">
+                                <div class="col-md-4 col-xs-4">
+                                    {{--background-image: url('/assets/images/home/01_isaosa_img_home_productos2.jpg')"--}}
+                                    <div class="image" style=""></div>
+                                </div>
+                                <div class="col-md-8 col-xs-8">
+                                    <div class="pre">
+                                        <div class="label">NOTICIAS</div>
+                                        <div class="date">{{ \Carbon\Carbon::parse($new->datetime_created)->format('d/m/Y')}}</div>
+                                    </div>
+                                    <h5>
+                                        {{ $new->title }}
+                                    </h5>
+                                    <div class="decription">
+                                        <p>{{ $new->description }}</p>
+                                    </div>
+                                    <div class="cta">
+                                        <button class="btn">LEER MÁS</button>
+                                    </div>
+                                </div>
                             </div>
-                            <h5>
-                                ANÁLISIS DEL SUELO Y COMPONENTES BÁSICOS
-                            </h5>
-                            <div class="decription">
-                                <p>Banksy XOXO seitan street art direct trade flannel letterpress 8-bit occupy vegan PBR&B. Lo-fi cornhole pickled Helvetica. Mixtape cornhole gastropub, single-origin...</p>
-                            </div>
-                            <div class="cta">
-                                <button class="btn">LEER MÁS</button>
-                            </div>
-                        </div>
+                        </a>
                     </div>
-                    </a>
-                </div>
-                <div class="article-preview">
-                    <a href="#">
-                    <div class="row">
-                        <div class="col-md-4 col-xs-4">
-                            <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff3.jpg')"></div>
-                        </div>
-                        <div class="col-md-8 col-xs-8">
-                            <div class="pre">
-                                <div class="label">Eventos</div>
-                                <div class="date">08/03/2017</div>
-                            </div>
-                            <h5>
-                                ANÁLISIS DEL SUELO Y COMPONENTES BÁSICOS
-                            </h5>
-                            <div class="decription">
-                                <p>Banksy XOXO seitan street art direct trade flannel letterpress 8-bit occupy vegan PBR&B. Lo-fi cornhole pickled Helvetica. Mixtape cornhole gastropub, single-origin...</p>
-                            </div>
-                            <div class="cta">
-                                <button class="btn">LEER MÁS</button>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
-                <div class="article-preview">
-                    <a href="#">
-                    <div class="row">
-                        <div class="col-md-4 col-xs-4">
-                            <div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff.jpg')"></div>
-                        </div>
-                        <div class="col-md-8 col-xs-8">
-                            <div class="pre">
-                                <div class="label">Eventos</div>
-                                <div class="date">08/03/2017</div>
-                            </div>
-                            <h5>
-                                ANÁLISIS DEL SUELO Y COMPONENTES BÁSICOS
-                            </h5>
-                            <div class="decription">
-                                <p>Banksy XOXO seitan street art direct trade flannel letterpress 8-bit occupy vegan PBR&B. Lo-fi cornhole pickled Helvetica. Mixtape cornhole gastropub, single-origin...</p>
-                            </div>
-                            <div class="cta">
-                                <button class="btn">LEER MÁS</button>
-                            </div>
-                        </div>
-                    </div>
-                    </a>
-                </div>
+                @endforeach
 
-                <div class="pagination">
-                    <div class="place">PÁGINA 1 / 10</div>
-                    <div class="arrows">
-                        <a href="#" class="prev"></a>
-                        <a href="#" class="next"></a>
-                    </div>
-                </div>
+                {{--<div class="article-preview">--}}
+                    {{--<a href="#">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-4 col-xs-4">--}}
+                            {{--<div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff3.jpg')"></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-8 col-xs-8">--}}
+                            {{--<div class="pre">--}}
+                                {{--<div class="label">Eventos</div>--}}
+                                {{--<div class="date">08/03/2017</div>--}}
+                            {{--</div>--}}
+                            {{--<h5>--}}
+                                {{--ANÁLISIS DEL SUELO Y COMPONENTES BÁSICOS--}}
+                            {{--</h5>--}}
+                            {{--<div class="decription">--}}
+                                {{--<p>Banksy XOXO seitan street art direct trade flannel letterpress 8-bit occupy vegan PBR&B. Lo-fi cornhole pickled Helvetica. Mixtape cornhole gastropub, single-origin...</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="cta">--}}
+                                {{--<button class="btn">LEER MÁS</button>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+                {{--<div class="article-preview">--}}
+                    {{--<a href="#">--}}
+                    {{--<div class="row">--}}
+                        {{--<div class="col-md-4 col-xs-4">--}}
+                            {{--<div class="image" style="background-image: url('/assets/images/extras/isaosa_img_stuff.jpg')"></div>--}}
+                        {{--</div>--}}
+                        {{--<div class="col-md-8 col-xs-8">--}}
+                            {{--<div class="pre">--}}
+                                {{--<div class="label">Eventos</div>--}}
+                                {{--<div class="date">08/03/2017</div>--}}
+                            {{--</div>--}}
+                            {{--<h5>--}}
+                                {{--ANÁLISIS DEL SUELO Y COMPONENTES BÁSICOS--}}
+                            {{--</h5>--}}
+                            {{--<div class="decription">--}}
+                                {{--<p>Banksy XOXO seitan street art direct trade flannel letterpress 8-bit occupy vegan PBR&B. Lo-fi cornhole pickled Helvetica. Mixtape cornhole gastropub, single-origin...</p>--}}
+                            {{--</div>--}}
+                            {{--<div class="cta">--}}
+                                {{--<button class="btn">LEER MÁS</button>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+                {{--<div class="pagination">--}}
+                    {{--<div class="place">PÁGINA 1 / 10</div>--}}
+                    {{--<div class="arrows">--}}
+                        {{--<a href="#" class="prev"></a>--}}
+                        {{--<a href="#" class="next"></a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
             <div class="col-md-4 desktop-show">
                 <div class="block-style">
@@ -206,9 +178,9 @@
                         <span>Categorías</span>
                     </div>
                     <ul>
-                        <li class="label"><a href="#">Eventos</a></li>
-                        <li class="label"><a href="#">Noticias</a></li>
-                        <li class="label"><a href="#">Resultados</a></li>
+                        {{--<li class="label"><a href="#">Eventos</a></li>--}}
+                        <li class="label"><a href="/blog?noticias">Noticias</a></li>
+                        {{--<li class="label"><a href="#">Resultados</a></li>--}}
                     </ul>
                 </div>
                 <div class="block-style">
@@ -217,9 +189,9 @@
                         <span>Archivos</span>
                     </div>
                     <ul>
-                        <li><a href="#">Abril</a></li>
-                        <li><a href="#">Marzo</a></li>
-                        <li><a href="#">Febrero</a></li>
+                        {{--<li><a href="#">Abril</a></li>--}}
+                        {{--<li><a href="#">Marzo</a></li>--}}
+                        <li><a href="#">Julio</a></li>
                     </ul>
                 </div>
 

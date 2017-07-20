@@ -170,7 +170,14 @@ ISAOSA.main = (function(){
 
         if(_$product_elements){
             _$product_elements.on('click', function () {
+                var _$this = $(this);
                 _$product_list.fadeOut(1000, function () {
+                    $("#name-deposit").text(_$this.find(".name-target").text());
+                    $("#avatar-deposit").css( 'background-image', 'url('+_$this.data("image")+')' );
+
+                    $(".tabs .body ul li:eq(0)").html('<p>'+ _$this.data("description") +'</p>');
+                    $(".tabs .body ul li:eq(1)").html(_$this.data("body"));
+
                     setTimeout(function () {
                         _$product_result.hide().removeClass('hidden').fadeIn(1000);
                     }, 300);

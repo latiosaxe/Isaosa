@@ -701,7 +701,7 @@ body{
                 min-height: 350px;
                 position: relative;
                 .vertical-align{
-                    width: 80%;
+                    width: 98%;
                     z-index: 2;
                     padding: 0 50px;
                     position: absolute;
@@ -712,6 +712,7 @@ body{
                         font-size: 50px;
                     }
                     p, span{
+                        width: 70%;
                         font-size: 16px;
                     }
                 }
@@ -749,9 +750,9 @@ body{
         .article-list{
             ul{
                 li{
-                    margin-bottom: 6px;
+                    margin-bottom: 10px;
                     a{
-                        height: 65px;
+                        //height: 65px;
                         display: block;
                         position: relative;
                         text-decoration: none;
@@ -762,7 +763,7 @@ body{
                             width: 65px;
                             height: 65px;
                             position: absolute;
-                            background: center center no-repeat;
+                            background: center center no-repeat $color-datails;
                             background-size: cover;
                             @include transition(width 300ms ease-in-out);
                             &:before{
@@ -782,6 +783,8 @@ body{
                             z-index: 2;
                             color: #000;
                             display: block;
+                            max-height: 33px;
+                            overflow: hidden;
                             font-weight: 700;
                             position: relative;
                             font-size: 11px * $size-factor;
@@ -791,6 +794,7 @@ body{
                             z-index: 2;
                             display: block;
                             color: #B3B3B3;
+                            margin-top: 4px;
                             font-weight: 500;
                             font-style: italic;
                             position: relative;
@@ -830,7 +834,7 @@ body{
                 display: block;
                 position: relative;
                 padding-bottom: 100%;
-                background: center center no-repeat;
+                background: center center no-repeat $color-gray-light;
                 background-size: cover;
                 &:before{
                     content: '';
@@ -1601,7 +1605,8 @@ body{
                         padding: 10px 0;
                         position: relative;
                         &>span{
-                            padding: 10px 0;
+                            display: block;
+                            //padding: 10px 0;
                             color: $color-secondary;
                             font-size: 13px * $size-factor;
                         }
@@ -1661,6 +1666,7 @@ body{
             }
             .result-list{
                 .element{
+                    height: 280px;
                     margin-bottom: 20px;
                     position: relative;
                     .circle{
@@ -1855,6 +1861,36 @@ body{
                                 .title{
                                     line-height: 120%;
                                     font-size: 9px * $size-factor;
+                                }
+                            }
+                        }
+                    }
+                    .tabs{
+                        .body{
+                            &>ul{
+                                &>li{
+                                    ul{
+                                        li{
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                            h2, h3{
+                                font-size: 22px;
+                                color: $color-font;
+                                margin: 30px 0 20px;
+                                span{
+                                    color: $color-font !important;
+                                }
+                            }
+                            table{
+                                width: 100%;
+                                tr{
+                                    td{
+                                        padding: 5px;
+                                        border: 1px solid $color-gray-light;
+                                    }
                                 }
                             }
                         }
@@ -3134,6 +3170,7 @@ body{
                     width: 100%;
                     display: none;
                     text-align: left;
+                    font-size: 16.5px;
                     span{
                         font-size: 16px;
                         padding: 15px 0;
@@ -3149,8 +3186,8 @@ body{
                 }
             }
             .body{
-                ul{
-                    li{
+                &>ul{
+                    &>li{
                         display: block;
                         padding-top: 60px;
                         position: relative;
@@ -3171,6 +3208,13 @@ body{
                         &.byebye{
                             display: none;
                         }
+
+                        ul{
+                            li{
+                                display: block;
+                            }
+                        }
+
                     }
                 }
             }

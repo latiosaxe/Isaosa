@@ -14,9 +14,10 @@
 Route::get('/', function () {
     return view('site.sections.home');
 });
-Route::get('/productos', function () {
-    return view('site.sections.products');
-});
+
+
+Route::resource('productos', 'ProductController');
+
 Route::get('/quienes-somos', function () {
     return view('site.sections.about');
 });
@@ -29,10 +30,6 @@ Route::get('/solicitud', function () {
 Route::get('/alta-de-clientes', function () {
     return view('site.sections.clients');
 });
-Route::get('/blog', function () {
-    return view('site.sections.blog');
-});
 
-Route::get('/single', function () {
-    return view('site.sections.blog-single');
-});
+Route::resource('blog', 'NewsController');
+Route::get('publicacion/{id}', 'NewsController@show');
