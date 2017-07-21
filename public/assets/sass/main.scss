@@ -610,7 +610,7 @@ body{
                         color: #fff;
                         font-weight: 900;
                         font-family: $font-2;
-                        font-size: 50px * $size-factor;
+                        font-size: 45px * $size-factor;
                     }
                     .line{
                         height: 2px;
@@ -709,7 +709,7 @@ body{
                         margin: 15px 0;
                     }
                     h2{
-                        font-size: 50px;
+                        font-size: 40px;
                     }
                     p, span{
                         width: 70%;
@@ -1955,6 +1955,7 @@ body{
                             padding: 10px 50px 10px 0;
                             font-size: 20px * $size-factor;
                             span{
+                                text-transform: uppercase;
                                 color: rgba(255, 255, 255, 0.5);
                                 @include transition (color 300ms ease-in-out);
                             }
@@ -1998,8 +1999,9 @@ body{
                     color: #FFF;
                     font-size: 14px;
                     line-height: 145%;
-                    padding: 20px 20px 70px 20px;
+                    padding: 40px 40px 70px 40px;
                     background: $color-secondary;
+                    min-height: 300px;
                     .icon{
                         width: 100px;
                         height: 100px;
@@ -2665,10 +2667,15 @@ body{
         h4{
             margin-top: 20px;
         }
-        .col-md-4{
+        .quad{
             margin-bottom: 30px;
         }
+        .image-circle .overlay a{
+            font-size: 12px;
+        }
     }
+
+
     .site .home-about_us{
         padding: 20px 0 50px;
 
@@ -2794,8 +2801,14 @@ body{
             border-bottom: 0 !important;
         }
     }
-    .site .home-news .cta{
-        display: none;
+
+    .site .home-news{
+        .fake-center .quad{
+            width: 100%;
+        }
+        .cta{
+            display: none;
+        }
     }
 
     .site footer form{
