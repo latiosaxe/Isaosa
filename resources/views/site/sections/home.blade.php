@@ -433,7 +433,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="cta">
-                    <a href="#" class="btn">Ver más</a>
+                    <a href="/blog" class="btn">Ver más</a>
                 </div>
             </div>
         </div>
