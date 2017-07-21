@@ -1997,7 +1997,7 @@ body{
                 }
                 .orange{
                     color: #FFF;
-                    font-size: 14px; 
+                    font-size: 14px;
                     line-height: 145%;
                     padding: 40px 40px 70px 40px;
                     background: $color-secondary;
@@ -2667,10 +2667,15 @@ body{
         h4{
             margin-top: 20px;
         }
-        .col-md-4{
+        .quad{
             margin-bottom: 30px;
         }
+        .image-circle .overlay a{
+            font-size: 12px;
+        }
     }
+
+
     .site .home-about_us{
         padding: 20px 0 50px;
 
@@ -2796,8 +2801,14 @@ body{
             border-bottom: 0 !important;
         }
     }
-    .site .home-news .cta{
-        display: none;
+
+    .site .home-news{
+        .fake-center .quad{
+            width: 100%;
+        }
+        .cta{
+            display: none;
+        }
     }
 
     .site footer form{
