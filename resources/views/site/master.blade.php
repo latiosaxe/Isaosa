@@ -37,12 +37,12 @@
     </div>
     <ul>
         <li><a href="/productos">PRODUCTOS</a></li>
-        <li><a href="#">CALCULADORA</a></li>
+        {{--<li><a href="#">CALCULADORA</a></li>--}}
         <li><a href="/servicios">SERVICIOS</a></li>
-        <li><a href="#">BODEGAS</a></li>
+        <li><a href="/#bodegas">BODEGAS</a></li>
         <li><a href="/blog">NOTICIAS</a></li>
         <li><a href="/quieres-somos">QUIÉNES SOMOS</a></li>
-        <li><a href="#">CONTACTO</a></li>
+        <li><a href="/#contacto">CONTACTO</a></li>
         <li>
             <span>ACCESO INTERNO</span>
             <ul>
@@ -66,15 +66,14 @@
             <div class="col-md-8 col-sm-6 col-xs-6 text-right header-margin-up">
                 <div class="links">
                     <ul>
-                        <li><a href="#" target="_blank"><img src="/assets/images/icons/fb.svg" alt="Facebook"></a></li>
-                        <li><a href="#" target="_blank"><img src="/assets/images/icons/tw.svg" alt="Twitter"></a></li>
-                        <li><a href="#" target="_blank"><img src="/assets/images/icons/youtube.svg" alt="YouTube"></a></li>
+                        <li><a href="https://www.facebook.com/ISAOSA-164861660285225/" target="_blank"><img src="/assets/images/icons/fb.svg" alt="Facebook"></a></li>
+                        <li><a href="https://twitter.com/isaosa_mexico" target="_blank"><img src="/assets/images/icons/tw.svg" alt="Twitter"></a></li>
+                        <li><a href="https://www.youtube.com/user/IsaosaSoluciones" target="_blank"><img src="/assets/images/icons/youtube.svg" alt="YouTube"></a></li>
                     </ul>
                 </div>
                 <div class="pipe"></div>
                 <a href="#" class="header-menu">
                     <span>Menú</span>
-
                     <div class="hamburguer-bt">
                         <div class="hamburguer-bt__stripe hamburguer-bt__stripe__top"></div>
                         <div class="hamburguer-bt__stripe hamburguer-bt__stripe__middle"></div>

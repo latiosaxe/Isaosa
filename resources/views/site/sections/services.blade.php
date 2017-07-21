@@ -199,7 +199,7 @@
     </div>
     <div class="background-image"></div>
 
-    <div class="go-up-action" style="bottom: 30px;"> 
+    <div class="go-up-action" style="bottom: 30px;">
         <img src="/assets/images/icons/ir_arriba.svg" alt="Ir arriba">
     </div>
 </div>

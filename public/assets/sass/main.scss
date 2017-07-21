@@ -121,9 +121,11 @@ body{
 .mobile-menu{
     top: 0;
     bottom: 0;
-    width: 100%;
+    //width: 100%;
+    width: 350px;
     z-index: 102;
-    right: -100%;
+    //right: -100%;
+    right: -350px;
     overflow: auto;
     position: fixed;
     background: rgba(0,0,0,0.75);
@@ -3598,6 +3600,10 @@ body{
 }
 
 @media (max-width:480px)  {
+    .mobile-menu{
+        width: 100%;
+        right: -100%;
+    }
     .site .section-site.productos .sec-menu > ul > li{
         span{
             font-size: 13px;

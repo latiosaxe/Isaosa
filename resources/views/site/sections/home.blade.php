@@ -251,7 +251,7 @@
         <div class="alt-image"></div>
     </div>
 </section>
-<section class="home-locations">
+<section class="home-locations" id="#bodegas">
     <div class="container">
         <div class="relative">
             <div class="head">
@@ -468,7 +468,7 @@
         </div>
     </div>
 </section>
-<section class="home-contact relative">
+<section class="home-contact relative" id="contacto">
     <div class="container">
         <h4><span>Contacto</span></h4>
         <div class="row">
