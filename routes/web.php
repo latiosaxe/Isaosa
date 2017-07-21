@@ -15,12 +15,12 @@ Route::resource('/', 'HomeController');
 
 
 Route::resource('productos', 'ProductController');
+Route::resource('servicios', 'ServiceController');
+
+
 
 Route::get('/quienes-somos', function () {
     return view('site.sections.about');
-});
-Route::get('/servicios', function () {
-    return view('site.sections.services');
 });
 Route::get('/solicitud', function () {
     return view('site.sections.request');
