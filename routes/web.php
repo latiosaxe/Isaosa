@@ -31,3 +31,5 @@ Route::get('/alta-de-clientes', function () {
 
 Route::resource('blog', 'NewsController');
 Route::get('publicacion/{id}', 'NewsController@show');
+
+Route::get('sendEmail', 'MailController@basic_email');

@@ -1241,6 +1241,7 @@ body{
             display: inline-block;
             .quad{
                 float: none;
+                position: relative;
                 vertical-align: top;
                 display: inline-block;
                 width: 33.33%;
@@ -3633,6 +3634,16 @@ body{
                 font-size: 18px;
             }
         }
+    }
+}
+
+.fakeFileInput{
+    overflow: hidden;
+    position: relative;
+    input[type="file"]{
+        top: -100px;
+        position: absolute;
+        display: block !important;
     }
 }
 

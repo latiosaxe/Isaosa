@@ -410,5 +410,11 @@
 @section('javascript')
     <script>
         $('header').addClass('block');
+
+        $(".fakeFileInput .text").on('click', function () {
+            var input = $(this).closest('.fakeFileInput').find('.hidden');
+            console.log( input );
+            input.trigger('click');
+        });
     </script>
 @endsection
