@@ -16,8 +16,10 @@ class HomeController extends Controller
     {
 
         $news = DB::table('news')->take(3)->get();
+        $services = DB::table('services')->where('active', 1)->get();
 
         $data = [
+            'services'  => $services,
             'news'  => $news,
         ];
         return view('site.sections.home', $data);

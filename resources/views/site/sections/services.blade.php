@@ -41,16 +41,15 @@
                         {{--<span>ÁREA<br/>TÉCNICA</span>--}}
                     {{--</li>--}}
                 </ul>
-
-
-                <div class="go-up-action">
-                    <img src="/assets/images/icons/ir_arriba.svg" alt="Ir arriba">
-                </div>
             </div>
             <div class="col-md-8 orange">
                 <ul class="descriptions">
                     @foreach( $services as $service)
                         <li>
+                            <img src="{{ $service->icon  }}" alt="{{$service->name }}" class="icon">
+                            <div class="mobile-show">
+                                <div class="title-2">{{$service->name }}</div>
+                            </div>
                             {!! $service->body !!}
                         </li>
                     @endforeach
@@ -200,8 +199,10 @@
     </div>
     <div class="background-image"></div>
 
+    <div class="go-up-action" style="bottom: 30px;"> 
+        <img src="/assets/images/icons/ir_arriba.svg" alt="Ir arriba">
+    </div>
 </div>
-
 @endsection
 @section('javascript')
     <script>

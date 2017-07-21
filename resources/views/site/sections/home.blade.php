@@ -197,50 +197,55 @@
         <div class="content">
             <div class="title">SERVICIOS</div>
             <div class="grid">
-                <div class="element">
-                    <div class="icon">
-                        <img src="/assets/images/icons/parcelas.svg" alt="Parcelas demostrativas">
+                <?php $i = 1 ?>
+                @foreach($services as $service)
+                    <div class="element">
+                        <div class="icon">
+                            <img src="{{ $service->icon }}" alt="{{ $service->name }}">
+                        </div>
+                        <h3>{{ $service->name }}</h3>
+                        <div class="line"></div>
+                        <p>{{ $service->description }}.</p>
+                        <div class="more">
+                            <a href="/servicios?type={{ $i }}"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
+                        </div>
                     </div>
-                    <h3>PARCELAS<br/>DEMOSTRATIVAS</h3>
-                    <div class="line"></div>
-                    <p>Hemos observado en las diversas.</p>
-                    <div class="more">
-                        <a href="/servicios?type=1"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
-                    </div>
-                </div>
-                <div class="element">
-                    <div class="icon">
-                        <img src="/assets/images/icons/analisis_suelo.svg" alt="Análisis del suelo">
-                    </div>
-                    <h3>ANÁLISIS<br/>DEL SUELO</h3>
-                    <div class="line"></div>
-                    <p>Hemos observado en las diversas.</p>
-                    <div class="more">
-                        <a href="/servicios?type=2"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
-                    </div>
-                </div>
-                <div class="element">
-                    <div class="icon">
-                        <img src="/assets/images/icons/analisis_foliar.svg" alt="Análisis foliar">
-                    </div>
-                    <h3>ANÁLISIS<br/>FOLIAR</h3>
-                    <div class="line"></div>
-                    <p>Hemos observado en las diversas.</p>
-                    <div class="more">
-                        <a href="/servicios?type=3"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
-                    </div>
-                </div>
-                <div class="element">
-                    <div class="icon">
-                        <img src="/assets/images/icons/analisis_tecnico.svg" alt="Análisis técnico">
-                    </div>
-                    <h3>ÁREA<br/>TÉCNICA</h3>
-                    <div class="line"></div>
-                    <p>Hemos observado en las diversas.</p>
-                    <div class="more">
-                        <a href="/servicios?type=4"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>
-                    </div>
-                </div>
+                    <?php $i++ ?>
+                @endforeach
+
+                {{--<div class="element">--}}
+                    {{--<div class="icon">--}}
+                        {{--<img src="/assets/images/icons/analisis_suelo.svg" alt="Análisis del suelo">--}}
+                    {{--</div>--}}
+                    {{--<h3>ANÁLISIS<br/>DEL SUELO</h3>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Hemos observado en las diversas.</p>--}}
+                    {{--<div class="more">--}}
+                        {{--<a href="/servicios?type=2"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="element">--}}
+                    {{--<div class="icon">--}}
+                        {{--<img src="/assets/images/icons/analisis_foliar.svg" alt="Análisis foliar">--}}
+                    {{--</div>--}}
+                    {{--<h3>ANÁLISIS<br/>FOLIAR</h3>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Hemos observado en las diversas.</p>--}}
+                    {{--<div class="more">--}}
+                        {{--<a href="/servicios?type=3"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+                {{--<div class="element">--}}
+                    {{--<div class="icon">--}}
+                        {{--<img src="/assets/images/icons/analisis_tecnico.svg" alt="Análisis técnico">--}}
+                    {{--</div>--}}
+                    {{--<h3>ÁREA<br/>TÉCNICA</h3>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Hemos observado en las diversas.</p>--}}
+                    {{--<div class="more">--}}
+                        {{--<a href="/servicios?type=4"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
             </div>
         </div>
         <div class="alt-image"></div>

@@ -1047,6 +1047,8 @@ body{
                     }
                     p{
                         color: #fff;
+                        height: 27px;
+                        overflow: hidden;
                     }
                     a{
                         display: block;
@@ -2010,6 +2012,12 @@ body{
                     .descriptions{
                         li{
                             display: none;
+                            h2, p, a{
+                                color: #FFF !important;
+                            }
+                            h2{
+                                line-height: 120%;
+                            }
                             p{
                                 margin-bottom: 20px;
                             }
