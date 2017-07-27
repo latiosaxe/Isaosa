@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- meta section -->
-    <title>Tercer Cuarto</title>
+    <title>Isaosa</title>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
@@ -52,7 +52,7 @@
     <div class="dev-page-header">
 
         <div class="dph-logo">
-            <a href="/control/dashboard">Tercer Cuarto</a>
+            <a href="/control/dashboard">Isaosa</a>
             <a class="dev-page-sidebar-collapse" style="display: none;">
                 <div class="dev-page-sidebar-collapse-icon">
                     <span class="line-one"></span>

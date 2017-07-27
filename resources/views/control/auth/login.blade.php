@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- meta section -->
-    <title>Iniciar Sesión | Tercer Cuarto</title>
+    <title>Iniciar Sesión | Isaosa</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge" >
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" >
@@ -32,7 +32,7 @@
 <div class="dev-page dev-page-login">
 
     <div class="dev-page-login-block">
-        <a class="dev-page-login-block__logo">CMS Tercer Cuarto</a>
+        <a class="dev-page-login-block__logo">CMS Isaosa</a>
         <div class="dev-page-login-block__form">
             {{--<div class="title"><strong>Welcome</strong>, please login</div>--}}
             <form id="loginForm">

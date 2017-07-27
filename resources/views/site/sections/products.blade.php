@@ -19,7 +19,6 @@
             <div class="col-md-3 no-padding-mobile">
                 <div class="sec-menu">
                     <ul>
-
                         @foreach($categories as $category)
                         <li>
                             <span>{{ $category->name }}</span>
@@ -157,10 +156,28 @@
                     $(".site .section-site.productos .single-element-view .right-moment .tabs .body ul li.mobile-content").addClass('byebye');
 
                 }else{
-                    $(this).addClass('showed')
+                    $(this).addClass('showed');
                     $(".site .section-site.productos .single-element-view .right-moment .tabs .body ul li.mobile-content").removeClass('byebye');
                 }
             });
+        }
+
+        var type = parseInt(getParameterByName('data'));
+        console.log(type);
+        setTimeout(function () {
+            if(type>0){
+                $(".site .section-site.productos .sec-menu > ul > li").eq(type-1).find('span').trigger('click');
+            }
+        }, 300);
+
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
         }
     </script>
 @endsection

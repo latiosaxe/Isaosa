@@ -8,7 +8,7 @@
                     <h2>NUEVA GENERACIÓN</h2>
                     <div class="line"></div>
                     <p>Nuevas tecnologías que permiten mayor eficiencia y control en la entrega de nutrientes al suelo.</p>
-                    <a href="#">
+                    <a href="productos?data=1">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -22,7 +22,7 @@
                     <h2>MEZCLA VALOR AGREGADO</h2>
                     <div class="line"></div>
                     <p>Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento de sus cultivos.</p>
-                    <a href="#">
+                    <a href="productos?data=2">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -36,7 +36,7 @@
                     <h2>LÍQUIDOS</h2>
                     <div class="line"></div>
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
-                    <a href="#">
+                    <a href="productos?data=3">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -50,7 +50,7 @@
                     <h2>SOLUBLES</h2>
                     <div class="line"></div>
                     <p>Maxima tecnología en cada gota</p>
-                    <a href="#">
+                    <a href="productos?data=4">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -64,7 +64,7 @@
                     <h2>FOLIARES</h2>
                     <div class="line"></div>
                     <p>La mejor nutrición en el menor tiempo</p>
-                    <a href="#">
+                    <a href="productos?data=5">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -78,7 +78,7 @@
                     <h2>NPK ESPECIALIDAD</h2>
                     <div class="line"></div>
                     <p>Los mejores nutrientes en el mejor balance</p>
-                    <a href="#">
+                    <a href="productos?data=6">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -92,7 +92,7 @@
                     <h2>COMMODITIES</h2>
                     <div class="line"></div>
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
-                    <a href="#">
+                    <a href="productos?data=7">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
