@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../assets/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="../assets/plugins/slick/slick.css">
     <link rel="stylesheet" href="../assets/plugins/slick/slick-theme.css">
+    <link rel="stylesheet" href="../assets/plugins/sweetalert/sweetalert.css">
     <!--<link rel="stylesheet" href="assets/plugins/owl/assets/owl.carousel.min.css">-->
     <!--<link rel="stylesheet" href="assets/plugins/owl/assets/owl.theme.default.min.css">-->
     <link rel="stylesheet" href="../assets/css/main.css">
@@ -129,6 +130,7 @@
 <script src="../assets/scripts/libs/money.js"></script>
 <script src="../assets/scripts/libs/jquery.simpleWeather.min.js"></script>
 <script src="../assets/plugins/slick/slick.min.js"></script>
+<script src="../assets/plugins/sweetalert/sweetalert.min.js"></script>
 <script src="../assets/scripts/script.js"></script>
 <script>
     $(document).ready(function(){

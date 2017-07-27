@@ -33,3 +33,6 @@ Route::resource('blog', 'NewsController');
 Route::get('publicacion/{id}', 'NewsController@show');
 
 Route::get('sendEmail', 'MailController@basic_email');
+
+
+Route::post('uploadFile', 'UploadController@upload');

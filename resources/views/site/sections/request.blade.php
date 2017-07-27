@@ -294,7 +294,7 @@
                             <fieldset>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="acta-constitutiva">
                                         <div class="text">
                                             <span>Acta constitutiva</span>
                                         </div>
@@ -302,7 +302,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="constancia-situacion-fiscal">
                                         <div class="text">
                                             <span>Constancia de situación fiscal</span>
                                         </div>
@@ -310,23 +310,23 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="poder-notarial">
                                         <div class="text">
                                             <span>Poder notarial del representante o persona</span>
                                         </div>
                                     </div>
                                 </div>
+                                {{--<div class="col-md-6">--}}
+                                    {{--<div class="fakeFileInput">--}}
+                                        {{--<input type="file" class="hidden" id="acta">--}}
+                                        {{--<div class="text">--}}
+                                            {{--<span>Acta constitutiva</span>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
-                                        <div class="text">
-                                            <span>Acta constitutiva</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="identificacion-oficial">
                                         <div class="text">
                                             <span>Identificación oficial del apoderado y/o aval</span>
                                         </div>
@@ -334,7 +334,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="comprobante-curp">
                                         <div class="text">
                                             <span>Comprobante del CURP</span>
                                         </div>
@@ -342,7 +342,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="formato-32-d">
                                         <div class="text">
                                             <span>Formato 32-D</span>
                                         </div>
@@ -364,19 +364,19 @@
                             <fieldset>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="estado-ultimo">
                                         <div class="text">
                                             <span>Último año</span>
                                         </div>
                                     </div>
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="estado-segundo">
                                         <div class="text">
                                             <span>Segundo año</span>
                                         </div>
                                     </div>
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden">
+                                        <input type="file" class="hidden" id="estado-tercer">
                                         <div class="text">
                                             <span>Tercer año</span>
                                         </div>
@@ -416,5 +416,51 @@
             console.log( input );
             input.trigger('click');
         });
+
+        $("input[type='file']").on('change', function () {
+            var _$this = $(this),
+                input = this,
+                file,
+                size;
+            if(_$this.hasClass('hidden')){
+                console.log(input);
+
+                if (!window.FileReader) {
+//                    bodyAppend("p", "The file API isn't supported on this browser yet.");
+                    return;
+                }
+
+                if (!input) {
+                    console.log("NO archivo");
+                }
+                else if (!input.files) {
+                    console.log(input);
+                    console.log("Navegador antiguo")
+                }
+                else if (!input.files[0]) {
+                    console.log("Por favor selecciona un archivo")
+                }
+                else {
+                    file = input.files[0];
+                    size = input.files[0].size/1024/1024;
+                    console.log("Nombre: " + file.name);
+                    console.log("Size: " +size);
+
+                    if(size <= 10){
+                        var fileData = file;
+                        var request = new XMLHttpRequest();
+                        request.open('post', '/uploadFile');
+                        request.addEventListener('load', uploadComplete);
+                        request.send(fileData);
+
+                    }else{
+                        swal("El archivo es muy pesado", "Favor de subir un archivo no mayor a 10MB");
+                    }
+                }
+            }
+            function uploadComplete(data) {
+                console.log(data.currentTarget.respone);
+            }
+        })
     </script>
 @endsection
