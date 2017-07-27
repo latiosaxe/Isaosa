@@ -15,7 +15,6 @@
     <link rel="stylesheet" type="text/css" href="/assets/control/plugins/dropzone/dropzone.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/control/plugins/redactor/redactor.css">
     <link rel="stylesheet" type="text/css" href="/assets/intuitive/css/default-blue-white.css" id="dev-css">
-    <link rel="stylesheet" type="text/css" href="/assets/style/style-control.css">
     <!-- ./css styles -->
 
     <!--[if lte IE 9]>
@@ -159,13 +158,6 @@
 <script type="text/javascript" src="/assets/intuitive/js/demo-dashboard.js"></script>
 
 <script type="text/javascript" src="/assets/control/js/main.js"></script>
-<script type="text/javascript" src="/assets/control/js/teams.js"></script>
-<script type="text/javascript" src="/assets/control/js/leagues.js"></script>
-<script type="text/javascript" src="/assets/control/js/matches.js"></script>
-<script type="text/javascript" src="/assets/control/js/stadiums.js"></script>
-<script type="text/javascript" src="/assets/control/js/posts.js"></script>
-<script type="text/javascript" src="/assets/control/js/featured.js"></script>
-
 <script>
     $(document).ready(function(){
        TC.main.init();

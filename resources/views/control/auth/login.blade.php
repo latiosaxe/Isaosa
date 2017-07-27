@@ -77,7 +77,9 @@
             data.password = $("#password").val();
 
             data._token = $('meta[name="csrf-token"]').attr('content');
-            
+
+            console.log(data);
+
             $.ajax({
                 url: '/authenticate',
                 data: data,

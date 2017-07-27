@@ -22,7 +22,7 @@ class AuthController extends Controller
         $username = $request->input('username', '');
         $password = $request->input('password', '');
 
-        if (Auth::attempt(['email' => $username, 'password' => $password])) {
+        if (Auth::attempt(['username' => $username, 'password' => $password])) {
             return response()->json(['message' => 'ok']);
 
 //            return redirect()->intended('dashboard');
