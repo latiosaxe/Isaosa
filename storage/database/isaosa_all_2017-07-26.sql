@@ -5,9 +5,9 @@
 # http://www.sequelpro.com/
 # https://github.com/sequelpro/sequelpro
 #
-# Host: 127.0.0.1 (MySQL 5.7.16)
+# Host: 127.0.0.1 (MySQL 5.7.19)
 # Database: isaosa_all
-# Generation Time: 2017-07-21 01:10:39 +0000
+# Generation Time: 2017-07-27 00:43:17 +0000
 # ************************************************************
 
 
