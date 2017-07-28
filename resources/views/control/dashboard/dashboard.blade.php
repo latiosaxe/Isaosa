@@ -1,19 +1,15 @@
 @extends ('control.master')
 @section ('content')
-<div class="wrapper">
-    <div class="row">
-        <div class="co-md-12">
-            <h3>Foto de la semana</h3>
-        </div>
-    </div>
-</div>
 
 <div class="wrapper wrapper-white">
     <div class="page-subtitle">
-        <h2>Bienvenido al panel de administración de Isaosa</h2>
+        <h2>Bienvenido al panel de administración de Isaosa <strong>{{ $user }}</strong></h2>
     </div>
-
-
+</div>
+<div class="wrapper">
+    {{--<div class="page-subtitle">--}}
+        {{--<h2>Bienvenido al panel de administración de Isaosa <strong>{{ $user }}</strong></h2>--}}
+    {{--</div>--}}
 </div>
 
 @endsection
@@ -23,7 +19,6 @@
 @section('javascript')
     <script>
         $(document).ready(function(){
-            TC.featured.init();
             Dropzone.options.imageGallery = {
                 paramName: "file",
                 autoProcessQueue: true,

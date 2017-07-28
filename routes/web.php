@@ -41,4 +41,12 @@ Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace
         return redirect('control/dashboard');
     });
     Route::get('dashboard', 'DashboardController@index');
+    Route::resource('blog', 'BlogController');
+    Route::resource('categorias', 'CategoriesController');
+});
+
+
+Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'api', 'namespace' => 'API'], function(){
+    Route::post('image', 'AdminController@uploadImage');
+    Route::post('images/delete/{id}', 'AdminController@deleteImage');
 });

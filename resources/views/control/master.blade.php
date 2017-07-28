@@ -69,34 +69,14 @@
         <!-- page sidebar -->
         <div class="dev-page-sidebar">
             <ul class="dev-page-navigation">
-
-
                 <li class="active">
                     <a href="/control/dashboard"><i class="fa fa-desktop"></i> <span>Inicio</span></a>
                 </li>
-
                 <li>
-                    <a href="/control/matches"><i class="fa fa-calendar"></i> <span>Partidos</span></a>
-                </li>
-
-
-                <li>
-                    <a href="/control/posts"><i class="fa fa-pencil"></i> <span>Notas</span></a>
-                </li>
-
-
-
-                <li class="title">Administrar</li>
-
-                <li>
-                    <a href="/control/leagues"><i class="fa fa-users"></i> <span>Ligas</span></a>
+                    <a href="/control/blog"><i class="fa fa-calendar"></i> <span>Noticias</span></a>
                 </li>
                 <li>
-                    <a href="/control/teams"><i class="fa fa-user"></i> <span>Equipos</span></a>
-                </li>
-
-                <li>
-                    <a href="/control/stadiums"><i class="fa fa-compass"></i> <span>Estadios</span></a>
+                    <a href="/control/categorias"><i class="fa fa-calendar"></i> <span>Categorias</span></a>
                 </li>
 
             </ul>
@@ -158,6 +138,8 @@
 <script type="text/javascript" src="/assets/intuitive/js/demo-dashboard.js"></script>
 
 <script type="text/javascript" src="/assets/control/js/main.js"></script>
+<script type="text/javascript" src="/assets/control/js/blog.js"></script>
+<script type="text/javascript" src="/assets/control/js/categories.js"></script>
 <script>
     $(document).ready(function(){
        TC.main.init();
