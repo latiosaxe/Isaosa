@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\Control;
 
-use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -28,12 +27,10 @@ class CategoriesController extends Controller
         ];
         return view('control.categories.show', $data);
     }
-
-
+    
     public function store(Request $request){
         $status = 400;
         $data = (object)['message' => ''];
-        $current_time = Carbon::now()->format('Y-m-d H:i:s');
         try {
             $post = DB::table('products_category')->insert([
                 'uid' => $request->input('uid', ''),
@@ -52,7 +49,6 @@ class CategoriesController extends Controller
         $status = 400;
         $data = (object)['message' => ''];
 
-        $current_time = Carbon::now()->format('Y-m-d H:i:s');
         try{
             $post = DB::table('products_category')
                 ->where('id', $id)

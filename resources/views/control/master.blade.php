@@ -70,17 +70,18 @@
         <div class="dev-page-sidebar">
             <ul class="dev-page-navigation">
                 <li class="active">
-                    <a href="/control/dashboard"><i class="fa fa-desktop"></i> <span>Inicio</span></a>
+                    <a href="/control/dashboard"><i class="fa fa-desktop"></i><span>Inicio</span></a>
                 </li>
                 <li>
-                    <a href="/control/blog"><i class="fa fa-calendar"></i> <span>Noticias</span></a>
+                    <a href="/control/blog"><i class="fa fa-calendar"></i><span>Noticias</span></a>
                 </li>
                 <li>
-                    <a href="/control/categorias"><i class="fa fa-calendar"></i> <span>Categorias</span></a>
+                    <a href="/control/categorias"><i class="fa fa-calendar"></i><span>Categorias</span></a>
                 </li>
-
+                <li>
+                    <a href="/control/productos"><i class="fa fa-calendar"></i><span>Productos</span></a>
+                </li>
             </ul>
-
         </div>
         <!-- ./page sidebar -->
 
@@ -140,6 +141,7 @@
 <script type="text/javascript" src="/assets/control/js/main.js"></script>
 <script type="text/javascript" src="/assets/control/js/blog.js"></script>
 <script type="text/javascript" src="/assets/control/js/categories.js"></script>
+<script type="text/javascript" src="/assets/control/js/productos.js"></script>
 <script>
     $(document).ready(function(){
        TC.main.init();

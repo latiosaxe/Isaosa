@@ -43,6 +43,7 @@ Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace
     Route::get('dashboard', 'DashboardController@index');
     Route::resource('blog', 'BlogController');
     Route::resource('categorias', 'CategoriesController');
+    Route::resource('productos', 'ProductsController');
 });
 
 
