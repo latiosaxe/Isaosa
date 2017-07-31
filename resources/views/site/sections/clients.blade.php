@@ -35,10 +35,10 @@
                             </div>
                             <div class="col-md-12 ">
                                 <div class="fakeFileInput">
-                                    <input type="file" id="constancia-situacion-fiscal">
-                                    {{--<div class="text">--}}
-                                        {{--<span>Constancia de Situación Fiscal</span>--}}
-                                    {{--</div>--}}
+                                    <input type="file" class="hidden" id="constancia-situacion-fiscal">
+                                    <div class="text">
+                                        <span>Constancia de Situación Fiscal</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-md-12">
