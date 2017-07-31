@@ -76,15 +76,21 @@
                     <a href="/control/blog"><i class="fa fa-calendar"></i><span>Noticias</span></a>
                 </li>
                 <li>
-                    <a href="/control/categorias"><i class="fa fa-calendar"></i><span>Categorias</span></a>
+                    <a href="/control/categorias"><i class="fa fa-book"></i><span>Categorias</span></a>
                 </li>
                 <li>
-                    <a href="/control/productos"><i class="fa fa-calendar"></i><span>Productos</span></a>
+                    <a href="/control/productos"><i class="fa fa-cube"></i><span>Productos</span></a>
                 </li>
                 <li>
-                    <a href="/control/productos"><i class="fa fa-calendar"></i><span>Servicios</span></a>
+                    <a href="/control/servicios"><i class="fa fa-cubes"></i><span>Servicios</span></a>
                 </li>
             </ul>
+            <br>
+            <div class="dev-page-navigation">
+                <p style="text-align: center; padding: 20px 0;">
+                    <a href="/" style="display: block; color: #FFF;"><i class="fa fa-desktop"></i><span> Sitio Isaosa</span></a>
+                </p>
+            </div>
         </div>
         <!-- ./page sidebar -->
 
@@ -145,6 +151,7 @@
 <script type="text/javascript" src="/assets/control/js/blog.js"></script>
 <script type="text/javascript" src="/assets/control/js/categories.js"></script>
 <script type="text/javascript" src="/assets/control/js/productos.js"></script>
+<script type="text/javascript" src="/assets/control/js/services.js"></script>
 <script>
     $(document).ready(function(){
        TC.main.init();
