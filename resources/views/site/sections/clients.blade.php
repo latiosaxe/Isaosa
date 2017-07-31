@@ -16,12 +16,12 @@
                         <div class="row">
                             <div class="col-md-12 element fake-select margin-botom-20">
                                 <select name="regimen-fiscal" id="regimen-de-ventas">
-                                    <option value=" ">Ejecutivo de Ventas</option>
+                                    <option value="1">Ejecutivo de Ventas</option>
                                 </select>
                             </div>
                             <div class="col-md-12 element fake-select margin-botom-20">
                                 <select name="regimen-fiscal" id="regimen-fiscal">
-                                    <option value=" ">Régimen Fiscal</option>
+                                    <option value="1">Régimen Fiscal</option>
                                 </select>
                             </div>
                             <div class="col-md-12 element margin-botom-20">

@@ -30,7 +30,7 @@ class FormsController extends Controller
             $image = $request->file($inputName);
             $new_image_name = $inputName.'.'.$image->getClientOriginalExtension();
             $s3 = Storage::disk('s3');
-            $file_path = "/clientes/{$uid}/{$new_image_name}";
+            $file_path = "clientes/{$uid}/{$new_image_name}";
             $full_path = env('AWS_BASE') . $file_path;
             $s3->put($file_path, file_get_contents($image), 'public');
 
