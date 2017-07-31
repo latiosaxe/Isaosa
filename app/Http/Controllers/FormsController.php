@@ -28,7 +28,7 @@ class FormsController extends Controller
     private function aws(Request $request, $inputName, $uid){
         try {
             $image = $request->file($inputName);
-
+            dd($image, $inputName);
             $new_image_name = $inputName.'.'.$image->getClientOriginalExtension();
             $s3 = Storage::disk('s3');
             $file_path = "/clientes/{$uid}/{$new_image_name}";
@@ -38,7 +38,7 @@ class FormsController extends Controller
 //            $data['status'] = 'Updated';
 //            $data['src'] = $full_path;
             $status = 200;
-            return $file_path;
+            return $full_path;
 
         } catch (Exception $e) {
 //            $data['message'] = 'Error';
