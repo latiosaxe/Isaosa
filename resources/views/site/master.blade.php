@@ -20,6 +20,8 @@
     <meta property="og:title"         content="ISAOSA" />
     <meta property="og:description"   content="ISAOSA nutrientes agrícolas" />
     <meta property="og:image"         content="/assets/images/home/nuevas/_5.jpg" />
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <!-- Load Facebook SDK for JavaScript -->
@@ -134,6 +136,15 @@
 <script src="../assets/scripts/script.js"></script>
 <script>
     $(document).ready(function(){
+        var _token =  $('meta[name="csrf-token"]').attr('content');
+//        console.info(_token);
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': _token
+            }
+        });
+
+
         ISAOSA.main.init();
 
         var demo = function(data) {

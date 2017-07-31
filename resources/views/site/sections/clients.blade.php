@@ -151,6 +151,7 @@
 @section('javascript')
     <script>
         $(document).ready(function () {
+
             $('header').addClass('block');
 
             $(".fakeFileInput .text").on('click', function () {

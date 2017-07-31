@@ -22,7 +22,7 @@ Route::group(['middleware' => ['web']], function(){
         return view('site.sections.request');
     });
     Route::get('alta-de-clientes', 'FormsController@clients');
-    Route::post('alta-de-clientes', 'FormsController@Newclients');
+    Route::post('alta-de-clientes', 'FormsController@Newclient');
 
     Route::resource('blog', 'NewsController');
     Route::get('publicacion/{id}', 'NewsController@show');
