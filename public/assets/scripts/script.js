@@ -159,13 +159,9 @@ ISAOSA.main = (function(){
         }
 
         if(_$servicios_tab){
-
             _$servicios_tab.find('.head li').on('click', function(){
                 _$servicios_tab.find('.head li').removeClass('active');
                 $(this).addClass('active');
-
-                console.log($(this).index());
-
                 $(".site .section-site.servicios .aux-relative .orange .descriptions > li").removeClass('active');
                 $(".site .section-site.servicios .aux-relative .orange .descriptions > li").eq($(this).index()).addClass('active');
             });

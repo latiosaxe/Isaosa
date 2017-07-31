@@ -154,8 +154,6 @@
             console.log("MXN = $" + rate.toFixed(2));
         };
 
-        var clima = function (data) {};
-
         $.getJSON("http://api.fixer.io/latest", demo);
 
         var _positions = [

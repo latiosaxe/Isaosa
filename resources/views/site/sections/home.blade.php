@@ -320,8 +320,8 @@
                     </div>
                 </div>
             </div>
-            <div class="desktop-show">
-                <div class="body">
+            <div class="desktop-show" style="width: 100%;"> 
+                <div class="body" style="width: 100%;">
                     <div id="map"></div>
                 </div>
             </div>
@@ -591,18 +591,18 @@
                 map.setZoom(14);
             });
 
-            GMaps.geolocate({
-                success: function(position) {
-//                    map.setCenter(position.coords.latitude, position.coords.longitude);
-                    loadWeather(position.coords.latitude+','+ position.coords.longitude);
-                },
-                error: function(error) {
-//                    alert('Error al localizar: '+error.message);
-                },
-                not_supported: function() {
-//                    alert("Tu navegador no cuenta con posibilidad de geolocalización");
-                }
-            });
+//            GMaps.geolocate({
+//                success: function(position) {
+////                    map.setCenter(position.coords.latitude, position.coords.longitude);
+//                    loadWeather(position.coords.latitude+','+ position.coords.longitude);
+//                },
+//                error: function(error) {
+////                    alert('Error al localizar: '+error.message);
+//                },
+//                not_supported: function() {
+////                    alert("Tu navegador no cuenta con posibilidad de geolocalización");
+//                }
+//            });
 
         }
     </script>
