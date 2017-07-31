@@ -201,7 +201,6 @@
         var doc = document.documentElement;
         $(window).scroll(function(){
             posititonWindow = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
-            console.log(posititonWindow);
             if(posititonWindow > 100){
                 $('header').addClass('home-active-special');
             }else{

@@ -152,6 +152,7 @@
     <script>
         $(document).ready(function () {
 
+            var formData;
             $('header').addClass('block');
 
             $(".fakeFileInput .text").on('click', function () {
@@ -159,12 +160,13 @@
                 input.trigger('click');
             });
 
-            function appendIfFile(formdata, file_id ) {
+            function appendIfFile(file_id ) {
                 var file = document.querySelector('#' + file_id).files[0];
                 console.log(file);
                 var ext = file.name.split('.').pop();
                 if(ext=="pdf" || ext=="docx" || ext=="doc" || ext=='png' || ext=='jpg'){
-                    formdata.append(file_id, file);
+                    console.info(file_id, file);
+                    formData.append(file_id, file);
                     console.log("Si", ext);
                     return true;
                 } else{
@@ -176,35 +178,43 @@
             $("#NewClient").on('submit', function (event) {
                 event.preventDefault();
 
-
 //                VALIDACIONES
 
-                var i = 0,
-                        formdata = new FormData();
+                formData = new FormData();
 
-                formdata.append("action", "new_client");
-                formdata.append("curp", $("#curp").val());
-                formdata.append("regimen-de-ventas", $("#regimen-de-ventas").val());
-                formdata.append("regimen-fiscal", $("#regimen-fiscal").val());
+                formData.append("action", "new_client");
+                formData.append("curp", $("#curp").val());
+                formData.append("regimen-de-ventas", $("#regimen-de-ventas").val());
+                formData.append("regimen-fiscal", $("#regimen-fiscal").val());
 //
-//                appendIfFile(formdata, 'regimen-de-ventas');
-//                appendIfFile(formdata, 'regimen-fiscal');
-                appendIfFile(formdata, 'comprobante-de-domicilio');
-                appendIfFile(formdata, 'constancia-situacion-fiscal');
+//                appendIfFile(formData, 'regimen-de-ventas');
+//                appendIfFile(formData, 'regimen-fiscal');
+                appendIfFile('comprobante-de-domicilio');
+                appendIfFile('constancia-situacion-fiscal');
 
-                $.ajax({
-                    url: '/alta-de-clientes', // Url to which the request is send
-                    type: 'POST',
-                    data: formdata,
-                    processData: false,
-                    contentType: false,
-                    success: function ( json_data ) {
-                        if( callback ){
-                            callback( json_data );
-                        }
-                        alert("Callback");
-                    }
-                });
+                console.info(formData);
+
+
+                formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+
+                var request = new XMLHttpRequest();
+                request.open("POST", "/alta-de-clientes");
+                request.send(formData);
+
+//
+//                $.ajax({
+//                    url: '/alta-de-clientes', // Url to which the request is send
+//                    type: 'POST',
+//                    data: formData,
+//                    processData: false,
+//                    contentType: false,
+//                    success: function ( json_data ) {
+//                        if( callback ){
+//                            callback( json_data );
+//                        }
+//                        alert("Callback");
+//                    }
+//                });
 
 
             });
