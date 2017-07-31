@@ -5,7 +5,7 @@ TC.products = (function(){
         
         ;
     var _init = function _init(){
-        _$newStadium = $("#newProducts");
+        _$newStadium = $("#newProduct");
 
         _$newStadium.submit(function(event){
             event.preventDefault();
@@ -16,22 +16,22 @@ TC.products = (function(){
                     description: $("#description").val(),
                     body: $("#body").val(),
                     characteristics: $("#characteristics").val(),
-                    parentcategory_id: $("#category_id").val(),
+                    category_id: $("#category_id").val()
                 };
             $.ajax({
-                url: TC.control_url+'categorias',
+                url: TC.control_url+'productos',
                 data: data,
                 type: 'post'
             }).success(function(){
-                document.location.href = TC.control_url+'categorias'
+                document.location.href = TC.control_url+'productos'
             }).error(function(data){
-                console.log(data);
-               // alert('Error al crear la nota');
+                // console.log(data);
+               alert('Error al crear el producto');
             });
         });
 
 
-        _$showStadium = $("#showProducts");
+        _$showStadium = $("#showProduct");
         _$showStadium.submit(function(event){
             event.preventDefault();
 
@@ -42,18 +42,22 @@ TC.products = (function(){
             var id =  $(this).data('id'),
                 data = {
                     name: $("#name").val(),
-                    parentcategory_id: $("#category_id").val(),
+                    formula: $("#formula").val(),
+                    description: $("#description").val(),
+                    body: $("#body").val(),
+                    characteristics: $("#characteristics").val(),
+                    category_id: $("#category_id").val(),
                     active: active
                 };
 
             $.ajax({
-                url: TC.control_url+'categorias/'+id,
+                url: TC.control_url+'productos/'+id,
                 data: data,
                 type: 'put'
             }).success(function(){
-                document.location.href = TC.control_url+'categorias'
+                document.location.href = TC.control_url+'productos'
             }).error(function(){
-                alert('Error al actualizar la nota');
+                alert('Error al actualizar el producto');
             });
         });
 

@@ -5,39 +5,64 @@
             <h3>Editar producto</h3>
         </div>
 
-        <form id="showProducts" data-id="{{ $category->id }}" class="form-horizontal">
+        <form id="showProduct" data-id="{{ $product->id }}" class="form-horizontal">
             <div class="form-group">
                 <label class="col-md-2 control-label">Nombre:</label>
                 <div class="col-md-8">
-                    <input type="text" id="name" class="form-control" placeholder="Titulo" required="required" value="{{ $category->name }}">
+                    <input type="text" class="form-control" id="name" placeholder="Titulo" value="{{ $product->name }}">
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-2 control-label">Categoria padre:</label>
+                <label class="col-md-2 control-label">Formula:</label>
                 <div class="col-md-8">
-                    <select id="category_id" class="form-control selectpicker">
-                        <option value="0">Sin categoria padre</option>
-                        @foreach($categories as $categorySelect)
-                            @if($categorySelect->parentcategory_id == 0)
-                                <option value="{{ $categorySelect->id }}"  @if($category->parentcategory_id == $categorySelect->id) selected @endif>{{ $categorySelect->name }}</option>
-                            @endif
-                        @endforeach
-                    </select>
-                    <label for="done"><small>Si la categoria no depende de otra dejar en "Sin categoria padre".</small></label>
+                    <input type="text" class="form-control" id="formula" placeholder="Titulo" required="required" value="{{ $product->formula }}">
                 </div>
             </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Resumen:</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="description" placeholder="Titulo" value="{{ $product->description }}">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Categoría:</label>
+                <div class="col-md-8">
+                    <select id="category_id" class="form-control selectpicker">
+                        @foreach($categories as $category)
+                            <option value="{{ $category->id }}" @if($category->id == $product->category_id) selected @endif>{{ $category->name }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Description:</label>
+                <div class="col-md-8">
+                    <textarea id="body" class="form-control redactor-text" placeholder="Description">
+                         {{ $product->body }}
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-md-2 control-label">Caracteristicas:</label>
+                <div class="col-md-8">
+                    <textarea id="characteristics" class="form-control redactor-text" placeholder="Caracteristicas">
+                        {{ $product->characteristics }}
+                    </textarea>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label class="col-md-2 control-label">Activa:</label>
                 <div class="col-md-8">
                     <div class="checkbox checkbox-inline">
-                        <input type="checkbox" id="active" @if($category->active == 1) checked @endif>
+                        <input type="checkbox" id="active" @if($product->active == 1) checked @endif>
                         <label for="active"><small>Si esta palomeada se mostrará.</small></label>
                     </div>
                 </div>
             </div>
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-8">
-                    <button type="submit" class="btn btn-default">Actualizar</button>
+                    <button type="submit" class="btn btn-default">Actualizar producto</button>
                 </div>
             </div>
         </form>
@@ -47,7 +72,7 @@
 @section('javascript')
     <script>
         $(document).ready(function(){
-            TC.category.init();
+            TC.products.init();
         });
     </script>
 @endsection

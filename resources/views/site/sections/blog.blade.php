@@ -41,10 +41,14 @@
                         <div class="carousel-card">
                             <div class="container">
                                 <div class="vertical-align">
-                                    <h2>{{ $new->title }}</h2>
+                                    <h2>
+                                        <a href="/publicacion/{{ $new->id }}">
+                                            {{ $new->title }}
+                                        </a>
+                                    </h2>
                                     <div class="line"></div>
                                     <p>{{ $new->description }}</p>
-                                    <a href="/publicacion/{{ $new->id }}">
+                                    <a href="/publicacion/{{ $new->id }}" class="read-more">
                                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                                         <span>Leer más</span>
                                     </a>

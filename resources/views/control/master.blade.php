@@ -81,6 +81,9 @@
                 <li>
                     <a href="/control/productos"><i class="fa fa-calendar"></i><span>Productos</span></a>
                 </li>
+                <li>
+                    <a href="/control/productos"><i class="fa fa-calendar"></i><span>Servicios</span></a>
+                </li>
             </ul>
         </div>
         <!-- ./page sidebar -->

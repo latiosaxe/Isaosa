@@ -42,7 +42,7 @@
         <li><a href="/servicios">SERVICIOS</a></li>
         <li><a href="/#bodegas">BODEGAS</a></li>
         <li><a href="/blog">NOTICIAS</a></li>
-        <li><a href="/quieres-somos">QUIÉNES SOMOS</a></li>
+        <li><a href="/quienes-somos">QUIÉNES SOMOS</a></li>
         <li><a href="/#contacto">CONTACTO</a></li>
         <li>
             <span>ACCESO INTERNO</span>
@@ -114,7 +114,7 @@
                 </div>
                 <div class="col-md-3 col-md-offset-1 footer-logo">
                     <a href="/">
-                        <img src="/assets/images/icons/logo_footer.svg" alt="ISAOSA">
+                        <img src="/assets/images/icons/logo_with_r.svg" alt="ISAOSA">
                     </a>
                 </div>
             </div>
@@ -172,6 +172,31 @@
             });
         }
 
+        if($(window).width() <= 768){
+            $(".site .home-sections .content .grid .element").on('click', function(event){
+                event.preventDefault();
+                console.log("Wop", $(this).find('.more a').attr('href'));
+                window.location.href = $(this).find('.more a').attr('href');
+            });
+
+            $(".site .home-about_us").on('click', function (event) {
+                event.preventDefault();
+                window.location.href = '/quienes-somos';
+            })
+        }
+
+
+        var posititonWindow = 0;
+        var doc = document.documentElement;
+        $(window).scroll(function(){
+            posititonWindow = (window.pageYOffset || doc.scrollTop)  - (doc.clientTop || 0);
+            console.log(posititonWindow);
+            if(posititonWindow > 100){
+                $('header').addClass('home-active-special');
+            }else{
+                $('header').removeClass('home-active-special');
+            }
+        })
     });
 </script>
 

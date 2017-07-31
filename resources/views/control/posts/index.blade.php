@@ -58,6 +58,12 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-md-2 control-label">Imagen:</label>
+                <div class="col-md-8">
+                    <input type="file" class="form-control" id="img_thumb">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-md-2 control-label">Galería:</label>
                 <div class="col-md-8">
                     <p>

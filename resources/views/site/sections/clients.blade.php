@@ -6,7 +6,7 @@
     <div class="container">
         <h1 class="color-green">ALTA DE CLIENTES</h1>
 
-        <form onsubmit="return false;">
+        <form onsubmit="return false;" id="NewClient">
             <div class="">
                 <div class="">
                     <div class="col-md-6 gray-block">
@@ -15,7 +15,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 element fake-select margin-botom-20">
-                                <select name="regimen-fiscal" id="regimen-fiscal">
+                                <select name="regimen-fiscal" id="regimen-de-ventas">
                                     <option value="">Ejecutivo de Ventas</option>
                                 </select>
                             </div>
@@ -35,7 +35,7 @@
                             </div>
                             <div class="col-md-12 ">
                                 <div class="fakeFileInput">
-                                    <input type="file" class="hidden">
+                                    <input type="file" class="hidden" id="constancia-situacion-fiscal">
                                     <div class="text">
                                         <span>Constancia de Situación Fiscal</span>
                                     </div>
@@ -43,7 +43,7 @@
                             </div>
                             <div class="col-md-12">
                                 <div class="fakeFileInput">
-                                    <input type="file" class="hidden">
+                                    <input type="file" class="hidden" id="comprobante-de-domicilio">
                                     <div class="text">
                                         <span>Comprobante de Domicilio</span>
                                     </div>
@@ -150,6 +150,108 @@
 @endsection
 @section('javascript')
     <script>
-        $('header').addClass('block');
+        $(document).ready(function () {
+            $('header').addClass('block');
+
+            $(".fakeFileInput .text").on('click', function () {
+                var input = $(this).closest('.fakeFileInput').find('.hidden');
+                input.trigger('click');
+            });
+
+            function appendIfFile(formdata, file_id ) {
+                var file = document.querySelector('#' + file_id).files[0];
+                console.log(file);
+                var ext = file.name.split('.').pop();
+                if(ext=="pdf" || ext=="docx" || ext=="doc" || ext=='png' || ext=='jpg'){
+                    formdata.append(file_id, file);
+                    console.log("Si", ext);
+                    return true;
+                } else{
+                    console.log("No", ext);
+                    return false;
+                }
+            }
+
+            $("#NewClient").on('submit', function (event) {
+                event.preventDefault();
+
+
+//                VALIDACIONES
+
+                var i = 0,
+                        formdata = new FormData();
+
+                formdata.append("action", "new_client");
+                formdata.append("curp", $("#curp").val());
+                formdata.append("regimen-de-ventas", $("#regimen-de-ventas").val());
+                formdata.append("regimen-fiscal", $("#regimen-fiscal").val());
+//
+//                appendIfFile(formdata, 'regimen-de-ventas');
+//                appendIfFile(formdata, 'regimen-fiscal');
+                appendIfFile(formdata, 'comprobante-de-domicilio');
+                appendIfFile(formdata, 'constancia-situacion-fiscal');
+
+                $.ajax({
+                    url: '/alta-de-clientes', // Url to which the request is send
+                    type: 'POST',
+                    data: formdata,
+                    processData: false,
+                    contentType: false,
+                    success: function ( json_data ) {
+                        if( callback ){
+                            callback( json_data );
+                        }
+                        alert("Callback");
+                    }
+                });
+
+
+            });
+        });
+//        $("input[type='file']").on('change', function () {
+//            var _$this = $(this),
+//                    input = this,
+//                    file,
+//                    size;
+//            if(_$this.hasClass('hidden')){
+//                console.log(input);
+//
+//                if (!window.FileReader) {
+////                    bodyAppend("p", "The file API isn't supported on this browser yet.");
+//                    return;
+//                }
+//
+//                if (!input) {
+//                    console.log("NO archivo");
+//                }
+//                else if (!input.files) {
+//                    console.log(input);
+//                    console.log("Navegador antiguo")
+//                }
+//                else if (!input.files[0]) {
+//                    console.log("Por favor selecciona un archivo")
+//                }
+//                else {
+//                    file = input.files[0];
+//                    size = input.files[0].size/1024/1024;
+//                    console.log("Nombre: " + file.name);
+//                    console.log("Size: " +size);
+//
+//                    if(size <= 10){
+//                        var fileData = file;
+//                        var request = new XMLHttpRequest();
+//                        request.open('post', '/uploadFile');
+//                        request.addEventListener('load', uploadComplete);
+//                        request.send(fileData);
+//
+//                    }else{
+//                        swal("El archivo es muy pesado", "Favor de subir un archivo no mayor a 10MB");
+//                    }
+//                }
+//            }
+//            function uploadComplete(data) {
+//                console.log(data.currentTarget.respone);
+//            }
+//        })
     </script>
 @endsection

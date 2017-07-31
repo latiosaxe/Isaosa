@@ -37,7 +37,7 @@
         <div class="page-subtitle">
             <h2>Crear Productos</h2>
         </div>
-        <form id="newProducts" class="form-horizontal">
+        <form id="newProduct" class="form-horizontal">
             <div class="form-group">
                 <label class="col-md-2 control-label">Nombre:</label>
                 <div class="col-md-8">
@@ -47,7 +47,7 @@
             <div class="form-group">
                 <label class="col-md-2 control-label">Formula:</label>
                 <div class="col-md-8">
-                    <input type="text" class="form-control" id="formula" placeholder="Titulo">
+                    <input type="text" class="form-control" id="formula" placeholder="Titulo" required="required">
                 </div>
             </div>
             <div class="form-group">

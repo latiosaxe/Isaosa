@@ -8,7 +8,7 @@
                     <h2>NUEVA GENERACIÓN</h2>
                     <div class="line"></div>
                     <p>Nuevas tecnologías que permiten mayor eficiencia y control en la entrega de nutrientes al suelo.</p>
-                    <a href="productos?data=1">
+                    <a href="productos?data=1" class="read-more">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -22,7 +22,7 @@
                     <h2>MEZCLA VALOR AGREGADO</h2>
                     <div class="line"></div>
                     <p>Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento de sus cultivos.</p>
-                    <a href="productos?data=2">
+                    <a href="productos?data=2" class="read-more">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -36,7 +36,7 @@
                     <h2>LÍQUIDOS</h2>
                     <div class="line"></div>
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
-                    <a href="productos?data=3">
+                    <a href="productos?data=3" class="read-more">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -50,7 +50,7 @@
                     <h2>SOLUBLES</h2>
                     <div class="line"></div>
                     <p>Maxima tecnología en cada gota</p>
-                    <a href="productos?data=4">
+                    <a href="productos?data=4" class="read-more">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -64,7 +64,7 @@
                     <h2>FOLIARES</h2>
                     <div class="line"></div>
                     <p>La mejor nutrición en el menor tiempo</p>
-                    <a href="productos?data=5">
+                    <a href="productos?data=5" class="read-more">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -78,7 +78,7 @@
                     <h2>NPK ESPECIALIDAD</h2>
                     <div class="line"></div>
                     <p>Los mejores nutrientes en el mejor balance</p>
-                    <a href="productos?data=6">
+                    <a href="productos?data=6" class="read-more">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -92,7 +92,7 @@
                     <h2>COMMODITIES</h2>
                     <div class="line"></div>
                     <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
-                    <a href="productos?data=7">
+                    <a href="productos?data=7" class="read-more">
                         <img src="/assets/images/icons/mas.svg" alt="Leer más">
                         <span>Ver productos</span>
                     </a>
@@ -195,7 +195,7 @@
 <section class="home-sections relative">
     <div class="container full-width">
         <div class="content">
-            <div class="title">SERVICIOS</div>
+            <div class="title"><a href="/servicios">SERVICIOS</a></div>
             <div class="grid">
                 <?php $i = 1 ?>
                 @foreach($services as $service)
@@ -407,7 +407,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="head">
-                    <h3>Noticias</h3>
+                    <h3><a href="/blog">Noticias</a></h3>
                 </div>
             </div>
         </div>
@@ -448,7 +448,7 @@
     <div class="container">
         <div class="relative">
             <div class="title">
-                <h4>QUIÉNES SOMOS</h4>
+                <h4><a href="/quienes-somos">QUIÉNES SOMOS</a></h4>
             </div>
             <div class="image" style="background-image: url('/assets/images/home/03_isaosa_img_home_quienesomos.jpg')"></div>
             <div class="text">
