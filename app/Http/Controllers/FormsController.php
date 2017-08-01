@@ -135,15 +135,19 @@ class FormsController extends Controller
     private function aws(Request $request, $inputName, $uid){
         try {
             $image = $request->file($inputName);
-            dd($image);
-            $new_image_name = $inputName.'.'.$image->getClientOriginalExtension();
-            $s3 = Storage::disk('s3');
-            $file_path = "clientes/{$uid}/{$new_image_name}";
-            $full_path = env('AWS_BASE') . $file_path;
-            $s3->put($file_path, file_get_contents($image), 'public');
+            $full_path = '';
+            if($image==null){
+                $full_path = 'Sin arichivo';
+            }else{
+                $new_image_name = $inputName.'.'.$image->getClientOriginalExtension();
+                $s3 = Storage::disk('s3');
+                $file_path = "clientes/{$uid}/{$new_image_name}";
+                $full_path = env('AWS_BASE') . $file_path;
+                $s3->put($file_path, file_get_contents($image), 'public');
 
 //            $data['status'] = 'Updated';
 //            $data['src'] = $full_path;
+            }
             $status = 200;
             return $full_path;
 
