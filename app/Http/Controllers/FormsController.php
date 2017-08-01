@@ -16,8 +16,8 @@ class FormsController extends Controller
         $client = Client::create();
         $uid = base_convert(time(),10,26);
         $client->uid = $uid;
-        $client->regimen_de_ventas = $request->input('regimen-de-ventas', 'Sin definir');
-        $client->regimen_fiscal = $request->input('regimen-fiscal', 'Sin definir');
+        $client->regimen_de_ventas = $request->input('regimen_de_ventas', 'Sin definir');
+        $client->regimen_fiscal = $request->input('regimen_fiscal', 'Sin definir');
         
         $client->razon_social = $request->input('razon_social', 'Sin definir');
         $client->rfc = $request->input('rfc', 'Sin definir');

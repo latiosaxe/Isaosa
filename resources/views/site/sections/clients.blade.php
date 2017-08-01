@@ -193,7 +193,9 @@
 
             function reqListener () {
                 console.log(this.responseText);
-                if(this.responseText == 'ok'){
+                var response = JSON.parse(this.responseText);
+                console.log(response);
+                if(response.status == 'ok'){
                     sweetAlert("Solicitud exitosa", "Nos pondremos en contacto contigo tan pronto nos sea posible");
                 }else{
                     sweetAlert("Oops...", "Parece que hubo un error, intentalo mas tarde o ponte en contacto con nosotros", "error");
@@ -208,8 +210,8 @@
                 formData = new FormData();
 
                 formData.append("action", "new_client");
-                formData.append("regimen-de-ventas", noValue( $("#regimen-de-ventas").val()) );
-                formData.append("regimen-fiscal", noValue( $("#regimen-fiscal").val()) );
+                formData.append("regimen_de_ventas", noValue( $("#regimen-de-ventas").val()) );
+                formData.append("regimen_fiscal", noValue( $("#regimen-fiscal").val()) );
                 formData.append("razon_social", noValue( $("#razon_social").val()) );
                 formData.append("rfc", noValue( $("#rfc").val()) );
                 formData.append("curp", noValue( $("#curp").val()) );
