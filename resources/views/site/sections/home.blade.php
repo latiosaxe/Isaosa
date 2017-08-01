@@ -157,9 +157,9 @@
                         México
                     </a>
                     <ul>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_nacional_201706.pdf" target="_blank">Junio 2017</a></li>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_nacional_201705.pdf" target="_blank">Mayo 2017</a></li>
-                        <li><a href="http://isaosa.com/boletines/perspectiva_abril_noviembre_2017.pdf" target="_blank">Perspectiva 2017 Abril - Noviembre</a></li>
+                        <li><a href="/boletines/boletin_mensual_nacional_201706.pdf" target="_blank">Junio 2017</a></li>
+                        <li><a href="/boletines/boletin_mensual_nacional_201705.pdf" target="_blank">Mayo 2017</a></li>
+                        <li><a href="/boletines/perspectiva_abril_noviembre_2017.pdf" target="_blank">Perspectiva 2017 Abril - Noviembre</a></li>
                     </ul>
                 </li>
                 <li>
@@ -167,12 +167,12 @@
                         Chihuahua
                     </a>
                     <ul>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201611.pdf" target="_blank">Noviembre 2016</a></li>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201610.pdf" target="_blank">Octubre 2016</a></li>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chiguagua_201609.pdf" target="_blank">Septiembre 2016</a></li>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201608.pdf" target="_blank">Agosto 2016</a></li>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201607.pdf" target="_blank">Julio 2016</a></li>
-                        <li><a href="http://isaosa.com/boletines/boletin_mensual_chihuahua_201606.pdf" target="_blank">Junio 2016</a></li>
+                        <li><a href="/boletines/boletin_mensual_chihuahua_201611.pdf" target="_blank">Noviembre 2016</a></li>
+                        <li><a href="/boletines/boletin_mensual_chihuahua_201610.pdf" target="_blank">Octubre 2016</a></li>
+                        <li><a href="/boletines/boletin_mensual_chiguagua_201609.pdf" target="_blank">Septiembre 2016</a></li>
+                        <li><a href="/boletines/boletin_mensual_chihuahua_201608.pdf" target="_blank">Agosto 2016</a></li>
+                        <li><a href="/boletines/boletin_mensual_chihuahua_201607.pdf" target="_blank">Julio 2016</a></li>
+                        <li><a href="/boletines/boletin_mensual_chihuahua_201606.pdf" target="_blank">Junio 2016</a></li>
                     </ul>
                 </li>
             </ul>
