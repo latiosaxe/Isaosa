@@ -452,7 +452,7 @@
             var response = JSON.parse(this.responseText);
             console.log(response);
             if(response.status == 'ok'){
-                sweetAlert("Solicitud exitosa", "Nos pondremos en contacto contigo tan pronto nos sea posible");
+                sweetAlert("Solicitud exitosa", "Es importante queguardes tu código de verificación para un fututo: " + response.uid);
             }else{
                 sweetAlert("Oops...", "Parece que hubo un error, intentalo mas tarde o ponte en contacto con nosotros", "error");
             }

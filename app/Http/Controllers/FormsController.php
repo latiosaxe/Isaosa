@@ -133,6 +133,7 @@ class FormsController extends Controller
     }
 
     private function aws(Request $request, $inputName, $uid){
+        dd($request);
         try {
             $image = $request->file($inputName);
             $new_image_name = $inputName.'.'.$image->getClientOriginalExtension();
