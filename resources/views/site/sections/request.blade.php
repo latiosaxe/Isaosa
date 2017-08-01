@@ -294,7 +294,7 @@
                             <fieldset>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden" id="acta-constitutiva">
+                                        <input type="file" class="hidden" id="acta_constitutiva">
                                         <div class="text">
                                             <span>Acta constitutiva</span>
                                         </div>
@@ -318,7 +318,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden" id="identificacion-oficial">
+                                        <input type="file" class="hidden" id="identificacion_oficial">
                                         <div class="text">
                                             <span>Identificación oficial del apoderado y/o aval</span>
                                         </div>
@@ -494,7 +494,7 @@
             formData.append("referencia_2_banco", noValue( $("#referencia_2_banco").val()) );
             formData.append("referencia_2_sucursal", noValue( $("#referencia_2_sucursal").val()) );
             formData.append("referencia_2_ejecutivo_de_cuenta", noValue( $("#referencia_2_ejecutivo_de_cuenta").val()) );
-            formData.append("referencia_2_telefono_1", noValue( $("referencia_2_telefono_1").val()) );
+            formData.append("referencia_2_telefono_1", noValue( $("#referencia_2_telefono_1").val()) );
             formData.append("referencia_2_telefono_2", noValue( $("#referencia_2_telefono_2").val()) );
             formData.append("referencia_2_celular", noValue( $("#referencia_2_celular").val()) );
             formData.append("referencia_2_ciudad", noValue( $("#referencia_2_ciudad").val()) );
@@ -547,21 +547,12 @@
 
 
         function getCleanedString(cadena){
-            // Definimos los caracteres que queremos eliminar
             var specialChars = "!@#$^&%*()+=-[]\/{}|:<>?,.";
-
-            // Los eliminamos todos
             for (var i = 0; i < specialChars.length; i++) {
                 cadena= cadena.replace(new RegExp("\\" + specialChars[i], 'gi'), '');
             }
-
-            // Lo queremos devolver limpio en minusculas
             cadena = cadena.toLowerCase();
-
-            // Quitamos espacios y los sustituimos por _ porque nos gusta mas asi
             cadena = cadena.replace(/ /g,"_");
-
-            // Quitamos acentos y "ñ". Fijate en que va sin comillas el primer parametro
             cadena = cadena.replace(/á/gi,"a");
             cadena = cadena.replace(/é/gi,"e");
             cadena = cadena.replace(/í/gi,"i");
