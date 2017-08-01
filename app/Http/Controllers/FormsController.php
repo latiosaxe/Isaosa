@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
 use App\Client;
 use App\Request;
-use Illuminate\Http\Request;
 use \Storage;
 
 class FormsController extends Controller
@@ -59,75 +59,76 @@ class FormsController extends Controller
 
 
     public function NewRequest(Request $request){
-        $request = Request::create();
+        $newRequest = Request::create();
         $uid = base_convert(time(),10,26);
-        $request->uid = $uid;
+        $newRequest->uid = $uid;
 
-        $request->empresa = $request->input('', 'Sin definir');
-        $request->rfc = $request->input('', 'Sin definir');
-        $request->curp = $request->input('', 'Sin definir');
-        $request->domicilio_fiscal = $request->input('', 'Sin definir');
-        $request->colonia = $request->input('', 'Sin definir');
-        $request->ciudad = $request->input('', 'Sin definir');
-        $request->municipio = $request->input('', 'Sin definir');
-        $request->estado = $request->input('', 'Sin definir');
-        $request->cp = $request->input('', 'Sin definir');
-        $request->telefono_1 = $request->input('', 'Sin definir');
-        $request->telefono_2 = $request->input('', 'Sin definir');
-        $request->celular = $request->input('', 'Sin definir');
-        $request->correo_electronico = $request->input('', 'Sin definir');
-        $request->apoderado_legal = $request->input('', 'Sin definir');
-        $request->nombre_del_contacto = $request->input('', 'Sin definir');
-        $request->consumo_anual_de_fertilizante = $request->input('', 'Sin definir');
-        $request->referencia_1_banco = $request->input('', 'Sin definir');
-        $request->referencia_1_sucursal = $request->input('', 'Sin definir');
-        $request->referencia_1_ejecutivo_de_cuenta = $request->input('', 'Sin definir');
-        $request->referencia_1_telefono_1 = $request->input('', 'Sin definir');
-        $request->referencia_1_telefono_2 = $request->input('', 'Sin definir');
-        $request->referencia_1_celular = $request->input('', 'Sin definir');
-        $request->referencia_1_ciudad = $request->input('', 'Sin definir');
-        $request->referencia_1_municipio = $request->input('', 'Sin definir');
-        $request->referencia_1_estado = $request->input('', 'Sin definir');
-        $request->referencia_2_banco = $request->input('', 'Sin definir');
-        $request->referencia_2_sucursal = $request->input('', 'Sin definir');
-        $request->referencia_2_ejecutivo_de_cuenta = $request->input('', 'Sin definir');
-        $request->referencia_2_telefono_1 = $request->input('', 'Sin definir');
-        $request->referencia_2_telefono_2 = $request->input('', 'Sin definir');
-        $request->referencia_2_celular = $request->input('', 'Sin definir');
-        $request->referencia_2_ciudad = $request->input('', 'Sin definir');
-        $request->referencia_2_municipio = $request->input('', 'Sin definir');
-        $request->referencia_2_estado = $request->input('', 'Sin definir');
-        $request->empresa_1_rfc = $request->input('', 'Sin definir');
-        $request->empresa_1_domicilio_fiscal = $request->input('', 'Sin definir');
-        $request->empresa_1_cp = $request->input('', 'Sin definir');
-        $request->empresa_1_ciudad = $request->input('', 'Sin definir');
-        $request->empresa_1_municipio = $request->input('', 'Sin definir');
-        $request->empresa_1_telefono_1 = $request->input('', 'Sin definir');
-        $request->empresa_1_telefono_2 = $request->input('', 'Sin definir');
-        $request->empresa_1_celular = $request->input('', 'Sin definir');
-        $request->empresa_1_correo_electronico = $request->input('', 'Sin definir');
-        $request->empresa_1_nombre_del_contacto = $request->input('', 'Sin definir');
-        $request->empresa_2_rfc = $request->input('', 'Sin definir');
-        $request->empresa_2_domicilio_fiscal = $request->input('', 'Sin definir');
-        $request->empresa_2_cp = $request->input('', 'Sin definir');
-        $request->empresa_2_ciudad = $request->input('', 'Sin definir');
-        $request->empresa_2_municipio = $request->input('', 'Sin definir');
-        $request->empresa_2_telefono_1 = $request->input('', 'Sin definir');
-        $request->empresa_2_telefono_2 = $request->input('', 'Sin definir');
-        $request->empresa_2_celular = $request->input('', 'Sin definir');
-        $request->empresa_2_correo_electronico = $request->input('', 'Sin definir');
-        $request->empresa_2_nombre_del_contacto = $request->input('', 'Sin definir');
+        $newRequest->empresa = $request->input('', 'Sin definir');
+        $newRequest->rfc = $request->input('', 'Sin definir');
+        $newRequest->curp = $request->input('', 'Sin definir');
+        $newRequest->domicilio_fiscal = $request->input('', 'Sin definir');
+        $newRequest->colonia = $request->input('', 'Sin definir');
+        $newRequest->ciudad = $request->input('', 'Sin definir');
+        $newRequest->municipio = $request->input('', 'Sin definir');
+        $newRequest->estado = $request->input('', 'Sin definir');
+        $newRequest->cp = $request->input('', 'Sin definir');
+        $newRequest->telefono_1 = $request->input('', 'Sin definir');
+        $newRequest->telefono_2 = $request->input('', 'Sin definir');
+        $newRequest->celular = $request->input('', 'Sin definir');
+        $newRequest->correo_electronico = $request->input('', 'Sin definir');
+        $newRequest->apoderado_legal = $request->input('', 'Sin definir');
+        $newRequest->nombre_del_contacto = $request->input('', 'Sin definir');
+        $newRequest->consumo_anual_de_fertilizante = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_banco = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_sucursal = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_ejecutivo_de_cuenta = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_telefono_1 = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_telefono_2 = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_celular = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_ciudad = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_municipio = $request->input('', 'Sin definir');
+        $newRequest->referencia_1_estado = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_banco = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_sucursal = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_ejecutivo_de_cuenta = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_telefono_1 = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_telefono_2 = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_celular = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_ciudad = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_municipio = $request->input('', 'Sin definir');
+        $newRequest->referencia_2_estado = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_rfc = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_domicilio_fiscal = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_cp = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_ciudad = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_municipio = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_telefono_1 = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_telefono_2 = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_celular = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_correo_electronico = $request->input('', 'Sin definir');
+        $newRequest->empresa_1_nombre_del_contacto = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_rfc = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_domicilio_fiscal = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_cp = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_ciudad = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_municipio = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_telefono_1 = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_telefono_2 = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_celular = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_correo_electronico = $request->input('', 'Sin definir');
+        $newRequest->empresa_2_nombre_del_contacto = $request->input('', 'Sin definir');
 
-        $request->acta_constitutiva = $this->aws($request, 'acta_constitutiva', $uid);
-        $request->constancia_situacion_fiscal = $this->aws($request, 'constancia_situacion_fiscal', $uid);
-        $request->poder_notarial = $this->aws($request, 'poder_notarial', $uid);
-        $request->identificacion_oficial = $this->aws($request, 'identificacion_oficial', $uid);
-        $request->comprobante_curp = $this->aws($request, 'comprobante_curp', $uid);
-        $request->formato_32_d = $this->aws($request, 'formato_32_d', $uid);
+        $newRequest->acta_constitutiva = $this->aws($request, 'acta_constitutiva', $uid);
+        $newRequest->constancia_situacion_fiscal = $this->aws($request, 'constancia_situacion_fiscal', $uid);
+        $newRequest->poder_notarial = $this->aws($request, 'poder_notarial', $uid);
+        $newRequest->identificacion_oficial = $this->aws($request, 'identificacion_oficial', $uid);
+        $newRequest->comprobante_curp = $this->aws($request, 'comprobante_curp', $uid);
+        $newRequest->formato_32_d = $this->aws($request, 'formato_32_d', $uid);
 
         $request->save();
 
         $data['status'] = 'ok';
+        $data['uid'] = $uid;
         return response()->json($data, 200);
     }
 
