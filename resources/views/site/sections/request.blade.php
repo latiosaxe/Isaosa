@@ -528,9 +528,9 @@
             appendIfFile('comprobante_curp');
             appendIfFile('formato_32_d');
 
-            console.info(formData);
-
             formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+
+            console.info(formData);
 
             var request = new XMLHttpRequest();
             request.addEventListener("load", reqListener);
