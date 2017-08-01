@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Client;
+use App\Request;
 use Illuminate\Http\Request;
 use \Storage;
 
