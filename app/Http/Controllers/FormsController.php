@@ -125,7 +125,7 @@ class FormsController extends Controller
         $newRequest->comprobante_curp = $this->aws($request, 'comprobante_curp', $uid);
         $newRequest->formato_32_d = $this->aws($request, 'formato_32_d', $uid);
 
-        $request->save();
+        $newRequest->save();
 
         $data['status'] = 'ok';
         $data['uid'] = $uid;
