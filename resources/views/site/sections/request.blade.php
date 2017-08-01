@@ -542,6 +542,8 @@
             console.log(input);
             if(input.length == 0){
                 return 'Sin valor'
+            }else{
+                return input;
             }
         }
 
