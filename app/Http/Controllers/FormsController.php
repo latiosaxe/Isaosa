@@ -63,6 +63,8 @@ class FormsController extends Controller
         $uid = base_convert(time(),10,26);
         $newRequest->uid = $uid;
 
+        dd($request2);
+
         $newRequest->empresa = $request2->input('empresa', 'Sin definir');
         $newRequest->rfc = $request2->input('rfc', 'Sin definir');
         $newRequest->curp = $request2->input('curp', 'Sin definir');
