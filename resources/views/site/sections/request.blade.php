@@ -59,13 +59,13 @@
                         <div class="row">
                             <fieldset>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Empresa">
+                                    <input type="text" placeholder="Empresa" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="R.F.C.">
+                                    <input type="text" placeholder="R.F.C." required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="C.U.R.P.">
+                                    <input type="text" placeholder="C.U.R.P." required="required">
                                 </div>
                                 <div class="col-md-6 element fake-select">
                                     <select name="regimen-fiscal" id="regimen-fiscal">
@@ -76,37 +76,37 @@
                                     <input type="text" placeholder="Domicilio Fiscal">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Colonia">
+                                    <input type="text" placeholder="Colonia" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Ciudad">
+                                    <input type="text" placeholder="Ciudad" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Municipio">
+                                    <input type="text" placeholder="Municipio" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Estado">
+                                    <input type="text" placeholder="Estado" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="C.P.">
+                                    <input type="text" placeholder="C.P." required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Teléfono 1">
+                                    <input type="text" placeholder="Teléfono 1" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Teléfono 2">
+                                    <input type="text" placeholder="Teléfono 2" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Celular">
+                                    <input type="text" placeholder="Celular" required="required">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Correo electrónico">
+                                    <input type="text" placeholder="Correo electrónico" required="required">
                                 </div>
                                 <div class="col-md-6 element">
                                     <input type="text" placeholder="Apoderado legal">
                                 </div>
                                 <div class="col-md-6 element">
-                                    <input type="text" placeholder="Nombre del contacto">
+                                    <input type="text" placeholder="Nombre del contacto" required="required">
                                 </div>
                                 <div class="col-md-6 element margin-botom-0">
                                     <input type="text" placeholder="Consumo anual de fertilizante">
@@ -452,7 +452,7 @@
             var response = JSON.parse(this.responseText);
             console.log(response);
             if(response.status == 'ok'){
-                sweetAlert("Solicitud exitosa", "Es importante queguardes tu código de verificación para un fututo: " + response.uid);
+                sweetAlert("Solicitud exitosa", "Es importante que guardes tu código de verificación para un fututo: " + response.uid);
             }else{
                 sweetAlert("Oops...", "Parece que hubo un error, intentalo mas tarde o ponte en contacto con nosotros", "error");
             }
