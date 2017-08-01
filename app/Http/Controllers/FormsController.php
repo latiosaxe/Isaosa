@@ -43,8 +43,6 @@ class FormsController extends Controller
         $client->addres_email = $request->input('addres_email', 'Sin definir');
         $client->addres_contact = $request->input('addres_contact', 'Sin definir');
 
-//        $client-> = $request->input('', '');
-
         $client->comprobante_de_domicilio = $this->aws($request, 'comprobante-de-domicilio', $uid);
         $client->constancia_situacion_fiscal = $this->aws($request, 'constancia-situacion-fiscal', $uid);
 

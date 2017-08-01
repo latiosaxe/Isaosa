@@ -204,32 +204,32 @@
                 formData = new FormData();
 
                 formData.append("action", "new_client");
-                formData.append("regimen-de-ventas", $("#regimen-de-ventas").val());
-                formData.append("regimen-fiscal", $("#regimen-fiscal").val());
-                formData.append("razon_social", $("#razon_social").val());
-                formData.append("rfc", $("#rfc").val());
-                formData.append("curp", $("#curp").val());
+                formData.append("regimen-de-ventas", noValue( $("#regimen-de-ventas").val()) );
+                formData.append("regimen-fiscal", noValue( $("#regimen-fiscal").val()) );
+                formData.append("razon_social", noValue( $("#razon_social").val()) );
+                formData.append("rfc", noValue( $("#rfc").val()) );
+                formData.append("curp", noValue( $("#curp").val()) );
 
-                formData.append("titulo", $("#titulo").val());
-                formData.append("complete_name", $("#complete_name").val());
-                formData.append("job", $("#job").val());
-                formData.append("tel", $("#tel").val());
-                formData.append("cel", $("#cel").val());
-                formData.append("email", $("#email").val());
+                formData.append("titulo", noValue( $("#titulo").val()) );
+                formData.append("complete_name", noValue( $("#complete_name").val()) );
+                formData.append("job", noValue( $("#job").val()) );
+                formData.append("tel", noValue( $("#tel").val()) );
+                formData.append("cel", noValue( $("#cel").val()) );
+                formData.append("email", noValue( $("#email").val()) );
 
-                formData.append("addres_stret", $("#addres_stret").val());
-                formData.append("addres_colonia", $("#addres_colonia").val());
-                formData.append("addres_city", $("#addres_city").val());
-                formData.append("addres_cp", $("#addres_cp").val());
-                formData.append("addres_municipio", $("#addres_municipio").val());
-                formData.append("addres_state", $("#addres_state").val());
-                formData.append("addres_country", $("#addres_tel").val());
-                formData.append("addres_tel", $("#addres_tel").val());
-                formData.append("addres_tel2", $("#addres_tel2").val());
-                formData.append("addres_cel", $("#addres_cel").val());
-                formData.append("addres_website", $("#addres_website").val());
-                formData.append("addres_email", $("#addres_email").val());
-                formData.append("addres_contact", $("#addres_contact").val());
+                formData.append("addres_stret", noValue( $("#addres_stret").val()) );
+                formData.append("addres_colonia", noValue( $("#addres_colonia").val()) );
+                formData.append("addres_city", noValue( $("#addres_city").val()) );
+                formData.append("addres_cp", noValue( $("#addres_cp").val()) );
+                formData.append("addres_municipio", noValue( $("#addres_municipio").val()) );
+                formData.append("addres_state", noValue( $("#addres_state").val()) );
+                formData.append("addres_country", noValue( $("#addres_tel").val()) );
+                formData.append("addres_tel", noValue( $("#addres_tel").val()) );
+                formData.append("addres_tel2", noValue( $("#addres_tel2").val()) );
+                formData.append("addres_cel", noValue( $("#addres_cel").val()) );
+                formData.append("addres_website", noValue( $("#addres_website").val()) );
+                formData.append("addres_email", noValue( $("#addres_email").val()) );
+                formData.append("addres_contact", noValue( $("#addres_contact").val()) );
 
                 appendIfFile('constancia-situacion-fiscal');
                 appendIfFile('comprobante-de-domicilio');
@@ -243,6 +243,12 @@
                 request.open("POST", "/alta-de-clientes");
                 request.send(formData);
             });
+
+            function noValue(input){
+                if(input.val().length == 0){
+                    return 'Sin valor'
+                }
+            }
         });
     </script>
 @endsection
