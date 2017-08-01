@@ -59,7 +59,7 @@ class FormsController extends Controller
 
 
     public function NewRequest(Request $request){
-        $newRequest = Request::create();
+        $newRequest = NewRequest::create();
         $uid = base_convert(time(),10,26);
         $newRequest->uid = $uid;
 
