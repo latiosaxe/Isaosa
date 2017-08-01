@@ -421,6 +421,7 @@
             console.log(file);
             if(file=="pdf" || file=="docx" || file=="doc" || file=='png' || file=='jpg'){
                 console.log('Si se permite');
+                $(this).closest('.fakeFileInput').find('p').remove();
                 $(this).closest('.fakeFileInput').append('<p>'+ $(this).val().split(/(\\|\/)/g).pop() +'</p>');
             } else{
                 sweetAlert("Oops...", "El archivo no es valido, por favor intenta con un archivo PDF, DOCX, DOC, PNG o JPG", "error");
