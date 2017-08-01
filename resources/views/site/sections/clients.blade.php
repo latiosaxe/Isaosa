@@ -175,15 +175,19 @@
             function appendIfFile(file_id ) {
                 var file = document.querySelector('#' + file_id).files[0];
                 console.log(file);
-                var ext = file.name.split('.').pop();
-                if(ext=="pdf" || ext=="docx" || ext=="doc" || ext=='png' || ext=='jpg'){
-                    console.info(file_id, file);
-                    formData.append(file_id, file);
-                    console.log("Si", ext);
-                    return true;
-                } else{
-                    console.log("No", ext);
-                    return false;
+                if (typeof file === 'undefined' || !file) {
+                    console.log("No hay " + file_id );
+                }else{
+                    var ext = file.name.split('.').pop();
+                    if(ext=="pdf" || ext=="docx" || ext=="doc" || ext=='png' || ext=='jpg'){
+                        console.info(file_id, file);
+                        formData.append(file_id, file);
+                        console.log("Si", ext);
+                        return true;
+                    } else{
+                        console.log("No", ext);
+                        return false;
+                    }
                 }
             }
 
@@ -245,7 +249,8 @@
             });
 
             function noValue(input){
-                if(input.val().length == 0){
+                console.log(input);
+                if(input.length == 0){
                     return 'Sin valor'
                 }
             }
