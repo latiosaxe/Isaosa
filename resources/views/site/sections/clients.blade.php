@@ -16,22 +16,22 @@
                         <div class="row">
                             <div class="col-md-12 element fake-select margin-botom-20">
                                 <select name="regimen-fiscal" id="regimen-de-ventas">
-                                    <option value="1">Ejecutivo de Ventas</option>
+                                    <option value="Ejecutivo-de-ventas">Ejecutivo de Ventas</option>
                                 </select>
                             </div>
                             <div class="col-md-12 element fake-select margin-botom-20">
                                 <select name="regimen-fiscal" id="regimen-fiscal">
-                                    <option value="1">Régimen Fiscal</option>
+                                    <option value="Regimen-fiscal">Régimen Fiscal</option>
                                 </select>
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Razón Social">
+                                <input type="text" placeholder="Razón Social" id="razon_social">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="RFC">
+                                <input type="text" placeholder="RFC" id="rfc">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="CURP">
+                                <input type="text" placeholder="CURP" id="curp">
                             </div>
                             <div class="col-md-12 ">
                                 <div class="fakeFileInput">
@@ -57,24 +57,26 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 element fake-select margin-botom-20">
-                                <select name="regimen-fiscal" id="regimen-fiscal">
-                                    <option value=" ">Título</option>
+                                <select name="regimen-fiscal" id="titulo">
+                                    <option value="sin-definir">Título</option>
+                                    <option value="Mr">Mr</option>
+                                    <option value="Mrs">Mrs</option>
                                 </select>
                             </div>
                             <div class="col-md-12 element fake-select margin-botom-20">
-                                <input type="text" placeholder="Nombre Completo">
+                                <input type="text" placeholder="Nombre Completo" id="complete_name">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Puesto en la empresa">
+                                <input type="text" placeholder="Puesto en la empresa" id="job">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Teléfono">
+                                <input type="text" placeholder="Teléfono" id="tel">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Celular">
+                                <input type="text" placeholder="Celular" id="cel">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Correo Electrónico">
+                                <input type="email" placeholder="Correo Electrónico" id="email">
                             </div>
                         </div>
                     </div>
@@ -84,43 +86,43 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Calle y número">
+                                <input type="text" placeholder="Calle y número" id="addres_stret">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Colonia">
+                                <input type="text" placeholder="Colonia" id="addres_colonia">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Ciudad">
+                                <input type="text" placeholder="Ciudad"  id="addres_city">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="CP">
+                                <input type="text" placeholder="CP" id="addres_cp">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Municipio">
+                                <input type="text" placeholder="Municipio" id="addres_municipio">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Estado">
+                                <input type="text" placeholder="Estado"  id="addres_state">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="País">
+                                <input type="text" placeholder="País" id="addres_country">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Teléfono 1">
+                                <input type="text" placeholder="Teléfono 1" id="addres_tel">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Teléfono 2">
+                                <input type="text" placeholder="Teléfono 2" id="addres_tel2">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Celular">
+                                <input type="text" placeholder="Celular" id="addres_cel">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Sitio Web">
+                                <input type="text" placeholder="Sitio Web" id="addres_website">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Correo Electrónico">
+                                <input type="text" placeholder="Correo Electrónico"  id="addres_email">
                             </div>
                             <div class="col-md-12 element margin-botom-20">
-                                <input type="text" placeholder="Persona de contacto">
+                                <input type="text" placeholder="Persona de contacto" id="addres_contact">
                             </div>
                         </div>
                     </div>
@@ -159,6 +161,16 @@
                 var input = $(this).closest('.fakeFileInput').find('.hidden');
                 input.trigger('click');
             });
+            $(".fakeFileInput input").on('change', function () {
+                var file = $(this).val().split('.').pop();
+                console.log(file);
+                if(file=="pdf" || file=="docx" || file=="doc" || file=='png' || file=='jpg'){
+                    console.log('Si se permite');
+                    $(this).closest('.fakeFileInput').append('<p>'+ $(this).val().split(/(\\|\/)/g).pop() +'</p>');
+                } else{
+                    sweetAlert("Oops...", "El archivo no es valido, por favor intenta con un archivo PDF, DOCX, DOC, PNG o JPG", "error");
+                }
+            });
 
             function appendIfFile(file_id ) {
                 var file = document.querySelector('#' + file_id).files[0];
@@ -175,6 +187,15 @@
                 }
             }
 
+            function reqListener () {
+                console.log(this.responseText);
+                if(this.responseText == 'ok'){
+                    sweetAlert("Solicitud exitosa", "Nos pondremos en contacto contigo tan pronto nos sea posible");
+                }else{
+                    sweetAlert("Oops...", "Parece que hubo un error, intentalo mas tarde o ponte en contacto con nosotros", "error");
+                }
+            }
+
             $("#NewClient").on('submit', function (event) {
                 event.preventDefault();
 
@@ -183,86 +204,45 @@
                 formData = new FormData();
 
                 formData.append("action", "new_client");
-                formData.append("curp", $("#curp").val());
                 formData.append("regimen-de-ventas", $("#regimen-de-ventas").val());
                 formData.append("regimen-fiscal", $("#regimen-fiscal").val());
-//
-//                appendIfFile(formData, 'regimen-de-ventas');
-//                appendIfFile(formData, 'regimen-fiscal');
-                appendIfFile('comprobante-de-domicilio');
+                formData.append("razon_social", $("#razon_social").val());
+                formData.append("rfc", $("#rfc").val());
+                formData.append("curp", $("#curp").val());
+
+                formData.append("titulo", $("#titulo").val());
+                formData.append("complete_name", $("#complete_name").val());
+                formData.append("job", $("#job").val());
+                formData.append("tel", $("#tel").val());
+                formData.append("cel", $("#cel").val());
+                formData.append("email", $("#email").val());
+
+                formData.append("addres_stret", $("#addres_stret").val());
+                formData.append("addres_colonia", $("#addres_colonia").val());
+                formData.append("addres_city", $("#addres_city").val());
+                formData.append("addres_cp", $("#addres_cp").val());
+                formData.append("addres_municipio", $("#addres_municipio").val());
+                formData.append("addres_state", $("#addres_state").val());
+                formData.append("addres_country", $("#addres_tel").val());
+                formData.append("addres_tel", $("#addres_tel").val());
+                formData.append("addres_tel2", $("#addres_tel2").val());
+                formData.append("addres_cel", $("#addres_cel").val());
+                formData.append("addres_website", $("#addres_website").val());
+                formData.append("addres_email", $("#addres_email").val());
+                formData.append("addres_contact", $("#addres_contact").val());
+
                 appendIfFile('constancia-situacion-fiscal');
+                appendIfFile('comprobante-de-domicilio');
 
                 console.info(formData);
-
 
                 formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
 
                 var request = new XMLHttpRequest();
+                request.addEventListener("load", reqListener);
                 request.open("POST", "/alta-de-clientes");
                 request.send(formData);
-
-//
-//                $.ajax({
-//                    url: '/alta-de-clientes', // Url to which the request is send
-//                    type: 'POST',
-//                    data: formData,
-//                    processData: false,
-//                    contentType: false,
-//                    success: function ( json_data ) {
-//                        if( callback ){
-//                            callback( json_data );
-//                        }
-//                        alert("Callback");
-//                    }
-//                });
-
-
             });
         });
-//        $("input[type='file']").on('change', function () {
-//            var _$this = $(this),
-//                    input = this,
-//                    file,
-//                    size;
-//            if(_$this.hasClass('hidden')){
-//                console.log(input);
-//
-//                if (!window.FileReader) {
-////                    bodyAppend("p", "The file API isn't supported on this browser yet.");
-//                    return;
-//                }
-//
-//                if (!input) {
-//                    console.log("NO archivo");
-//                }
-//                else if (!input.files) {
-//                    console.log(input);
-//                    console.log("Navegador antiguo")
-//                }
-//                else if (!input.files[0]) {
-//                    console.log("Por favor selecciona un archivo")
-//                }
-//                else {
-//                    file = input.files[0];
-//                    size = input.files[0].size/1024/1024;
-//                    console.log("Nombre: " + file.name);
-//                    console.log("Size: " +size);
-//
-//                    if(size <= 10){
-//                        var fileData = file;
-//                        var request = new XMLHttpRequest();
-//                        request.open('post', '/uploadFile');
-//                        request.addEventListener('load', uploadComplete);
-//                        request.send(fileData);
-//
-//                    }else{
-//                        swal("El archivo es muy pesado", "Favor de subir un archivo no mayor a 10MB");
-//                    }
-//                }
-//            }
-//            function uploadComplete(data) {
-//                console.log(data.currentTarget.respone);
-//            }
-//        })
     </script>
 @endsection

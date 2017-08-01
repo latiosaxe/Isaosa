@@ -131,7 +131,8 @@ ISAOSA.main = (function(){
             $('html,body').animate({ scrollTop: 0 }, 'slow');
         });
 
-        _$header_menu.on('click', function () {
+        _$header_menu.on('click', function (event) {
+            event.preventDefault();
             if(_$header_menu.find('.hamburguer-bt').hasClass('on')){
                 _$header_menu.find('.hamburguer-bt').removeClass('on');
                 _$mobile_menu.removeClass('active');

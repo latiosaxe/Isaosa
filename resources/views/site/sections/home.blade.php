@@ -134,8 +134,8 @@
         <ul>
             <li><a href="#">Ingreso de clientes</a></li>
             <li><a href="#">Proveedores</a></li>
-            <li><a href="#">Solicitud de Crédito</a></li>
-            <li><a href="#">Alta de clientes</a></li>
+            <li><a href="/solicitud">Solicitud de Crédito</a></li>
+            <li><a href="/alta-de-clientes">Alta de clientes</a></li>
         </ul>
     </div>
 
@@ -251,7 +251,7 @@
         <div class="alt-image"></div>
     </div>
 </section>
-<section class="home-locations" id="#bodegas">
+<section class="home-locations" id="bodegas">
     <div class="container">
         <div class="relative">
             <div class="head">
@@ -320,7 +320,7 @@
                     </div>
                 </div>
             </div>
-            <div class="desktop-show" style="width: 100%;"> 
+            <div class="desktop-show" style="width: 100%;">
                 <div class="body" style="width: 100%;">
                     <div id="map"></div>
                 </div>
@@ -340,7 +340,7 @@
                                     </p><p>
                                         Manzanillo, Colima, México
                                     </p><p>
-                                        Teléfono: (314) 336 4877
+                                        <a href="te:(314) 336 4877">Teléfono: (314) 336 4877</a>
                                     </p>
                                 </div>
                             </div>
@@ -357,7 +357,7 @@
                                     </p><p>
                                         Altamira, Tamaulipas, México
                                     </p><p>
-                                        Teléfono: (833) 260 9119
+                                        <a href="tel:(833) 260 9119">Teléfono: (833) 260 9119</a>
                                     </p>
                                 </div>
                             </div>
@@ -374,7 +374,7 @@
                                     </p><p>
                                         Topolobampo, Ahome, Sinaloa, México
                                     </p><p>
-                                        Teléfono: (668) 862 1600
+                                        <a href="tel:(668) 862 1600">Teléfono: (668) 862 1600</a>
                                     </p>
                                 </div>
                             </div>
@@ -391,7 +391,7 @@
                                     </p><p>
                                         Manzanillo, Colima, México
                                     </p><p>
-                                        Teléfono: (314) 336 4877
+                                        <a href="tel:(314) 336 4877">Teléfono: (314) 336 4877</a>
                                     </p>
                                 </div>
                             </div>
@@ -418,7 +418,7 @@
                     {{--style="background-image: url('/assets/images/home/04_isaosa_img_home_contacto.png')"--}}
                     <div class="image-circle">
                         <div class="overlay">
-                            <a href="#">
+                            <a href="/publicacion/{{ $new->id }}">
                                 <p>
                                     {{ $new->description }}
                                 </p>
@@ -429,7 +429,9 @@
                         </div>
                     </div>
                     <div class="line"></div>
-                    <h4>{{ $new->title }}</h4>
+                    <h4>
+                        <a href="/publicacion/{{ $new->id }}">{{ $new->title }}</a>
+                    </h4>
                 </div>
             @endforeach
             </div>

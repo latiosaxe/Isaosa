@@ -9,8 +9,8 @@
     <ul>
         <li><a href="#">Ingreso de clientes</a></li>
         <li><a href="#">Proveedores</a></li>
-        <li><a href="#">Solicitud de Crédito</a></li>
-        <li><a href="#">Alta de clientes</a></li>
+        <li><a href="/solicitud">Solicitud de Crédito</a></li>
+        <li><a href="/alta-de-clientes">Alta de clientes</a></li>
     </ul>
 </div>
 
