@@ -185,6 +185,7 @@
                         console.log("Si", ext);
                         return true;
                     } else{
+                        formData.append(file_id, 'Sin archivo');
                         console.log("No", ext);
                         return false;
                     }
