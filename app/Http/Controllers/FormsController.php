@@ -133,9 +133,9 @@ class FormsController extends Controller
     }
 
     private function aws(Request $request, $inputName, $uid){
-        dd($request);
         try {
             $image = $request->file($inputName);
+            dd($image);
             $new_image_name = $inputName.'.'.$image->getClientOriginalExtension();
             $s3 = Storage::disk('s3');
             $file_path = "clientes/{$uid}/{$new_image_name}";
