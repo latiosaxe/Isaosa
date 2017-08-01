@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Client;
-use App\Request;
+use App\NewRequest;
 use \Storage;
 
 class FormsController extends Controller
