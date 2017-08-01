@@ -12,7 +12,7 @@ class FormsController extends Controller
         return view('site.sections.clients');
     }
 
-    public function Newclient(Request $request){
+    public function NewClient(Request $request){
         $client = Client::create();
         $uid = base_convert(time(),10,26);
         $client->uid = $uid;
@@ -51,6 +51,85 @@ class FormsController extends Controller
         $data['status'] = 'ok';
         return response()->json($data, 200);
     }
+
+    public function request(){
+        return view('site.sections.request');
+    }
+
+
+    public function NewRequest(Request $request){
+        $request = Request::create();
+        $uid = base_convert(time(),10,26);
+        $request->uid = $uid;
+
+        $request->empresa = $request->input('', 'Sin definir');
+        $request->rfc = $request->input('', 'Sin definir');
+        $request->curp = $request->input('', 'Sin definir');
+        $request->domicilio_fiscal = $request->input('', 'Sin definir');
+        $request->colonia = $request->input('', 'Sin definir');
+        $request->ciudad = $request->input('', 'Sin definir');
+        $request->municipio = $request->input('', 'Sin definir');
+        $request->estado = $request->input('', 'Sin definir');
+        $request->cp = $request->input('', 'Sin definir');
+        $request->telefono_1 = $request->input('', 'Sin definir');
+        $request->telefono_2 = $request->input('', 'Sin definir');
+        $request->celular = $request->input('', 'Sin definir');
+        $request->correo_electronico = $request->input('', 'Sin definir');
+        $request->apoderado_legal = $request->input('', 'Sin definir');
+        $request->nombre_del_contacto = $request->input('', 'Sin definir');
+        $request->consumo_anual_de_fertilizante = $request->input('', 'Sin definir');
+        $request->referencia_1_banco = $request->input('', 'Sin definir');
+        $request->referencia_1_sucursal = $request->input('', 'Sin definir');
+        $request->referencia_1_ejecutivo_de_cuenta = $request->input('', 'Sin definir');
+        $request->referencia_1_telefono_1 = $request->input('', 'Sin definir');
+        $request->referencia_1_telefono_2 = $request->input('', 'Sin definir');
+        $request->referencia_1_celular = $request->input('', 'Sin definir');
+        $request->referencia_1_ciudad = $request->input('', 'Sin definir');
+        $request->referencia_1_municipio = $request->input('', 'Sin definir');
+        $request->referencia_1_estado = $request->input('', 'Sin definir');
+        $request->referencia_2_banco = $request->input('', 'Sin definir');
+        $request->referencia_2_sucursal = $request->input('', 'Sin definir');
+        $request->referencia_2_ejecutivo_de_cuenta = $request->input('', 'Sin definir');
+        $request->referencia_2_telefono_1 = $request->input('', 'Sin definir');
+        $request->referencia_2_telefono_2 = $request->input('', 'Sin definir');
+        $request->referencia_2_celular = $request->input('', 'Sin definir');
+        $request->referencia_2_ciudad = $request->input('', 'Sin definir');
+        $request->referencia_2_municipio = $request->input('', 'Sin definir');
+        $request->referencia_2_estado = $request->input('', 'Sin definir');
+        $request->empresa_1_rfc = $request->input('', 'Sin definir');
+        $request->empresa_1_domicilio_fiscal = $request->input('', 'Sin definir');
+        $request->empresa_1_cp = $request->input('', 'Sin definir');
+        $request->empresa_1_ciudad = $request->input('', 'Sin definir');
+        $request->empresa_1_municipio = $request->input('', 'Sin definir');
+        $request->empresa_1_telefono_1 = $request->input('', 'Sin definir');
+        $request->empresa_1_telefono_2 = $request->input('', 'Sin definir');
+        $request->empresa_1_celular = $request->input('', 'Sin definir');
+        $request->empresa_1_correo_electronico = $request->input('', 'Sin definir');
+        $request->empresa_1_nombre_del_contacto = $request->input('', 'Sin definir');
+        $request->empresa_2_rfc = $request->input('', 'Sin definir');
+        $request->empresa_2_domicilio_fiscal = $request->input('', 'Sin definir');
+        $request->empresa_2_cp = $request->input('', 'Sin definir');
+        $request->empresa_2_ciudad = $request->input('', 'Sin definir');
+        $request->empresa_2_municipio = $request->input('', 'Sin definir');
+        $request->empresa_2_telefono_1 = $request->input('', 'Sin definir');
+        $request->empresa_2_telefono_2 = $request->input('', 'Sin definir');
+        $request->empresa_2_celular = $request->input('', 'Sin definir');
+        $request->empresa_2_correo_electronico = $request->input('', 'Sin definir');
+        $request->empresa_2_nombre_del_contacto = $request->input('', 'Sin definir');
+
+        $request->acta_constitutiva = $this->aws($request, 'acta_constitutiva', $uid);
+        $request->constancia_situacion_fiscal = $this->aws($request, 'constancia_situacion_fiscal', $uid);
+        $request->poder_notarial = $this->aws($request, 'poder_notarial', $uid);
+        $request->identificacion_oficial = $this->aws($request, 'identificacion_oficial', $uid);
+        $request->comprobante_curp = $this->aws($request, 'comprobante_curp', $uid);
+        $request->formato_32_d = $this->aws($request, 'formato_32_d', $uid);
+
+        $request->save();
+
+        $data['status'] = 'ok';
+        return response()->json($data, 200);
+    }
+
     private function aws(Request $request, $inputName, $uid){
         try {
             $image = $request->file($inputName);
@@ -70,4 +149,5 @@ class FormsController extends Controller
             return '';
         }
     }
+
 }

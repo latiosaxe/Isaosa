@@ -27,9 +27,9 @@
                                     <input type="text" placeholder="Número Único">
                                 </div>
                                 <div class="col-md-6">
-                                    <select name="select-state" id="select-state">
-                                        <option value="">Estado Actual</option>
-                                    </select>
+                                    {{--<select name="select-state" id="select-state">--}}
+                                        {{--<option value="">Estado Actual</option>--}}
+                                    {{--</select>--}}
                                 </div>
                             </fieldset>
                         </div>
@@ -47,7 +47,7 @@
             <p>NUEVA SOLICITUD DE CRÉDITO</p>
         </div>
 
-        <form onsubmit="return false;">
+        <form onsubmit="return false;" class="please-help-me" id="NewRequest">
             <div class="gray-block">
                 <div class="row">
                     <div class="col-md-12">
@@ -131,31 +131,31 @@
                                         <p><strong>BANCO 1</strong></p>
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Banco 1">
+                                        <input type="text" placeholder="Referencia 1 Banco">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Sucursal">
+                                        <input type="text" placeholder="Referencia 1 Sucursal">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Ejecutivo de cuenta">
+                                        <input type="text" placeholder="Referencia 1 Ejecutivo de cuenta">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 1">
+                                        <input type="text" placeholder="Referencia 1 Teléfono 1">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 2">
+                                        <input type="text" placeholder="Referencia 1 Teléfono 2">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Celular">
+                                        <input type="text" placeholder="Referencia 1 Celular">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Ciudad">
+                                        <input type="text" placeholder="Referencia 1 Ciudad">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Municipio">
+                                        <input type="text" placeholder="Referencia 1 Municipio">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Estado">
+                                        <input type="text" placeholder="Referencia 1 Estado">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -163,31 +163,31 @@
                                         <p><strong>BANCO 2</strong></p>
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Banco 2">
+                                        <input type="text" placeholder="Referencia 2 Banco">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Sucursal">
+                                        <input type="text" placeholder="Referencia 2 Sucursal">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Ejecutivo de cuenta">
+                                        <input type="text" placeholder="Referencia 2 Ejecutivo de cuenta">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 1">
+                                        <input type="text" placeholder="Referencia 2 Teléfono 1">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 2">
+                                        <input type="text" placeholder="Referencia 2 Teléfono 2">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Celular">
+                                        <input type="text" placeholder="Referencia 2 Celular">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Ciudad">
+                                        <input type="text" placeholder="Referencia 2 Ciudad">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Municipio">
+                                        <input type="text" placeholder="Referencia 2 Municipio">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Estado">
+                                        <input type="text" placeholder="Referencia 2 Estado">
                                     </div>
                                 </div>
                             </fieldset>
@@ -211,34 +211,34 @@
                                         <p><strong>EMPRESA 1</strong></p>
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="RFC">
+                                        <input type="text" placeholder="Empresa 1 RFC">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Domicilio Fiscal">
+                                        <input type="text" placeholder="Empresa 1 Domicilio Fiscal">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="CP">
+                                        <input type="text" placeholder="Empresa 1 CP">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Ciudad">
+                                        <input type="text" placeholder="Empresa 1 Ciudad">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Municipio">
+                                        <input type="text" placeholder="Empresa 1 Municipio">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 1">
+                                        <input type="text" placeholder="Empresa 1 Teléfono 1">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 2">
+                                        <input type="text" placeholder="Empresa 1 Teléfono 2">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Celular">
+                                        <input type="text" placeholder="Empresa 1 Celular">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Correo electrónico">
+                                        <input type="text" placeholder="Empresa 1 Correo electrónico">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Nombre del contacto">
+                                        <input type="text" placeholder="Empresa 1 Nombre del contacto">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -246,34 +246,34 @@
                                         <p><strong>EMPRESA 2</strong></p>
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="RFC">
+                                        <input type="text" placeholder="Empresa 2 RFC">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Domicilio Fiscal">
+                                        <input type="text" placeholder="Empresa 2 Domicilio Fiscal">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="CP">
+                                        <input type="text" placeholder="Empresa 2 CP">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Ciudad">
+                                        <input type="text" placeholder="Empresa 2 Ciudad">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Municipio">
+                                        <input type="text" placeholder="Empresa 2 Municipio">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 1">
+                                        <input type="text" placeholder="Empresa 2 Teléfono 1">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Teléfono 2">
+                                        <input type="text" placeholder="Empresa 2 Teléfono 2">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Celular">
+                                        <input type="text" placeholder="Empresa 2 Celular">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Correo electrónico">
+                                        <input type="text" placeholder="Empresa 2 Correo electrónico">
                                     </div>
                                     <div class="element">
-                                        <input type="text" placeholder="Nombre del contacto">
+                                        <input type="text" placeholder="Empresa 2 Nombre del contacto">
                                     </div>
                                 </div>
                             </fieldset>
@@ -302,7 +302,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden" id="constancia-situacion-fiscal">
+                                        <input type="file" class="hidden" id="constancia_situacion_fiscal">
                                         <div class="text">
                                             <span>Constancia de situación fiscal</span>
                                         </div>
@@ -310,20 +310,12 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden" id="poder-notarial">
+                                        <input type="file" class="hidden" id="poder_notarial">
                                         <div class="text">
                                             <span>Poder notarial del representante o persona</span>
                                         </div>
                                     </div>
                                 </div>
-                                {{--<div class="col-md-6">--}}
-                                    {{--<div class="fakeFileInput">--}}
-                                        {{--<input type="file" class="hidden" id="acta">--}}
-                                        {{--<div class="text">--}}
-                                            {{--<span>Acta constitutiva</span>--}}
-                                        {{--</div>--}}
-                                    {{--</div>--}}
-                                {{--</div>--}}
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
                                         <input type="file" class="hidden" id="identificacion-oficial">
@@ -334,7 +326,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden" id="comprobante-curp">
+                                        <input type="file" class="hidden" id="comprobante_curp">
                                         <div class="text">
                                             <span>Comprobante del CURP</span>
                                         </div>
@@ -342,7 +334,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="fakeFileInput">
-                                        <input type="file" class="hidden" id="formato-32-d">
+                                        <input type="file" class="hidden" id="formato_32_d">
                                         <div class="text">
                                             <span>Formato 32-D</span>
                                         </div>
@@ -409,58 +401,147 @@
 @endsection
 @section('javascript')
     <script>
+        var formData;
         $('header').addClass('block');
+
+        $.each($(".please-help-me fieldset input").not(':input[type=button], :input[type=submit], :input[type=file]'), function( index, value ) {
+            var fakeid = $(this).attr('placeholder').replace(/ /g,"_");
+            var newid = fakeid.toLowerCase();
+            var clean = getCleanedString(newid);
+//            console.log(clean);
+            $(this).attr('id', clean);
+        });
 
         $(".fakeFileInput .text").on('click', function () {
             var input = $(this).closest('.fakeFileInput').find('.hidden');
-            console.log( input );
             input.trigger('click');
         });
+        $(".fakeFileInput input").on('change', function () {
+            var file = $(this).val().split('.').pop();
+            console.log(file);
+            if(file=="pdf" || file=="docx" || file=="doc" || file=='png' || file=='jpg'){
+                console.log('Si se permite');
+                $(this).closest('.fakeFileInput').append('<p>'+ $(this).val().split(/(\\|\/)/g).pop() +'</p>');
+            } else{
+                sweetAlert("Oops...", "El archivo no es valido, por favor intenta con un archivo PDF, DOCX, DOC, PNG o JPG", "error");
+            }
+        });
 
-        $("input[type='file']").on('change', function () {
-            var _$this = $(this),
-                input = this,
-                file,
-                size;
-            if(_$this.hasClass('hidden')){
-                console.log(input);
-
-                if (!window.FileReader) {
-//                    bodyAppend("p", "The file API isn't supported on this browser yet.");
-                    return;
-                }
-
-                if (!input) {
-                    console.log("NO archivo");
-                }
-                else if (!input.files) {
-                    console.log(input);
-                    console.log("Navegador antiguo")
-                }
-                else if (!input.files[0]) {
-                    console.log("Por favor selecciona un archivo")
-                }
-                else {
-                    file = input.files[0];
-                    size = input.files[0].size/1024/1024;
-                    console.log("Nombre: " + file.name);
-                    console.log("Size: " +size);
-
-                    if(size <= 10){
-                        var fileData = file;
-                        var request = new XMLHttpRequest();
-                        request.open('post', '/uploadFile');
-                        request.addEventListener('load', uploadComplete);
-                        request.send(fileData);
-
-                    }else{
-                        swal("El archivo es muy pesado", "Favor de subir un archivo no mayor a 10MB");
-                    }
+        function appendIfFile(file_id ) {
+            var file = document.querySelector('#' + file_id).files[0];
+            console.log(file);
+            if (typeof file === 'undefined' || !file) {
+                console.log("No hay " + file_id );
+            }else{
+                var ext = file.name.split('.').pop();
+                if(ext=="pdf" || ext=="docx" || ext=="doc" || ext=='png' || ext=='jpg'){
+                    console.info(file_id, file);
+                    formData.append(file_id, file);
+                    console.log("Si", ext);
+                    return true;
+                } else{
+                    formData.append(file_id, 'Sin archivo');
+                    console.log("No", ext);
+                    return false;
                 }
             }
-            function uploadComplete(data) {
-                console.log(data.currentTarget.respone);
+        }
+
+        function reqListener () {
+            console.log(this.responseText);
+            var response = JSON.parse(this.responseText);
+            console.log(response);
+            if(response.status == 'ok'){
+                sweetAlert("Solicitud exitosa", "Nos pondremos en contacto contigo tan pronto nos sea posible");
+            }else{
+                sweetAlert("Oops...", "Parece que hubo un error, intentalo mas tarde o ponte en contacto con nosotros", "error");
             }
-        })
+        }
+
+        $("#NewRequest").on('submit', function (event) {
+            event.preventDefault();
+
+//                VALIDACIONES
+
+            formData = new FormData();
+
+            formData.append("action", "new_client");
+            formData.append("regimen_de_ventas", noValue( $("#regimen-de-ventas").val()) );
+            formData.append("regimen_fiscal", noValue( $("#regimen-fiscal").val()) );
+            formData.append("razon_social", noValue( $("#razon_social").val()) );
+            formData.append("rfc", noValue( $("#rfc").val()) );
+            formData.append("curp", noValue( $("#curp").val()) );
+
+            formData.append("titulo", noValue( $("#titulo").val()) );
+            formData.append("complete_name", noValue( $("#complete_name").val()) );
+            formData.append("job", noValue( $("#job").val()) );
+            formData.append("tel", noValue( $("#tel").val()) );
+            formData.append("cel", noValue( $("#cel").val()) );
+            formData.append("email", noValue( $("#email").val()) );
+
+            formData.append("addres_stret", noValue( $("#addres_stret").val()) );
+            formData.append("addres_colonia", noValue( $("#addres_colonia").val()) );
+            formData.append("addres_city", noValue( $("#addres_city").val()) );
+            formData.append("addres_cp", noValue( $("#addres_cp").val()) );
+            formData.append("addres_municipio", noValue( $("#addres_municipio").val()) );
+            formData.append("addres_state", noValue( $("#addres_state").val()) );
+            formData.append("addres_country", noValue( $("#addres_tel").val()) );
+            formData.append("addres_tel", noValue( $("#addres_tel").val()) );
+            formData.append("addres_tel2", noValue( $("#addres_tel2").val()) );
+            formData.append("addres_cel", noValue( $("#addres_cel").val()) );
+            formData.append("addres_website", noValue( $("#addres_website").val()) );
+            formData.append("addres_email", noValue( $("#addres_email").val()) );
+            formData.append("addres_contact", noValue( $("#addres_contact").val()) );
+
+            appendIfFile('acta_constitutiva');
+            appendIfFile('constancia_situacion_fiscal');
+            appendIfFile('poder_notarial');
+            appendIfFile('identificacion_oficial');
+            appendIfFile('comprobante_curp');
+            appendIfFile('formato_32_d');
+
+            console.info(formData);
+
+            formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+
+            var request = new XMLHttpRequest();
+            request.addEventListener("load", reqListener);
+            request.open("POST", "/solicitud");
+            request.send(formData);
+        });
+
+        function noValue(input){
+            console.log(input);
+            if(input.length == 0){
+                return 'Sin valor'
+            }
+        }
+
+
+        function getCleanedString(cadena){
+            // Definimos los caracteres que queremos eliminar
+            var specialChars = "!@#$^&%*()+=-[]\/{}|:<>?,.";
+
+            // Los eliminamos todos
+            for (var i = 0; i < specialChars.length; i++) {
+                cadena= cadena.replace(new RegExp("\\" + specialChars[i], 'gi'), '');
+            }
+
+            // Lo queremos devolver limpio en minusculas
+            cadena = cadena.toLowerCase();
+
+            // Quitamos espacios y los sustituimos por _ porque nos gusta mas asi
+            cadena = cadena.replace(/ /g,"_");
+
+            // Quitamos acentos y "ñ". Fijate en que va sin comillas el primer parametro
+            cadena = cadena.replace(/á/gi,"a");
+            cadena = cadena.replace(/é/gi,"e");
+            cadena = cadena.replace(/í/gi,"i");
+            cadena = cadena.replace(/ó/gi,"o");
+            cadena = cadena.replace(/ú/gi,"u");
+            cadena = cadena.replace(/ñ/gi,"n");
+            return cadena;
+        }
+
     </script>
 @endsection

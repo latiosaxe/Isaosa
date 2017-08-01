@@ -18,11 +18,11 @@ Route::group(['middleware' => ['web']], function(){
     Route::get('/quienes-somos', function () {
         return view('site.sections.about');
     });
-    Route::get('/solicitud', function () {
-        return view('site.sections.request');
-    });
+    Route::get('solicitud', 'FormsController@request');
+    Route::post('solicitud', 'FormsController@NewRequest');
+
     Route::get('alta-de-clientes', 'FormsController@clients');
-    Route::post('alta-de-clientes', 'FormsController@Newclient');
+    Route::post('alta-de-clientes', 'FormsController@NewClient');
 
     Route::resource('blog', 'NewsController');
     Route::get('publicacion/{id}', 'NewsController@show');
