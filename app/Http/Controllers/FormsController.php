@@ -16,32 +16,32 @@ class FormsController extends Controller
         $client = Client::create();
         $uid = base_convert(time(),10,26);
         $client->uid = $uid;
-        $client->regimen_de_ventas = $request->input('regimen-de-ventas', '');
-        $client->regimen_fiscal = $request->input('regimen-fiscal', '');
+        $client->regimen_de_ventas = $request->input('regimen-de-ventas', 'Sin definir');
+        $client->regimen_fiscal = $request->input('regimen-fiscal', 'Sin definir');
         
-        $client->razon_social = $request->input('razon_social', '');
-        $client->rfc = $request->input('rfc', '');
-        $client->curp = $request->input('curp', '');
-        $client->titulo = $request->input('titulo', '');
-        $client->complete_name = $request->input('complete_name', '');
-        $client->job = $request->input('job', '');
-        $client->tel = $request->input('tel', '');
-        $client->cel = $request->input('cel', '');
-        $client->email = $request->input('email', '');
+        $client->razon_social = $request->input('razon_social', 'Sin definir');
+        $client->rfc = $request->input('rfc', 'Sin definir');
+        $client->curp = $request->input('curp', 'Sin definir');
+        $client->titulo = $request->input('titulo', 'Sin definir');
+        $client->complete_name = $request->input('complete_name', 'Sin definir');
+        $client->job = $request->input('job', 'Sin definir');
+        $client->tel = $request->input('tel', 'Sin definir');
+        $client->cel = $request->input('cel', 'Sin definir');
+        $client->email = $request->input('email', 'Sin definir');
 
-        $client->addres_stret = $request->input('addres_stret', '');
-        $client->addres_colonia = $request->input('addres_colonia', '');
-        $client->addres_city = $request->input('addres_city', '');
-        $client->addres_cp = $request->input('addres_cp', '');
-        $client->addres_municipio = $request->input('addres_municipio', '');
-        $client->addres_state = $request->input('addres_state', '');
-        $client->addres_country = $request->input('addres_country', '');
-        $client->addres_tel = $request->input('addres_tel', '');
-        $client->addres_tel2 = $request->input('addres_tel2', '');
-        $client->addres_cel = $request->input('addres_cel', '');
-        $client->addres_website = $request->input('addres_website', '');
-        $client->addres_email = $request->input('addres_email', '');
-        $client->addres_contact = $request->input('addres_contact', '');
+        $client->addres_stret = $request->input('addres_stret', 'Sin definir');
+        $client->addres_colonia = $request->input('addres_colonia', 'Sin definir');
+        $client->addres_city = $request->input('addres_city', 'Sin definir');
+        $client->addres_cp = $request->input('addres_cp', 'Sin definir');
+        $client->addres_municipio = $request->input('addres_municipio', 'Sin definir');
+        $client->addres_state = $request->input('addres_state', 'Sin definir');
+        $client->addres_country = $request->input('addres_country', 'Sin definir');
+        $client->addres_tel = $request->input('addres_tel', 'Sin definir');
+        $client->addres_tel2 = $request->input('addres_tel2', 'Sin definir');
+        $client->addres_cel = $request->input('addres_cel', 'Sin definir');
+        $client->addres_website = $request->input('addres_website', 'Sin definir');
+        $client->addres_email = $request->input('addres_email', 'Sin definir');
+        $client->addres_contact = $request->input('addres_contact', 'Sin definir');
 
 //        $client-> = $request->input('', '');
 
