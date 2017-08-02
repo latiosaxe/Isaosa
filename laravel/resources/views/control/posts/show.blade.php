@@ -25,6 +25,17 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-md-2 control-label">Imagen:</label>
+                <div class="col-md-8">
+                    <div class="fakeFileInput">
+                        <input type="file" class="hidden" id="image">
+                        <div class="text">
+                            <span>Imagen destacada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-md-2 control-label">Activa:</label>
                 <div class="col-md-8">
                     <div class="checkbox checkbox-inline">
@@ -40,23 +51,23 @@
             </div>
         </form>
     </div>
-    <div class="wrapper">
-        <div class="page-subtitle">
-            <h3>Sección de galería</h3>
-        </div>
-        <ul class="actual_leagues">
+    {{--<div class="wrapper">--}}
+        {{--<div class="page-subtitle">--}}
+            {{--<h3>Sección de galería</h3>--}}
+        {{--</div>--}}
+        {{--<ul class="actual_leagues">--}}
             {{--@if($post->gallery)--}}
                 {{--@foreach($post->gallery->images as $image)--}}
                     {{--<li><img src="{{$image->url}}" alt="{{$image->title}}"><button class="btn btn-danger deleteImage" data-image-id="{{$image->id}}" data-gallery-id="{{$post->gallery_id}}">Eliminar imagen</button></li>--}}
                 {{--@endforeach--}}
             {{--@endif--}}
-        </ul>
-        <form action="/api/image" class="dropzone" id="image-gallery">
-            <div class="fallback">
-                <input name="file" type="file" multiple />
-            </div>
-        </form>
-    </div>
+        {{--</ul>--}}
+        {{--<form action="/api/image" class="dropzone" id="image-gallery">--}}
+            {{--<div class="fallback">--}}
+                {{--<input name="file" type="file" multiple />--}}
+            {{--</div>--}}
+        {{--</form>--}}
+    {{--</div>--}}
 @endsection
 
 @section('javascript')
@@ -64,24 +75,7 @@
         $(document).ready(function(){
             TC.blog.init();
 //            console.log($("#showStadium").data('id'));
-            Dropzone.options.imageGallery = {
-                paramName: "file",
-                autoProcessQueue: true,
-                maxFiles: 1,
-                maxFilesize: 50,
-                sending: function(file, xhr, formData) {
-                    formData.append("type", 'gallery-post');
-                    formData.append("id", $("#showPost").data('id'));
-                },
-                headers: {
-                    'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
-                },
-                init: function() {
-                    this.on("maxfilesexceeded", function(file){
-                        alert("Solo se puede subir una imagen");
-                    });
-                }
-            };
+
         });
     </script>
 @endsection

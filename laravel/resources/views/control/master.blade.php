@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/control/plugins/dropzone/dropzone.min.css">
     <link rel="stylesheet" type="text/css" href="/assets/control/plugins/redactor/redactor.css">
     <link rel="stylesheet" type="text/css" href="/assets/intuitive/css/default-blue-white.css" id="dev-css">
+    <link rel="stylesheet" type="text/css" href="/assets/intuitive/css/isaosa.css">
     <!-- ./css styles -->
 
     <!--[if lte IE 9]>

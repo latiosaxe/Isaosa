@@ -1,0 +1,44 @@
+@size-factor: 1.5;
+@color-font: #3B3F48;
+
+.fakeFileInput{
+    width: 100%;
+    margin-bottom: 20px;
+    input{
+        width: 1px;
+        //display: none;
+    }
+    .text{
+        color: #FFF;
+        width: 100%;
+        cursor: pointer;
+        padding: 12px 14px;
+        position: relative;
+        background: @color-font;
+        font-size: 12px * @size-factor;
+        &:before{
+            top: 0;
+            content: '';
+            right: 4px;
+            width: 42px;
+            height: 42px;
+            background: url('/assets/images/icons/descargables.svg') no-repeat;
+            position: absolute;
+        }
+    }
+}
+
+.fakeFileInput{
+    overflow: hidden;
+    position: relative;
+    input[type="file"]{
+        top: -100px;
+        position: absolute;
+        display: block !important;
+    }
+    p{
+        color: #000;
+        line-height: 120%;
+        padding: 10px 10px 0 10px;
+    }
+}

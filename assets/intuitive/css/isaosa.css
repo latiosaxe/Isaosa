@@ -1,0 +1,39 @@
+.fakeFileInput {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.fakeFileInput input {
+  width: 1px;
+}
+.fakeFileInput .text {
+  color: #FFF;
+  width: 100%;
+  cursor: pointer;
+  padding: 12px 14px;
+  position: relative;
+  background: #3B3F48;
+  font-size: 18px;
+}
+.fakeFileInput .text:before {
+  top: 0;
+  content: '';
+  right: 4px;
+  width: 42px;
+  height: 42px;
+  background: url('/assets/images/icons/descargables.svg') no-repeat;
+  position: absolute;
+}
+.fakeFileInput {
+  overflow: hidden;
+  position: relative;
+}
+.fakeFileInput input[type="file"] {
+  top: -100px;
+  position: absolute;
+  display: block !important;
+}
+.fakeFileInput p {
+  color: #000;
+  line-height: 120%;
+  padding: 10px 10px 0 10px;
+}
