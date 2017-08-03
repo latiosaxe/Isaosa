@@ -52,7 +52,7 @@ TC.blog = (function(){
 
             var request = new XMLHttpRequest();
             request.addEventListener("load", reqListener);
-            request.open("POST", TC.control_url+'blog/'+id);
+            request.open("PUT", TC.control_url+'blog/'+id);
             request.send(formData);
 
             // $.ajax({
@@ -72,7 +72,7 @@ TC.blog = (function(){
             var response = JSON.parse(this.responseText);
             console.log(response);
             if(response.status == 'ok'){
-                document.location.href = TC.control_url+'blog'
+                document.location.href = TC.control_url+'blog';
             }else{
                 alert('Error al actualizar la nota');
             }

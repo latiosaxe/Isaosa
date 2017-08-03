@@ -9,6 +9,7 @@ TC.main = (function(){
             }
         });
 
+
         _$redactor_text = $('.redactor-text');
         _$redactor_text.redactor();
     };
