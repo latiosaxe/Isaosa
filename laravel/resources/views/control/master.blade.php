@@ -16,6 +16,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/control/plugins/redactor/redactor.css">
     <link rel="stylesheet" type="text/css" href="/assets/intuitive/css/default-blue-white.css" id="dev-css">
     <link rel="stylesheet" type="text/css" href="/assets/intuitive/css/isaosa.css">
+    <link rel="stylesheet" type="text/css" href="/assets/plugins/sweetalert/sweetalert.css">
     <!-- ./css styles -->
 
     <!--[if lte IE 9]>
@@ -141,6 +142,7 @@
 <script type="text/javascript" src="/assets/control/plugins/redactor/redactor.min.js"></script>
 
 
+<script type="text/javascript" src="/assets/plugins/sweetalert/sweetalert.min.js"></script>
 <script type="text/javascript" src="/assets/intuitive/js/dev-settings.js"></script>
 <script type="text/javascript" src="/assets/intuitive/js/dev-loaders.js"></script>
 <script type="text/javascript" src="/assets/intuitive/js/dev-layout-default.js"></script>
@@ -157,6 +159,7 @@
     $(document).ready(function(){
        TC.main.init();
     });
+
 </script>
 
 @yield('javascript')

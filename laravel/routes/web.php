@@ -44,6 +44,7 @@ Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace
     });
     Route::get('dashboard', 'DashboardController@index');
     Route::resource('blog', 'BlogController');
+    Route::post('blogImage/{id}', 'BlogController@fakeUpload');
     Route::resource('categorias', 'CategoriesController');
     Route::resource('productos', 'ProductsController');
     Route::resource('servicios', 'ServicesController');

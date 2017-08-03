@@ -138,7 +138,7 @@ class FormsController extends Controller
             $image = $request->file($inputName);
             $full_path = '';
             if($image==null){
-                $full_path = 'Sin arichivo';
+                $full_path = 'Sin archivo';
             }else{
                 $new_image_name = $inputName.'.'.$image->getClientOriginalExtension();
                 $s3 = Storage::disk('s3');

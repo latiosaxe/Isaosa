@@ -39,12 +39,17 @@ TC.blog = (function(){
 
 
             var id =  $(this).data('id');
+            var newImage =  $(this).data('img');
 
             formData.append("title", noValue( $("#title").val() ) );
             formData.append("description", noValue( $("#description").val() ) );
             formData.append("body", noValue( $("#body").val() ) );
             formData.append("active", active );
-            appendIfFile('image');
+
+            if(newImage == 1){
+                formData.append("new_image", 1 );
+                appendIfFile('image');
+            }
 
             console.info(formData);
 
@@ -52,20 +57,27 @@ TC.blog = (function(){
 
             var request = new XMLHttpRequest();
             request.addEventListener("load", reqListener);
-            request.open("PUT", TC.control_url+'blog/'+id);
+            request.open("post", TC.control_url+'blogImage/'+id);
+            request.setRequestHeader('X-CSRF-TOKEN', $('meta[name="csrf-token"]').attr('content'));
             request.send(formData);
 
             // $.ajax({
-            //     url: TC.control_url+'blog/'+id,
+            //     url: TC.control_url+'blogImage/'+id,
             //     data: formData,
-            //     type: 'put'
+            //     type: 'post',
+            //     processData: false,
+            //     contentType: false
             // }).success(function(){
-            //     document.location.href = TC.control_url+'blog'
+            //     // document.location.href = TC.control_url+'blog'
             // }).error(function(){
             //     alert('Error al actualizar la nota');
             // });
         });
 
+        $(".newImage").on('change', function () {
+            _$showPost.data('img', 1);
+            console.log("Nueva imagen");
+        });
 
         function reqListener () {
             console.log(this.responseText);
@@ -86,7 +98,7 @@ TC.blog = (function(){
         $(".fakeFileInput input").on('change', function () {
             var file = $(this).val().split('.').pop();
             console.log(file);
-            if(file=='png' || file=='jpg'){
+            if(file=='png' || file=='jpg' || file=='PNG' || file=='JPG'){
                 console.log('Si se permite');
                 $(this).closest('.fakeFileInput').find('p').remove();
                 $(this).closest('.fakeFileInput').append('<p>'+ $(this).val().split(/(\\|\/)/g).pop() +'</p>');
@@ -116,7 +128,6 @@ TC.blog = (function(){
         }
 
         function noValue(input){
-            console.log(input);
             if(input.length == 0){
                 return 'Sin valor'
             }else{

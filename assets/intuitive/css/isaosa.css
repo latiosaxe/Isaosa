@@ -37,3 +37,10 @@
   line-height: 120%;
   padding: 10px 10px 0 10px;
 }
+.preview-image {
+  width: 200px;
+}
+.preview-image img {
+  width: 100%;
+  display: block;
+}

@@ -435,7 +435,7 @@
                 console.log("No hay " + file_id );
             }else{
                 var ext = file.name.split('.').pop();
-                if(ext=="pdf" || ext=="docx" || ext=="doc" || ext=='png' || ext=='jpg'){
+                if(ext=="pdf" || ext=="docx" || ext=="doc" || ext=='png' || ext=='jpg'|| file=='PNG' || file=='JPG'){
                     console.info(file_id, file);
                     formData.append(file_id, file);
                     console.log("Si", ext);

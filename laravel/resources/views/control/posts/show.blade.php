@@ -5,7 +5,9 @@
             <h3>Editar publicación</h3>
         </div>
 
-        <form id="showPost" data-id="{{ $post->id }}" class="form-horizontal">
+        {{--data-img="@if(strlen($post->img_thumb) >= 15){{1}}@else{{0}}@endif"--}}
+
+        <form id="showPost" data-id="{{ $post->id }}" data-img="0" class="form-horizontal">
             <div class="form-group">
                 <label class="col-md-2 control-label">Titulo:</label>
                 <div class="col-md-8">
@@ -28,11 +30,16 @@
                 <label class="col-md-2 control-label">Imagen:</label>
                 <div class="col-md-8">
                     <div class="fakeFileInput">
-                        <input type="file" class="hidden" id="image">
+                        <input type="file" class="hidden newImage" id="image">
                         <div class="text">
-                            <span>Imagen destacada</span>
+                            <span>@if(strlen($post->img_thumb) >= 15){{'Reemplaza imagen destacada'}}@else{{'Agregar Imagen destacada'}}@endif</span>
                         </div>
                     </div>
+                    <p class="preview-image">
+                        @if(strlen($post->img_thumb) >= 15)
+                            <img src="{{$post->img_thumb}}" />
+                        @endif
+                    </p>
                 </div>
             </div>
             <div class="form-group">
