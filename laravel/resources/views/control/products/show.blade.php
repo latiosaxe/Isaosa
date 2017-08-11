@@ -55,10 +55,19 @@
                 @include('control.partials._image', ['item'=>$product,'slug'=>'img','name'=>'Imagen'])
             </div>
 
+
+            <div class="form-group">
+                <label class="col-md-2 control-label">Posición:</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="position" placeholder="Posición en número" value="{{ $product->position }}">
+                </div>
+            </div>
+
+
+
             <div class="form-group">
                 @include('control.partials._checkbox', ['item'=>$product,'slug'=>'active','name'=>'Activa', 'description'=>' '])
             </div>
-
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-8">
@@ -71,7 +80,7 @@
 
 @section('javascript')
     <script>
-        var elements = ['id','name', 'formula', 'description', 'category_id', 'body', 'characteristics','img_thumb', 'img', 'active'],
+        var elements = ['id','name', 'formula', 'description', 'category_id', 'body', 'characteristics','img_thumb', 'img', 'active', 'position'],
                 url = 'productos'
                 ;
         TC.main.edit(elements, url);

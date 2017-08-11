@@ -41,6 +41,7 @@ class ProductsController extends Controller
                 'body' => $request->input('body', ''),
                 'characteristics' => $request->input('characteristics', ''),
                 'category_id' => $request->input('category_id', 1),
+                'position' => $request->input('position', 0),
                 'active' => $request->input('active', 1),
             ]);
             $status = 200;
@@ -64,6 +65,7 @@ class ProductsController extends Controller
             'body' => $request->input('body', ''),
             'characteristics' => $request->input('characteristics', ''),
             'category_id' => $request->input('category_id', 1),
+            'position' => $request->input('position', 0),
             'active' => $request->input('active', 1),
         ];
 

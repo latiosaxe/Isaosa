@@ -77,6 +77,12 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-md-2 control-label">Posición:</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="position" placeholder="Posición en número">
+                </div>
+            </div>
+            <div class="form-group">
                 <div class="col-md-offset-2 col-md-8">
                     <button type="submit" class="btn btn-default">Crear producto</button>
                 </div>

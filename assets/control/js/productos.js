@@ -16,7 +16,8 @@ TC.products = (function(){
                     description: $("#description").val(),
                     body: $("#body").val(),
                     characteristics: $("#characteristics").val(),
-                    category_id: $("#category_id").val()
+                    category_id: $("#category_id").val(),
+                    position: $("#position").val()
                 };
             $.ajax({
                 url: TC.control_url+'productos',
@@ -47,6 +48,7 @@ TC.products = (function(){
                     body: $("#body").val(),
                     characteristics: $("#characteristics").val(),
                     category_id: $("#category_id").val(),
+                    position: $("#position").val(),
                     active: active
                 };
 
