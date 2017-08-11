@@ -4,9 +4,9 @@
 <div class="form-group">
     @include('control.partials._input', ['item'=>$card,'slug'=>'description','name'=>'Descripción'])
 </div>
-<div class="form-group">
-    @include('control.partials._input', ['item'=>$card,'slug'=>'link','name'=>'Link'])
-</div>
+{{--<div class="form-group">--}}
+    {{--@include('control.partials._input', ['item'=>$card,'slug'=>'link','name'=>'Link'])--}}
+{{--</div>--}}
 <div class="form-group">
     @include('control.partials._image', ['item'=>$card,'slug'=>'image','name'=>'Imagen de fondo'])
 </div>

@@ -3,13 +3,14 @@
 <section class="home-section">
     <div class="home-carousel">
         @foreach($cards as $card)
+            <?php $i = 0 ?>
             <div class="carousel-card">
                 <div class="container">
                     <div class="vertical-align">
                         <h2>{{ $card->title }}</h2>
                         <div class="line"></div>
                         <p>{{ $card->description }}</p>
-                        <a href="productos?data={{ $card->link }}" class="read-more">
+                        <a href="productos?data={{ $i }}" class="read-more">
                             <img src="/assets/images/icons/mas.svg" alt="Leer más">
                             <span>Ver productos</span>
                         </a>
@@ -17,6 +18,7 @@
                 </div>
                 <div class="background" style="background-image: url({{ $card->image }})"></div>
             </div>
+            <?php $i ++; ?>
         @endforeach
         {{--<div class="carousel-card">--}}
             {{--<div class="container">--}}
