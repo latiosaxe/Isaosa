@@ -1,3 +1,10 @@
+.form-group .checkbox label:before,
+.form-group .checkbox label:after {
+  display: none;
+}
+.checkbox input[type="checkbox"] {
+  opacity: 1;
+}
 .fakeFileInput {
   width: 100%;
   margin-bottom: 20px;

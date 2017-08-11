@@ -33,47 +33,22 @@ class BlogController extends Controller
         $status = 400;
         $data = (object)['message' => ''];
         $current_time = Carbon::now()->format('Y-m-d H:i:s');
+        $title = $request->input('title', '');
+        $slug = str_slug($title);
         try {
             $post = DB::table('news')->insert([
                 'uid' => $request->input('uid', ''),
-                'title' => $request->input('title', ''),
+                'title' => $title,
                 'description' => $request->input('description', ''),
                 'body' => $request->input('body', ''),
-                'img_thumb' => $request->input('img_thumb', ''),
                 'active' => $request->input('active', 1),
                 'datetime_created' => $current_time,
                 'datetime_modified' => $current_time,
             ]);
-            $status = 200;
-        }catch(\Exception $e){
-            $data->message = $e->getMessage();
-        }
-        return response()->json($data, $status);
-    }
-
-    public function update($id, Request $request){
-
-        dd($request = \Request::all());
 
 
-        $status = 400;
-        $data = (object)['message' => ''];
+            if($request->input('img_thumb')){ $post->img_thumb = $this->aws($request, 'img_thumb', $slug); }
 
-        $current_time = Carbon::now()->format('Y-m-d H:i:s');
-
-
-        try{
-            $new = DB::table('news')
-                ->where('id', $id)
-                ->update([
-                'uid' => $request->input('uid', ''),
-                'title' => $request->get('title'),
-                'description' => $request->input('description', ''),
-                'body' => $request->input('body', ''),
-                'active' => $request->input('active', 1),
-                'datetime_modified' => $current_time,
-                'img_thumb' => $this->aws($request, 'publicacion', $id)
-            ]);
             $status = 200;
         }catch(\Exception $e){
             $data->message = $e->getMessage();
@@ -83,22 +58,20 @@ class BlogController extends Controller
 
     public function fakeUpload($id, Request $request){
         $status = 400;
-//        $data = (object)['message' => ''];
-
+        $title = $request->input('title', '');
+        $slug = str_slug($title);
         $current_time = Carbon::now()->format('Y-m-d H:i:s');
 
         $updates = [
             'uid' => $request->input('uid', ''),
-            'title' => $request->get('title'),
+            'title' => $title,
             'description' => $request->input('description', ''),
             'body' => $request->input('body', ''),
             'active' => $request->input('active', 1),
             'datetime_modified' => $current_time,
         ];
 
-        if($request->input('new_image') == 1){
-            $updates['img_thumb'] = $this->aws($request, 'image', $id);
-        }
+        if($request->input('img_thumb')){ $updates['img_thumb'] = $this->aws($request, 'img_thumb', $slug); }
 
         try{
             $new = DB::table('news')

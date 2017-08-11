@@ -1,6 +1,15 @@
 @size-factor: 1.5;
 @color-font: #3B3F48;
 
+.form-group .checkbox label{
+    &:before, &:after{
+        display: none;
+    }
+}
+.checkbox input[type="checkbox"]{
+    opacity: 1;
+}
+
 .fakeFileInput{
     width: 100%;
     margin-bottom: 20px;

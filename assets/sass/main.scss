@@ -54,6 +54,7 @@ body{
     height: 100%;
     .slick-slide{
         height: 100vh;
+        min-height: 600px;
         position: relative;
     }
 }
@@ -489,6 +490,8 @@ body{
     .home-section{
         width: 100%;
         height: 100vh;
+        min-height: 600px;
+        position: relative; 
         background: $color-primary;
         .home-carousel-nav{
             z-index: 3;
@@ -526,14 +529,15 @@ body{
                     vertical-align: top;
                     display: inline-block;
                     span{
-                        cursor: pointer;
                         color: #FFF;
                         margin: 0 auto;
                         display: block;
                         padding: 20px 0;
+                        cursor: pointer;
                         //max-width: 140px;
                         width: 100%;
                         position: relative;
+                        text-transform: uppercase;
                         font-size: 13px * $size-factor;
                     }
                     &:before{
@@ -598,8 +602,6 @@ body{
         }
     }
 
-
-
     .home-carousel, .blog-carousel{
         z-index: 2;
         height: 100%;
@@ -610,7 +612,7 @@ body{
             .container{
                 z-index: 2;
                 height: 100vh;
-                min-height: 500px;
+                min-height: 600px;
                 position: relative;
                 .vertical-align{
                     width: 50%;
@@ -618,6 +620,7 @@ body{
                         color: #fff;
                         font-weight: 900;
                         font-family: $font-2;
+                        text-transform: uppercase;
                         font-size: 45px * $size-factor;
                         a{
                             color: #FFF;

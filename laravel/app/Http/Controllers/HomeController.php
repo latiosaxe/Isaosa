@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Home;
 
 class HomeController extends Controller
 {
@@ -14,11 +15,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-
+        $cards = DB::table('home')->where('active', 1)->orderBy('position', 'asc')->get();
         $news = DB::table('news')->take(3)->get();
         $services = DB::table('services')->where('active', 1)->get();
 
         $data = [
+            'cards'  => $cards,
             'services'  => $services,
             'news'  => $news,
         ];

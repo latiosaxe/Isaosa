@@ -2,133 +2,139 @@
 @section ('content')
 <section class="home-section">
     <div class="home-carousel">
-        <div class="carousel-card">
-            <div class="container">
-                <div class="vertical-align">
-                    <h2>NUEVA GENERACIÓN</h2>
-                    <div class="line"></div>
-                    <p>Nuevas tecnologías que permiten mayor eficiencia y control en la entrega de nutrientes al suelo.</p>
-                    <a href="productos?data=1" class="read-more">
-                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Ver productos</span>
-                    </a>
+        @foreach($cards as $card)
+            <div class="carousel-card">
+                <div class="container">
+                    <div class="vertical-align">
+                        <h2>{{ $card->title }}</h2>
+                        <div class="line"></div>
+                        <p>{{ $card->description }}</p>
+                        <a href="productos?data={{ $card->link }}" class="read-more">
+                            <img src="/assets/images/icons/mas.svg" alt="Leer más">
+                            <span>Ver productos</span>
+                        </a>
+                    </div>
                 </div>
+                <div class="background" style="background-image: url({{ $card->image }})"></div>
             </div>
-            <div class="background" style="background-image: url('/assets/images/home/nuevas/_1.jpg')"></div>
-        </div>
-        <div class="carousel-card">
-            <div class="container">
-                <div class="vertical-align">
-                    <h2>MEZCLA VALOR AGREGADO</h2>
-                    <div class="line"></div>
-                    <p>Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento de sus cultivos.</p>
-                    <a href="productos?data=2" class="read-more">
-                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Ver productos</span>
-                    </a>
-                </div>
-            </div>
-            <div class="background" style="background-image: url('/assets/images/home/nuevas/_2.jpg')"></div>
-        </div>
-        <div class="carousel-card">
-            <div class="container">
-                <div class="vertical-align">
-                    <h2>LÍQUIDOS</h2>
-                    <div class="line"></div>
-                    <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
-                    <a href="productos?data=3" class="read-more">
-                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Ver productos</span>
-                    </a>
-                </div>
-            </div>
-            <div class="background" style="background-image: url('/assets/images/home/nuevas/_3.jpg')"></div>
-        </div>
-        <div class="carousel-card">
-            <div class="container">
-                <div class="vertical-align">
-                    <h2>SOLUBLES</h2>
-                    <div class="line"></div>
-                    <p>Maxima tecnología en cada gota</p>
-                    <a href="productos?data=4" class="read-more">
-                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Ver productos</span>
-                    </a>
-                </div>
-            </div>
-            <div class="background" style="background-image: url('/assets/images/home/nuevas/_4.jpg')"></div>
-        </div>
-        <div class="carousel-card">
-            <div class="container">
-                <div class="vertical-align">
-                    <h2>FOLIARES</h2>
-                    <div class="line"></div>
-                    <p>La mejor nutrición en el menor tiempo</p>
-                    <a href="productos?data=5" class="read-more">
-                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Ver productos</span>
-                    </a>
-                </div>
-            </div>
-            <div class="background" style="background-image: url('/assets/images/home/nuevas/_5.jpg')"></div>
-        </div>
-        <div class="carousel-card">
-            <div class="container">
-                <div class="vertical-align">
-                    <h2>NPK ESPECIALIDAD</h2>
-                    <div class="line"></div>
-                    <p>Los mejores nutrientes en el mejor balance</p>
-                    <a href="productos?data=6" class="read-more">
-                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Ver productos</span>
-                    </a>
-                </div>
-            </div>
-            <div class="background" style="background-image: url('/assets/images/home/nuevas/_6.jpg')"></div>
-        </div>
-        <div class="carousel-card">
-            <div class="container">
-                <div class="vertical-align">
-                    <h2>COMMODITIES</h2>
-                    <div class="line"></div>
-                    <p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>
-                    <a href="productos?data=7" class="read-more">
-                        <img src="/assets/images/icons/mas.svg" alt="Leer más">
-                        <span>Ver productos</span>
-                    </a>
-                </div>
-            </div>
-            <div class="background" style="background-image: url('/assets/images/home/nuevas/_7.jpg')"></div>
-        </div>
+        @endforeach
+        {{--<div class="carousel-card">--}}
+            {{--<div class="container">--}}
+                {{--<div class="vertical-align">--}}
+                    {{--<h2>MEZCLA VALOR AGREGADO</h2>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Conoce la nueva línea de mezclas granulares, todos los nutrientes necesarios para maximizar el rendimiento de sus cultivos.</p>--}}
+                    {{--<a href="productos?data=2" class="read-more">--}}
+                        {{--<img src="/assets/images/icons/mas.svg" alt="Leer más">--}}
+                        {{--<span>Ver productos</span>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="background" style="background-image: url('/assets/images/home/nuevas/_2.jpg')"></div>--}}
+        {{--</div>--}}
+        {{--<div class="carousel-card">--}}
+            {{--<div class="container">--}}
+                {{--<div class="vertical-align">--}}
+                    {{--<h2>LÍQUIDOS</h2>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>--}}
+                    {{--<a href="productos?data=3" class="read-more">--}}
+                        {{--<img src="/assets/images/icons/mas.svg" alt="Leer más">--}}
+                        {{--<span>Ver productos</span>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="background" style="background-image: url('/assets/images/home/nuevas/_3.jpg')"></div>--}}
+        {{--</div>--}}
+        {{--<div class="carousel-card">--}}
+            {{--<div class="container">--}}
+                {{--<div class="vertical-align">--}}
+                    {{--<h2>SOLUBLES</h2>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Maxima tecnología en cada gota</p>--}}
+                    {{--<a href="productos?data=4" class="read-more">--}}
+                        {{--<img src="/assets/images/icons/mas.svg" alt="Leer más">--}}
+                        {{--<span>Ver productos</span>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="background" style="background-image: url('/assets/images/home/nuevas/_4.jpg')"></div>--}}
+        {{--</div>--}}
+        {{--<div class="carousel-card">--}}
+            {{--<div class="container">--}}
+                {{--<div class="vertical-align">--}}
+                    {{--<h2>FOLIARES</h2>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>La mejor nutrición en el menor tiempo</p>--}}
+                    {{--<a href="productos?data=5" class="read-more">--}}
+                        {{--<img src="/assets/images/icons/mas.svg" alt="Leer más">--}}
+                        {{--<span>Ver productos</span>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="background" style="background-image: url('/assets/images/home/nuevas/_5.jpg')"></div>--}}
+        {{--</div>--}}
+        {{--<div class="carousel-card">--}}
+            {{--<div class="container">--}}
+                {{--<div class="vertical-align">--}}
+                    {{--<h2>NPK ESPECIALIDAD</h2>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Los mejores nutrientes en el mejor balance</p>--}}
+                    {{--<a href="productos?data=6" class="read-more">--}}
+                        {{--<img src="/assets/images/icons/mas.svg" alt="Leer más">--}}
+                        {{--<span>Ver productos</span>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="background" style="background-image: url('/assets/images/home/nuevas/_6.jpg')"></div>--}}
+        {{--</div>--}}
+        {{--<div class="carousel-card">--}}
+            {{--<div class="container">--}}
+                {{--<div class="vertical-align">--}}
+                    {{--<h2>COMMODITIES</h2>--}}
+                    {{--<div class="line"></div>--}}
+                    {{--<p>Conoce nuestros fertilizantes líquidos, ideales para los sistemas de fertilización por goteo.</p>--}}
+                    {{--<a href="productos?data=7" class="read-more">--}}
+                        {{--<img src="/assets/images/icons/mas.svg" alt="Leer más">--}}
+                        {{--<span>Ver productos</span>--}}
+                    {{--</a>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+            {{--<div class="background" style="background-image: url('/assets/images/home/nuevas/_7.jpg')"></div>--}}
+        {{--</div>--}}
     </div>
     <div class="home-carousel-nav">
         <div class="container relative">
             <div class="bar-active"><div class="padding"><span></span></div></div>
             <ul>
-                <li class="active">
-                    <span href="#">NUEVA GENERACIÓN</span>
-                </li>
-                <li>
-                    <span href="#">MEZCLA VALOR AGREGADO</span>
-                </li>
-                <li>
-                    <span href="#">LÍQUIDOS</span>
-                </li>
-                <li>
-                    <span href="#">SOLUBLES</span>
-                </li>
-                <li>
-                    <span href="#">FOLIARES</span>
-                </li>
-                <li>
-                    <span href="#">NPK ESPECIALIDAD</span>
-                </li>
-                <li>
-                    <span href="#">COMMODITIES</span>
-                </li>
+                @foreach($cards as $card)
+                    <li>
+                        <span href="#">{{ $card->title }}</span>
+                    </li>
+                @endforeach
+
+                {{--<li>--}}
+                    {{--<span href="#">MEZCLA VALOR AGREGADO</span>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<span href="#">LÍQUIDOS</span>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<span href="#">SOLUBLES</span>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<span href="#">FOLIARES</span>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<span href="#">NPK ESPECIALIDAD</span>--}}
+                {{--</li>--}}
+                {{--<li>--}}
+                    {{--<span href="#">COMMODITIES</span>--}}
+                {{--</li>--}}
             </ul>
         </div>
     </div>
+
 
     <div class="nav-users">
         <ul>
@@ -157,6 +163,7 @@
                         México
                     </a>
                     <ul>
+                        <li><a href="/boletines/boletin-mensual-Agroclimatico-Nacional-Agosto 2017.pdf" target="_blank">Agosto 2017</a></li>
                         <li><a href="/boletines/boletin_mensual_nacional_201706.pdf" target="_blank">Junio 2017</a></li>
                         <li><a href="/boletines/boletin_mensual_nacional_201705.pdf" target="_blank">Mayo 2017</a></li>
                         <li><a href="/boletines/perspectiva_abril_noviembre_2017.pdf" target="_blank">Perspectiva 2017 Abril - Noviembre</a></li>
@@ -180,18 +187,6 @@
     </div>
 </section>
 
-{{--<section class="home-calculator" id="home-calculator">--}}
-    {{--<div class="container">--}}
-        {{--<div class="title">CALCULADORA</div>--}}
-        {{--<div class="content">--}}
-            {{--<form onsubmit="return false;">--}}
-                {{--<input type="text" value="Placeholder temporal">--}}
-            {{--</form>--}}
-        {{--</div>--}}
-        {{--<div class="alt-image"></div>--}}
-    {{--</div>--}}
-{{--</section>--}}
-
 <section class="home-sections relative">
     <div class="container full-width">
         <div class="content">
@@ -212,40 +207,6 @@
                     </div>
                     <?php $i++ ?>
                 @endforeach
-
-                {{--<div class="element">--}}
-                    {{--<div class="icon">--}}
-                        {{--<img src="/assets/images/icons/analisis_suelo.svg" alt="Análisis del suelo">--}}
-                    {{--</div>--}}
-                    {{--<h3>ANÁLISIS<br/>DEL SUELO</h3>--}}
-                    {{--<div class="line"></div>--}}
-                    {{--<p>Hemos observado en las diversas.</p>--}}
-                    {{--<div class="more">--}}
-                        {{--<a href="/servicios?type=2"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="element">--}}
-                    {{--<div class="icon">--}}
-                        {{--<img src="/assets/images/icons/analisis_foliar.svg" alt="Análisis foliar">--}}
-                    {{--</div>--}}
-                    {{--<h3>ANÁLISIS<br/>FOLIAR</h3>--}}
-                    {{--<div class="line"></div>--}}
-                    {{--<p>Hemos observado en las diversas.</p>--}}
-                    {{--<div class="more">--}}
-                        {{--<a href="/servicios?type=3"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
-                {{--<div class="element">--}}
-                    {{--<div class="icon">--}}
-                        {{--<img src="/assets/images/icons/analisis_tecnico.svg" alt="Análisis técnico">--}}
-                    {{--</div>--}}
-                    {{--<h3>ÁREA<br/>TÉCNICA</h3>--}}
-                    {{--<div class="line"></div>--}}
-                    {{--<p>Hemos observado en las diversas.</p>--}}
-                    {{--<div class="more">--}}
-                        {{--<a href="/servicios?type=4"><span>Leer más</span> <img src="/assets/images/icons/vermas.svg" alt="Leer más"></a>--}}
-                    {{--</div>--}}
-                {{--</div>--}}
             </div>
         </div>
         <div class="alt-image"></div>

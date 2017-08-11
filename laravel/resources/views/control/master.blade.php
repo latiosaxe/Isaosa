@@ -72,7 +72,10 @@
         <div class="dev-page-sidebar">
             <ul class="dev-page-navigation">
                 <li class="active">
-                    <a href="/control/dashboard"><i class="fa fa-desktop"></i><span>Inicio</span></a>
+                    <a href="/control/dashboard"><span>Inicio</span></a>
+                </li>
+                <li class="active">
+                    <a href="/control/cartas"><i class="fa fa-desktop"></i><span>Cartas</span></a>
                 </li>
                 <li>
                     <a href="/control/blog"><i class="fa fa-calendar"></i><span>Noticias</span></a>
@@ -155,11 +158,11 @@
 <script type="text/javascript" src="/assets/control/js/categories.js"></script>
 <script type="text/javascript" src="/assets/control/js/productos.js"></script>
 <script type="text/javascript" src="/assets/control/js/services.js"></script>
+
 <script>
     $(document).ready(function(){
        TC.main.init();
     });
-
 </script>
 
 @yield('javascript')

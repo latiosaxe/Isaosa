@@ -5,7 +5,7 @@
             <h3>Editar producto</h3>
         </div>
 
-        <form id="showProduct" data-id="{{ $product->id }}" class="form-horizontal">
+        <form id="showElement" data-id="{{ $product->id }}" class="form-horizontal">
             <div class="form-group">
                 <label class="col-md-2 control-label">Nombre:</label>
                 <div class="col-md-8">
@@ -13,10 +13,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-2 control-label">Formula:</label>
-                <div class="col-md-8">
-                    <input type="text" class="form-control" id="formula" placeholder="Titulo" required="required" value="{{ $product->formula }}">
-                </div>
+                @include('control.partials._text', ['item'=>$product,'slug'=>'formula','name'=>'Formula'])
             </div>
             <div class="form-group">
                 <label class="col-md-2 control-label">Resumen:</label>
@@ -52,14 +49,17 @@
             </div>
 
             <div class="form-group">
-                <label class="col-md-2 control-label">Activa:</label>
-                <div class="col-md-8">
-                    <div class="checkbox checkbox-inline">
-                        <input type="checkbox" id="active" @if($product->active == 1) checked @endif>
-                        <label for="active"><small>Si esta palomeada se mostrará.</small></label>
-                    </div>
-                </div>
+                @include('control.partials._image', ['item'=>$product,'slug'=>'img_thumb','name'=>'Preview'])
             </div>
+            <div class="form-group">
+                @include('control.partials._image', ['item'=>$product,'slug'=>'img','name'=>'Imagen'])
+            </div>
+
+            <div class="form-group">
+                @include('control.partials._checkbox', ['item'=>$product,'slug'=>'active','name'=>'Activa', 'description'=>' '])
+            </div>
+
+
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-8">
                     <button type="submit" class="btn btn-default">Actualizar producto</button>
@@ -71,8 +71,9 @@
 
 @section('javascript')
     <script>
-        $(document).ready(function(){
-            TC.products.init();
-        });
+        var elements = ['id','name', 'formula', 'description', 'category_id', 'body', 'characteristics','img_thumb', 'img', 'active'],
+                url = 'productos'
+                ;
+        TC.main.edit(elements, url);
     </script>
 @endsection

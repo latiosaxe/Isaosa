@@ -38,39 +38,9 @@
         <div class="page-subtitle">
             <h2>Crear Publicación</h2>
         </div>
-        <form id="newPost" class="form-horizontal">
-            <div class="form-group">
-                <label class="col-md-2 control-label">Titulo:</label>
-                <div class="col-md-8">
-                    <input type="text" class="form-control" id="title" placeholder="Titulo">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-2 control-label">Descripción:</label>
-                <div class="col-md-8">
-                    <input type="text" class="form-control" id="description" placeholder="Descripción">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-2 control-label">Resumen:</label>
-                <div class="col-md-8">
-                    <textarea id="resume" class="form-control redactor-text" placeholder="Resumen"></textarea>
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-2 control-label">Imagen:</label>
-                <div class="col-md-8">
-                    <input type="file" class="form-control" id="img_thumb">
-                </div>
-            </div>
-            <div class="form-group">
-                <label class="col-md-2 control-label">Galería:</label>
-                <div class="col-md-8">
-                    <p>
-                        * Las imagenes se suben una vez creada la galería
-                    </p>
-                </div>
-            </div>
+        <form id="newElement" class="form-horizontal">
+            <?php $post = '' ?>
+            @include('control.posts._form', ['post'=>$post])
 
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-8">
@@ -87,7 +57,10 @@
 @section('javascript')
     <script>
         $(document).ready(function(){
-            TC.blog.init();
+            var elements = ['id','title', 'description', 'resume', 'img_thumb', 'active'],
+                    url = 'blog'
+                    ;
+            TC.main.create(elements, url);
         });
     </script>
 @endsection

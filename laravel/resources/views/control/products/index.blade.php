@@ -33,6 +33,7 @@
         </table>
     </div>
 
+    <?php $product='' ?>
     <div class="wrapper wrapper-white">
         <div class="page-subtitle">
             <h2>Crear Productos</h2>
@@ -45,10 +46,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label class="col-md-2 control-label">Formula:</label>
-                <div class="col-md-8">
-                    <input type="text" class="form-control" id="formula" placeholder="Titulo" required="required">
-                </div>
+                @include('control.partials._text', ['item'=>$product,'slug'=>'formula','name'=>'Formula'])
             </div>
             <div class="form-group">
                 <label class="col-md-2 control-label">Resumen:</label>

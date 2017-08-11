@@ -43,11 +43,24 @@ Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace
         return redirect('control/dashboard');
     });
     Route::get('dashboard', 'DashboardController@index');
+
     Route::resource('blog', 'BlogController');
-    Route::post('blogImage/{id}', 'BlogController@fakeUpload');
+    Route::post('blogUpdate/{id}', 'BlogController@fakeUpload');
+
     Route::resource('categorias', 'CategoriesController');
+
     Route::resource('productos', 'ProductsController');
+    Route::post('productosUpdate/{id}', 'ProductsController@fakeUpload');
+
     Route::resource('servicios', 'ServicesController');
+
+
+    Route::resource('productos', 'ProductsController');
+    Route::post('productosUpdate/{id}', 'ProductsController@fakeUpload');
+
+
+    Route::resource('cartas', 'HomeController');
+    Route::post('cartasUpdate/{id}', 'HomeController@fakeUpdate');
 });
 
 
