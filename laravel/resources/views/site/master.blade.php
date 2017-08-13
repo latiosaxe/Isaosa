@@ -49,11 +49,11 @@
         <li>
             <span>ACCESO INTERNO</span>
             <ul>
-                <li><a href="#">- ISAOSA</a></li>
-                <li><a href="#">- SOLUCIONES</a></li>
-                <li><a href="#">- INSUMOS</a></li>
-                <li><a href="#">- comprobación de gastos</a></li>
-                <li><a href="#">- tarifario de insumos</a></li>
+                <li><a href="http://200.76.34.67/isaosaweb/loginadmin.aspx">- ISAOSA</a></li>
+                <li><a href="http://200.76.34.67/nutrientesweb/loginadmin.aspx">- SOLUCIONES</a></li>
+                <li><a href="http://200.76.34.67/insumosweb/loginadmin.aspx">- INSUMOS</a></li>
+                <li><a href="http://200.76.34.68/GastoComprobar/Account/Login?ReturnUrl=%2fGastoComprobar">- Comprobación de gastos</a></li>
+                <li><a href="http://insumosyservicios.mx/prices">- Tarifario de insumos</a></li>
             </ul>
         </li>
     </ul>
