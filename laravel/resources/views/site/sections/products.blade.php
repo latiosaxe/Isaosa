@@ -52,9 +52,9 @@
                         <div class="avatar" id="avatar-deposit" style="background-image: url('/assets/images/extras/accesointerno.jpg')"></div>
                         <p>Contiene</p>
                         <ul class="element-details">
-                            @if($product->table_1)
+                            {{--@if($product->table_1)--}}
                                 <li><div class="circle">{{$product->table_1}}</div><span>{{$product->table_1_copy}}</span></li>
-                            @endif
+                            {{--@endif--}}
                             @if($product->table_2)
                                 <li><div class="circle">{{$product->table_2}}</div><span>{{$product->table_2_copy}}</span></li>
                             @endif
