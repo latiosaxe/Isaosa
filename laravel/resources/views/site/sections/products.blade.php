@@ -37,7 +37,10 @@
             <div class="col-md-9 col-height-100">
                 <div class="row result-list ">
                     @foreach($products as $product)
-                        <div class="col-md-3 element" data-id="{{ $product->id }}" data-image="{{ $product->img  }}" data-description="{{ $product->description }}" data-body="{{ $product->body }}">
+                        <div class="col-md-3 element" data-id="{{ $product->id }}" data-image="{{ $product->img  }}" data-description="{{ $product->description }}" data-body="{{ $product->body }}"
+                        data-table_1="{{ $product->table_1 }}" data-table_2="{{ $product->table_2 }}" data-table_3="{{ $product->table_3 }}" data-table_4="{{ $product->table_4 }}" data-table_5="{{ $product->table_5 }}" data-table_6="{{ $product->table_6 }}" data-table_7="{{ $product->table_7 }}" data-table_8="{{ $product->table_8 }}" data-table_9="{{ $product->table_9 }}" data-table_10="{{ $product->table_10 }}"
+                        data-table_1_copy="{{ $product->table_1_copy }}" data-table_2_copy="{{ $product->table_2_copy }}" data-table_3_copy="{{ $product->table_3_copy }}" data-table_4_copy="{{ $product->table_4_copy }}" data-table_5_copy="{{ $product->table_5_copy }}" data-table_6_copy="{{ $product->table_6_copy }}" data-table_7_copy="{{ $product->table_7_copy }}" data-table_8_copy="{{ $product->table_8_copy }}" data-table_9_copy="{{ $product->table_9_copy }}" data-table_10_copy="{{ $product->table_10_copy }}"
+                        >
                             <div class="circle" style="background-image: url('{{ $product->img  }}')"></div>
                             <p class="name-target">{{ $product->name }}</p>
                         </div>
@@ -52,36 +55,46 @@
                         <div class="avatar" id="avatar-deposit" style="background-image: url('/assets/images/extras/accesointerno.jpg')"></div>
                         <p>Contiene</p>
                         <ul class="element-details">
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
+                            <li><div class="circle"></div><span></span></li>
                             {{--@if($product->table_1)--}}
-                                <li><div class="circle">{{$product->table_1}}</div><span>{{$product->table_1_copy}}</span></li>
+                                {{--<li><div class="circle">{{$product->table_1}}</div><span>{{$product->table_1_copy}}</span></li>--}}
                             {{--@endif--}}
-                            @if($product->table_2)
-                                <li><div class="circle">{{$product->table_2}}</div><span>{{$product->table_2_copy}}</span></li>
-                            @endif
-                            @if($product->table_3)
-                                <li><div class="circle">{{$product->table_3}}</div><span>{{$product->table_3_copy}}</span></li>
-                            @endif
-                            @if($product->table_4)
-                                <li><div class="circle">{{$product->table_4}}</div><span>{{$product->table_4_copy}}</span></li>
-                            @endif
-                            @if($product->table_5)
-                                <li><div class="circle">{{$product->table_5}}</div><span>{{$product->table_5_copy}}</span></li>
-                            @endif
-                            @if($product->table_6)
-                                <li><div class="circle">{{$product->table_6}}</div><span>{{$product->table_6_copy}}</span></li>
-                            @endif
-                            @if($product->table_7)
-                                <li><div class="circle">{{$product->table_7}}</div><span>{{$product->table_7_copy}}</span></li>
-                            @endif
-                            @if($product->table_8)
-                                <li><div class="circle">{{$product->table_8}}</div><span>{{$product->table_8_copy}}</span></li>
-                            @endif
-                            @if($product->table_9)
-                                <li><div class="circle">{{$product->table_9}}</div><span>{{$product->table_9_copy}}</span></li>
-                            @endif
-                            @if($product->table_10)
-                                <li><div class="circle">{{$product->table_10}}</div><span>{{$product->table_10_copy}}</span></li>
-                            @endif
+                            {{--@if($product->table_2)--}}
+                                {{--<li><div class="circle">{{$product->table_2}}</div><span>{{$product->table_2_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_3)--}}
+                                {{--<li><div class="circle">{{$product->table_3}}</div><span>{{$product->table_3_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_4)--}}
+                                {{--<li><div class="circle">{{$product->table_4}}</div><span>{{$product->table_4_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_5)--}}
+                                {{--<li><div class="circle">{{$product->table_5}}</div><span>{{$product->table_5_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_6)--}}
+                                {{--<li><div class="circle">{{$product->table_6}}</div><span>{{$product->table_6_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_7)--}}
+                                {{--<li><div class="circle">{{$product->table_7}}</div><span>{{$product->table_7_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_8)--}}
+                                {{--<li><div class="circle">{{$product->table_8}}</div><span>{{$product->table_8_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_9)--}}
+                                {{--<li><div class="circle">{{$product->table_9}}</div><span>{{$product->table_9_copy}}</span></li>--}}
+                            {{--@endif--}}
+                            {{--@if($product->table_10)--}}
+                                {{--<li><div class="circle">{{$product->table_10}}</div><span>{{$product->table_10_copy}}</span></li>--}}
+                            {{--@endif--}}
                             {{--<li><div class="circle">0</div><span>P</span></li>--}}
                             {{--<li><div class="circle">0</div><span>K</span></li>--}}
                             {{--<li><div class="circle">15</div><span>Zn</span></li>--}}
