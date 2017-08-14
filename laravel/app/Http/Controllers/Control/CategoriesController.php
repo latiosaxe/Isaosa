@@ -36,6 +36,7 @@ class CategoriesController extends Controller
                 'uid' => $request->input('uid', ''),
                 'name' => $request->input('name', ''),
                 'parentcategory_id' => $request->input('parentcategory_id', 0),
+                'position' => $request->input('position', 0),
                 'active' => $request->input('active', 1),
             ]);
             $status = 200;
@@ -56,6 +57,7 @@ class CategoriesController extends Controller
                     'uid' => $request->input('uid', ''),
                     'name' => $request->input('name', ''),
                     'parentcategory_id' => $request->input('parentcategory_id', 0),
+                    'position' => $request->input('position', 0),
                     'active' => $request->input('active', 1),
                 ])
             ;

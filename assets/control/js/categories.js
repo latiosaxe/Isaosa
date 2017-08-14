@@ -13,6 +13,7 @@ TC.category = (function(){
             var data = {
                     name: $("#name").val(),
                     parentcategory_id: $("#category_id").val(),
+                    position: $("#position").val()
                 };
             $.ajax({
                 url: TC.control_url+'categorias',
@@ -39,6 +40,7 @@ TC.category = (function(){
                 data = {
                     name: $("#name").val(),
                     parentcategory_id: $("#category_id").val(),
+                    position: $("#position").val(),
                     active: active
                 };
 

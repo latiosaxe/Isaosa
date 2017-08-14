@@ -27,6 +27,12 @@
                 </div>
             </div>
             <div class="form-group">
+                <label class="col-md-2 control-label">Posición:</label>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" id="position" placeholder="Posición en número" value="{{ $category->position }}">
+                </div>
+            </div>
+            <div class="form-group">
                 <label class="col-md-2 control-label">Activa:</label>
                 <div class="col-md-8">
                     <div class="checkbox checkbox-inline">
