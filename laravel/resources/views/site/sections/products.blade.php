@@ -50,9 +50,38 @@
                             <h2>ESN LIBERACIÓN CONTROLADA</h2>
                         </div>
                         <div class="avatar" id="avatar-deposit" style="background-image: url('/assets/images/extras/accesointerno.jpg')"></div>
-                        {{--<p>Contiene</p>--}}
-                        {{--<ul class="element-details">--}}
-                            {{--<li><div class="circle">0</div><span>N</span></li>--}}
+                        <p>Contiene</p>
+                        <ul class="element-details">
+                            @if($product->table_1)
+                                <li><div class="circle">{{$product->table_1}}</div><span>{{$product->table_1_copy}}</span></li>
+                            @endif
+                            @if($product->table_2)
+                                <li><div class="circle">{{$product->table_2}}</div><span>{{$product->table_2_copy}}</span></li>
+                            @endif
+                            @if($product->table_3)
+                                <li><div class="circle">{{$product->table_3}}</div><span>{{$product->table_3_copy}}</span></li>
+                            @endif
+                            @if($product->table_4)
+                                <li><div class="circle">{{$product->table_4}}</div><span>{{$product->table_4_copy}}</span></li>
+                            @endif
+                            @if($product->table_5)
+                                <li><div class="circle">{{$product->table_5}}</div><span>{{$product->table_5_copy}}</span></li>
+                            @endif
+                            @if($product->table_6)
+                                <li><div class="circle">{{$product->table_6}}</div><span>{{$product->table_6_copy}}</span></li>
+                            @endif
+                            @if($product->table_7)
+                                <li><div class="circle">{{$product->table_7}}</div><span>{{$product->table_7_copy}}</span></li>
+                            @endif
+                            @if($product->table_8)
+                                <li><div class="circle">{{$product->table_8}}</div><span>{{$product->table_8_copy}}</span></li>
+                            @endif
+                            @if($product->table_9)
+                                <li><div class="circle">{{$product->table_9}}</div><span>{{$product->table_9_copy}}</span></li>
+                            @endif
+                            @if($product->table_10)
+                                <li><div class="circle">{{$product->table_10}}</div><span>{{$product->table_10_copy}}</span></li>
+                            @endif
                             {{--<li><div class="circle">0</div><span>P</span></li>--}}
                             {{--<li><div class="circle">0</div><span>K</span></li>--}}
                             {{--<li><div class="circle">15</div><span>Zn</span></li>--}}
@@ -62,7 +91,7 @@
                             {{--<li><div class="circle">-</div><span>X</span></li>--}}
                             {{--<li><div class="circle">-</div><span>X</span></li>--}}
                             {{--<li><div class="circle">-</div><span>X</span></li>--}}
-                        {{--</ul>--}}
+                        </ul>
                         {{--<div class="download-label">--}}
                             {{--<span>DESCARGABLES</span>--}}
                         {{--</div>--}}

@@ -11,7 +11,7 @@ class ProductController extends Controller
         $products = DB::table('products')->where('active', 1)->orderBy('position', 'asc')->get();
         $productsRandom = DB::table('products')->inRandomOrder()->take(4)->get();
 
-        $categories = DB::table('products_category')->orderBy('position', 'asc')->get();
+        $categories = DB::table('products_category')->where('active', 1)->orderBy('position', 'asc')->get();
 
         $data = [
             'products'  => $products,

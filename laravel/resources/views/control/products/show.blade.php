@@ -64,6 +64,37 @@
             </div>
 
 
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_1', 'copy'=>'table_1_copy', 'name'=>'Tabla 1'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_2', 'copy'=>'table_2_copy','name'=>'Tabla 2'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_3', 'copy'=>'table_3_copy','name'=>'Tabla 3'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_4', 'copy'=>'table_4_copy','name'=>'Tabla 4'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_5', 'copy'=>'table_5_copy','name'=>'Tabla 5'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_6', 'copy'=>'table_6_copy','name'=>'Tabla 6'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_7', 'copy'=>'table_7_copy','name'=>'Tabla 7'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_8', 'copy'=>'table_8_copy','name'=>'Tabla 8'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_9', 'copy'=>'table_9_copy','name'=>'Tabla 9'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._data_table', ['item'=>$product, 'slug'=>'table_10', 'copy'=>'table_10_copy','name'=>'Tabla 10'])
+            </div>
+
 
             <div class="form-group">
                 @include('control.partials._checkbox', ['item'=>$product,'slug'=>'active','name'=>'Activa', 'description'=>' '])
@@ -80,7 +111,9 @@
 
 @section('javascript')
     <script>
-        var elements = ['id','name', 'formula', 'description', 'category_id', 'body', 'characteristics','img_thumb', 'img', 'active', 'position'],
+        var elements = ['id','name', 'formula', 'description', 'category_id', 'body', 'characteristics','img_thumb', 'img', 'active', 'position',
+                'table_1','table_2','table_3','table_4','table_5','table_6','table_7','table_8','table_9', 'table_10',
+                'table_1_copy','table_2_copy','table_3_copy','table_4_copy','table_5_copy','table_6_copy','table_7_copy','table_8_copy','table_9_copy', 'table_10_copy'],
                 url = 'productos'
                 ;
         TC.main.edit(elements, url);
