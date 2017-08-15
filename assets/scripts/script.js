@@ -183,7 +183,7 @@ ISAOSA.main = (function(){
                         console.log(_$this.data("table_1").length);
                         console.log(_$this.data("table_1_copy").length);
 
-                        if(_$this.data("table_1").length > 0){
+                        if(_$this.data("table_1").length > 0 || _$this.data("table_1_copy").length > 0){
                             $(".element-details li:eq(0)").show();
                             $(".element-details li .circle:eq(0)").text(_$this.data("table_1"));
                             $(".element-details li span:eq(0)").text(_$this.data("table_1_copy"));
