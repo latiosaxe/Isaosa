@@ -79,6 +79,7 @@ class ProductsController extends Controller
         $name = $request->input('name', '');
         $slug = str_slug($name);
 
+
         $updates = [
             'uid' => $request->input('uid', ''),
             'name' => $name,
@@ -97,7 +98,7 @@ class ProductsController extends Controller
             'table_8' => $request->input('table_8', ''),
             'table_9' => $request->input('table_9', ''),
             'table_10' => $request->input('table_10', ''),
-            'table_1_copy' => $request->input('table_1_copy ', ''),
+            'table_1_copy' => $request->input('table_1_copy', ''),
             'table_2_copy' => $request->input('table_2_copy', ''),
             'table_3_copy' => $request->input('table_3_copy', ''),
             'table_4_copy' => $request->input('table_4_copy', ''),
