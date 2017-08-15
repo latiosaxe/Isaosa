@@ -179,6 +179,9 @@ ISAOSA.main = (function(){
                         $(".tabs .body ul li:eq(0)").html('<p>'+ _$this.data("description") +'</p>');
                         $(".tabs .body ul li:eq(1)").html(_$this.data("body"));
 
+
+                        console.log(_$this.data("table_1").length);
+
                         if(_$this.data("table_1").length > 0){
                             $(".element-details li:eq(0)").show();
                             $(".element-details li .circle:eq(0)").text(_$this.data("table_1"));
