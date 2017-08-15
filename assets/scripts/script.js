@@ -181,6 +181,7 @@ ISAOSA.main = (function(){
 
 
                         console.log(_$this.data("table_1").length);
+                        console.log(_$this.data("table_1_copy").length);
 
                         if(_$this.data("table_1").length > 0){
                             $(".element-details li:eq(0)").show();
