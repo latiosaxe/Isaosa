@@ -179,70 +179,70 @@ ISAOSA.main = (function(){
                         $(".tabs .body ul li:eq(0)").html('<p>'+ _$this.data("description") +'</p>');
                         $(".tabs .body ul li:eq(1)").html(_$this.data("body"));
 
-                        if(_$this.data("table_1")){
+                        if(_$this.data("table_1").length > 0){
                             $(".element-details li:eq(0)").show();
                             $(".element-details li .circle:eq(0)").text(_$this.data("table_1"));
                             $(".element-details li span:eq(0)").text(_$this.data("table_1_copy"));
                         }else{
                             $(".element-details li:eq(0)").hide();
                         }
-                        if(_$this.data("table_2")){
+                        if(_$this.data("table_2").length > 0){
                             $(".element-details li:eq(1)").show();
                             $(".element-details li .circle:eq(1)").text(_$this.data("table_2"));
                             $(".element-details li span:eq(1)").text(_$this.data("table_2_copy"));
                         }else{
                             $(".element-details li:eq(1)").hide();
                         }
-                        if(_$this.data("table_3")){
+                        if(_$this.data("table_3").length > 0){
                             $(".element-details li:eq(2)").show();
                             $(".element-details li .circle:eq(2)").text(_$this.data("table_3"));
                             $(".element-details li span:eq(2)").text(_$this.data("table_3_copy"));
                         }else{
                             $(".element-details li:eq(2)").hide();
                         }
-                        if(_$this.data("table_4")){
+                        if(_$this.data("table_4").length > 0){
                             $(".element-details li:eq(3)").show();
                             $(".element-details li .circle:eq(3)").text(_$this.data("table_4"));
                             $(".element-details li span:eq(3)").text(_$this.data("table_4_copy"));
                         }else{
                             $(".element-details li:eq(3)").hide();
                         }
-                        if(_$this.data("table_5")){
+                        if(_$this.data("table_5").length > 0){
                             $(".element-details li:eq(4)").show();
                             $(".element-details li .circle:eq(4)").text(_$this.data("table_5"));
                             $(".element-details li span:eq(4)").text(_$this.data("table_5_copy"));
                         }else{
                             $(".element-details li:eq(4)").hide();
                         }
-                        if(_$this.data("table_6")){
+                        if(_$this.data("table_6").length > 0){
                             $(".element-details li:eq(5)").show();
                             $(".element-details li .circle:eq(5)").text(_$this.data("table_6"));
                             $(".element-details li span:eq(5)").text(_$this.data("table_6_copy"));
                         }else{
                             $(".element-details li:eq(5)").hide();
                         }
-                        if(_$this.data("table_7")){
+                        if(_$this.data("table_7").length > 0){
                             $(".element-details li:eq(6)").show();
                             $(".element-details li .circle:eq(6)").text(_$this.data("table_7"));
                             $(".element-details li span:eq(6)").text(_$this.data("table_7_copy"));
                         }else{
                             $(".element-details li:eq(6)").hide();
                         }
-                        if(_$this.data("table_8")){
+                        if(_$this.data("table_8").length > 0){
                             $(".element-details li:eq(7)").show();
                             $(".element-details li .circle:eq(7)").text(_$this.data("table_8"));
                             $(".element-details li span:eq(7)").text(_$this.data("table_8_copy"));
                         }else{
                             $(".element-details li:eq(7)").hide();
                         }
-                        if(_$this.data("table_9")){
+                        if(_$this.data("table_9").length > 0){
                             $(".element-details li:eq(8)").show();
                             $(".element-details li .circle:eq(8)").text(_$this.data("table_9"));
                             $(".element-details li span:eq(8)").text(_$this.data("table_9_copy"));
                         }else{
                             $(".element-details li:eq(8)").hide();
                         }
-                        if(_$this.data("table_10")){
+                        if(_$this.data("table_10").length > 0){
                             $(".element-details li:eq(9)").show();
                             $(".element-details li .circle:eq(9)").text(_$this.data("table_10"));
                             $(".element-details li span:eq(9)").text(_$this.data("table_10_copy"));
