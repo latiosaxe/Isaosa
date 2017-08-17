@@ -4,6 +4,7 @@
 namespace App\Http\Controllers\Control;
 
 use \Storage;
+use \Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Home;
@@ -11,20 +12,31 @@ use App\Home;
 class HomeController extends Controller
 {
     public function index(){
-        $cards = Home::all();
-        $data = [
-            'cards'  => $cards,
-        ];
-        return view('control.home.index', $data);
+        $user_level = Auth::user()->level;
+        if($user_level<=3){
+            return redirect('/control/dashboard');
+        }else{
+            $cards = Home::all();
+            $data = [
+                'cards'  => $cards,
+                'user_level' => $user_level
+            ];
+            return view('control.home.index', $data);
+        }
     }
 
     public function show($id){
-        $card = Home::where('id', $id)->first();
-
-        $data = [
-            'card' => $card,
-        ];
-        return view('control.home.show', $data);
+        $user_level = Auth::user()->level;
+        if($user_level<=3){
+            return redirect('/control/dashboard');
+        }else{
+            $card = Home::where('id', $id)->first();
+            $data = [
+                'card' => $card,
+                'user_level' => $user_level
+            ];
+            return view('control.home.show', $data);
+        }
     }
 
 

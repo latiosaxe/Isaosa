@@ -70,24 +70,12 @@
 
         <!-- page sidebar -->
         <div class="dev-page-sidebar">
-            <ul class="dev-page-navigation">
+            <ul class="dev-page-navigation" id="extra_navigation">
                 <li class="active">
                     <a href="/control/dashboard"><span>Inicio</span></a>
                 </li>
-                <li class="active">
-                    <a href="/control/cartas"><i class="fa fa-desktop"></i><span>Cartas</span></a>
-                </li>
                 <li>
                     <a href="/control/blog"><i class="fa fa-calendar"></i><span>Noticias</span></a>
-                </li>
-                <li>
-                    <a href="/control/categorias"><i class="fa fa-book"></i><span>Categorias</span></a>
-                </li>
-                <li>
-                    <a href="/control/productos"><i class="fa fa-cube"></i><span>Productos</span></a>
-                </li>
-                <li>
-                    <a href="/control/servicios"><i class="fa fa-cubes"></i><span>Servicios</span></a>
                 </li>
             </ul>
             <br>
@@ -164,6 +152,14 @@
        TC.main.init();
     });
 </script>
+
+@if($user_level >= 5)
+    <script>
+        $("#extra_navigation").append(
+            '<li> <a href="/control/cartas"><i class="fa fa-desktop"></i><span>Cartas</span></a> </li> <li> <a href="/control/categorias"><i class="fa fa-book"></i><span>Categorias</span></a> </li> <li> <a href="/control/productos"><i class="fa fa-cube"></i><span>Productos</span></a> </li> <li> <a href="/control/servicios"><i class="fa fa-cubes"></i><span>Servicios</span></a> </li>'
+        )
+    </script>
+@endif
 
 @yield('javascript')
 <!-- ./javascript -->

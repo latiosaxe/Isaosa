@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Control;
 
 use \Storage;
 use Carbon\Carbon;
+use \Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -12,20 +13,31 @@ use App\Http\Controllers\Controller;
 class BlogController extends Controller
 {
     public function index(){
-        $news = DB::table('news')->get();
-        $data = [
-            'posts'  => $news,
-        ];
-        return view('control.posts.index', $data);
+        $user_level = Auth::user()->level;
+        if($user_level<=3){
+            return redirect('/control/dashboard');
+        }else{
+            $news = DB::table('news')->get();
+            $data = [
+                'posts'  => $news,
+                'user_level' => $user_level
+            ];
+            return view('control.posts.index', $data);
+        }
     }
 
-    public function show($id)
-    {
-        $post = DB::table('news')->where('id', $id)->first();
-        $data = [
-            'post'   => $post,
-        ];
-        return view('control.posts.show', $data);
+    public function show($id){
+        $user_level = Auth::user()->level;
+        if($user_level<=3){
+            return redirect('/control/dashboard');
+        }else{
+            $post = DB::table('news')->where('id', $id)->first();
+            $data = [
+                'post'   => $post,
+                'user_level' => $user_level
+            ];
+            return view('control.posts.show', $data);
+        }
     }
 
 

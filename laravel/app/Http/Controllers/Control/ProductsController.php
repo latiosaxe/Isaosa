@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Control;
 
 use \Storage;
+use \Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -10,23 +11,35 @@ use App\Http\Controllers\Controller;
 class ProductsController extends Controller
 {
     public function index(){
-        $categories = DB::table('products_category')->orderBy('parentcategory_id', 'asc')->get();
-        $products = DB::table('products')->orderBy('name', 'asc')->get();
-        $data = [
-            'products'  => $products,
-            'categories'  => $categories,
-        ];
-        return view('control.products.index', $data);
+        $user_level = Auth::user()->level;
+        if($user_level<=3){
+            return redirect('/control/dashboard');
+        }else{
+            $categories = DB::table('products_category')->orderBy('parentcategory_id', 'asc')->get();
+            $products = DB::table('products')->orderBy('name', 'asc')->get();
+            $data = [
+                'products'  => $products,
+                'categories'  => $categories,
+                'user_level' => $user_level
+            ];
+            return view('control.products.index', $data);
+        }
     }
 
     public function show($id){
-        $categories = DB::table('products_category')->orderBy('parentcategory_id', 'asc')->get();
-        $product = DB::table('products')->where('id', $id)->first();
-        $data = [
-            'product'  => $product,
-            'categories'  => $categories,
-        ];
-        return view('control.products.show', $data);
+        $user_level = Auth::user()->level;
+        if($user_level<=3){
+            return redirect('/control/dashboard');
+        }else{
+            $categories = DB::table('products_category')->orderBy('parentcategory_id', 'asc')->get();
+            $product = DB::table('products')->where('id', $id)->first();
+            $data = [
+                'product'  => $product,
+                'categories'  => $categories,
+                'user_level' => $user_level
+            ];
+            return view('control.products.show', $data);
+        }
     }
 
     public function store(Request $request){

@@ -47,6 +47,9 @@ Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace
     Route::resource('blog', 'BlogController');
     Route::post('blogUpdate/{id}', 'BlogController@fakeUpload');
 
+
+
+
     Route::resource('categorias', 'CategoriesController');
 
     Route::resource('productos', 'ProductsController');
@@ -57,7 +60,6 @@ Route::group(['middleware' => ['web', 'auth'], 'prefix' => 'control', 'namespace
 
     Route::resource('productos', 'ProductsController');
     Route::post('productosUpdate/{id}', 'ProductsController@fakeUpload');
-
 
     Route::resource('cartas', 'HomeController');
     Route::post('cartasUpdate/{id}', 'HomeController@fakeUpdate');

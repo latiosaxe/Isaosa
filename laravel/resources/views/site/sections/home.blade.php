@@ -140,7 +140,7 @@
 
     <div class="nav-users">
         <ul>
-            <li><a href="#">Ingreso de clientes</a></li>
+            <li><a href="http://200.76.34.67/isaosaweb/login.aspx">Ingreso de clientes</a></li>
             <li><a href="#">Proveedores</a></li>
             <li><a href="/solicitud">Solicitud de Crédito</a></li>
             <li><a href="/alta-de-clientes">Alta de clientes</a></li>

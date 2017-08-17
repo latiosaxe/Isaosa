@@ -11,9 +11,11 @@ class DashboardController extends Controller
 {
     public function index(){
         $users = Auth::user()->name;
+        $user_level = Auth::user()->level;
 
         $data = [
-            'user' => $users
+            'user' => $users,
+            'user_level' => $user_level
         ];
         return view('control.dashboard.dashboard', $data);
     }
