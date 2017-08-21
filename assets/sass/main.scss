@@ -678,6 +678,25 @@ body{
             }
         }
     }
+    .also_return{
+        cursor: pointer;
+    }
+    .home-carousel{
+        .slick-prev, .slick-next{
+            z-index: 9;
+            top: inherit;
+            bottom: 110px;
+            &:before{
+                font-size: 40px;
+            }
+        }
+        .slick-prev{
+            left: 20px;
+        }
+        .slick-next{
+            right: 20px;
+        }
+    }
     .blog-carousel{
         height: 350px;
         margin-top: 46px;

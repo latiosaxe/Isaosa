@@ -60,7 +60,7 @@ ISAOSA.main = (function(){
 
         if(_$home_carousel){
             _$home_carousel.slick({
-                arrows: false,
+                arrows: true,
                 speed: 300,
                 infinite: true,
                 slidesToScroll: 1,
@@ -102,7 +102,7 @@ ISAOSA.main = (function(){
         _$product_elements = $(".productos .result-list .element");
         _$product_list = $(".productos .result-list");
         _$product_result = $(".productos .single-element-view");
-        _$product_return = $(".return_btn .btn");
+        _$product_return = $(".return_btn .btn, .also_return");
 
         _$goToButton = $(".goToButton");
 

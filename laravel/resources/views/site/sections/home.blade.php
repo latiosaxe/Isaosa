@@ -197,10 +197,10 @@
                 <?php $i = 1 ?>
                 @foreach($services as $service)
                     <div class="element">
-                        <div class="icon">
+                        <div class="icon" onclick="window.location='/servicios?type={{ $i }}'">
                             <img src="{{ $service->icon }}" alt="{{ $service->name }}">
                         </div>
-                        <h3>{{ $service->name }}</h3>
+                        <h3 onclick="window.location='/servicios?type={{ $i }}'">{{ $service->name }}</h3>
                         <div class="line"></div>
                         <p>{{ $service->description }}.</p>
                         <div class="more">
