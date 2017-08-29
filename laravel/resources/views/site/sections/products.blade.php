@@ -14,7 +14,7 @@
 
 <div class="section-site productos">
     <div class="container">
-        <h1 class="title-bold title-mobile-orange also_return">PRODUCTOS</h1>
+        <h1 class="title-bold title-mobile-orange also_return title-cursor">PRODUCTOS</h1>
         <div class="row">
             <div class="col-md-3 no-padding-mobile">
                 <div class="sec-menu">
@@ -36,8 +36,13 @@
             </div>
             <div class="col-md-9 col-height-100">
                 <div class="row result-list ">
+{{--                    {{ dd($products) }}--}}
                     @foreach($products as $product)
                         <div class="col-md-3 element" data-id="{{ $product->id }}" data-image="{{ $product->img  }}" data-description="{{ $product->description }}" data-body="{{ $product->body }}"
+                         @if( !is_null( $product->files ) )
+                            data-files="@foreach($product->files as $file){{ $file->file }},{{ $file->name }},{{ $file->file_type }}|@endforeach"
+                         @endif
+{{--                         @if($product->file_type) data-file="{{ $product->file_type }}" @endif--}}
                         data-table_1="{{ $product->table_1 }}" data-table_2="{{ $product->table_2 }}" data-table_3="{{ $product->table_3 }}" data-table_4="{{ $product->table_4 }}" data-table_5="{{ $product->table_5 }}" data-table_6="{{ $product->table_6 }}" data-table_7="{{ $product->table_7 }}" data-table_8="{{ $product->table_8 }}" data-table_9="{{ $product->table_9 }}" data-table_10="{{ $product->table_10 }}"
                         data-table_1_copy="{{ $product->table_1_copy }}" data-table_2_copy="{{ $product->table_2_copy }}" data-table_3_copy="{{ $product->table_3_copy }}" data-table_4_copy="{{ $product->table_4_copy }}" data-table_5_copy="{{ $product->table_5_copy }}" data-table_6_copy="{{ $product->table_6_copy }}" data-table_7_copy="{{ $product->table_7_copy }}" data-table_8_copy="{{ $product->table_8_copy }}" data-table_9_copy="{{ $product->table_9_copy }}" data-table_10_copy="{{ $product->table_10_copy }}"
                         >
@@ -105,13 +110,15 @@
                             {{--<li><div class="circle">-</div><span>X</span></li>--}}
                             {{--<li><div class="circle">-</div><span>X</span></li>--}}
                         </ul>
-                        {{--<div class="download-label">--}}
-                            {{--<span>DESCARGABLES</span>--}}
-                        {{--</div>--}}
-                        {{--<ul class="download-list">--}}
-                            {{--<li><a href="#">Ficha Técnica <img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>--}}
-                            {{--<li><a href="#">Hoja de Seguridad <img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>--}}
-                        {{--</ul>--}}
+                        <div id="productDownload" class="hidden">
+                            <div class="download-label">
+                                <span>DESCARGABLES</span>
+                            </div>
+                            <ul class="download-list" id="hereDownload">
+                                {{--<li><a href="#">Ficha Técnica <img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>--}}
+                                {{--<li><a href="#">Hoja de Seguridad <img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>--}}
+                            </ul>
+                        </div>
                     </div>
                     <div class="col-md-8 right-moment">
                         <div class="return_btn desktop-show">

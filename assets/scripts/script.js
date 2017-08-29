@@ -253,6 +253,28 @@ ISAOSA.main = (function(){
                         }else{
                             $(".element-details li:eq(9)").hide();
                         }
+
+
+                        var elementsString = _$this.data('files');
+                        console.log(elementsString);
+                        if(elementsString.length > 0){
+
+                            var elements = elementsString.split("|");
+
+                            $("#productDownload").removeClass('hidden');
+                            $("#hereDownload").html();
+
+                            $.each(elements, function (index, value) {
+                               console.log(value);
+                                if(value.length > 0){
+                                    var single = value.split(",");
+                                    $("#hereDownload").append('<li><a target="_blank" href="/public/fileman/Uploads/'+single[0]+'">'+single[1]+'<img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>');
+                                }
+                            });
+
+                        }else{
+                            $("#productDownload").addClass('hidden');
+                        }
                     }, 1000);
 
                     setTimeout(function () {
