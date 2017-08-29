@@ -6,6 +6,7 @@ use App\Client;
 use App\NewRequest;
 use Illuminate\Http\Request;
 use \Storage;
+use \Mail;
 
 class FormsController extends Controller
 {
@@ -48,6 +49,16 @@ class FormsController extends Controller
         $client->constancia_situacion_fiscal = $this->aws($request, 'constancia-situacion-fiscal', $uid);
 
         $client->save();
+
+        $data = [
+            'name'=>'Isaosa Alta de Cliente',
+            'client'=> $client,
+            'email'=>'bryanisimo@gmail.com'
+        ];
+        Mail::send('email.newClient', $data, function($message) use ($data){
+            $message->to('axel@hanami.ninja', 'Axel G')->subject( $data['name'] );
+            $message->from($data['email'], $data['name']);
+        });
 
         $data['status'] = 'ok';
         return response()->json($data, 200);
@@ -127,6 +138,18 @@ class FormsController extends Controller
         $newRequest->formato_32_d = $this->aws($request, 'formato_32_d', $uid);
 
         $newRequest->save();
+
+
+        $data = [
+            'name'=>'Isaosa Nueva Solicitud',
+            'request'=> $newRequest,
+            'email'=>'bryanisimo@gmail.com'
+        ];
+        Mail::send('email.newRequest', $data, function($message) use ($data){
+            $message->to('axel@hanami.ninja', 'Axel G')->subject( $data['name'] );
+            $message->from($data['email'], $data['name']);
+        });
+
 
         $data['status'] = 'ok';
         $data['uid'] = $uid;

@@ -11,6 +11,8 @@
 |
 */
 
+use App\Mail\Isaosa;
+
 Route::group(['middleware' => ['web']], function(){
     Route::resource('/', 'HomeController');
     Route::resource('productos', 'ProductController');
@@ -30,6 +32,12 @@ Route::group(['middleware' => ['web']], function(){
 
     Route::get('sendEmail', 'MailController@basic_email');
     Route::post('uploadFile', 'UploadController@upload');
+
+
+//    Route::get('/sendEmail', function () {
+//        Mail::to('latiosaxe@gmail.com')->send(new Isaosa);
+//        return redirect('/');
+//    });
 
 
     Route::get('/login', 'Auth\AuthController@login'); 
