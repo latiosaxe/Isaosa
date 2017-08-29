@@ -53,10 +53,10 @@ class FormsController extends Controller
         $data = [
             'name'=>'Isaosa Alta de Cliente',
             'client'=> $client,
-            'email'=>'bryanisimo@gmail.com'
+            'email'=>'latiosaxe@gmail.com'
         ];
         Mail::send('email.newClient', $data, function($message) use ($data){
-            $message->to('axel@hanami.ninja', 'Axel G')->subject( $data['name'] );
+            $message->to('latiosaxe@gmail.com', 'Axel G')->subject( $data['name'] );
             $message->from($data['email'], $data['name']);
         });
 
@@ -143,10 +143,10 @@ class FormsController extends Controller
         $data = [
             'name'=>'Isaosa Nueva Solicitud',
             'request'=> $newRequest,
-            'email'=>'bryanisimo@gmail.com'
+            'email'=>'latiosaxe@gmail.com'
         ];
         Mail::send('email.newRequest', $data, function($message) use ($data){
-            $message->to('axel@hanami.ninja', 'Axel G')->subject( $data['name'] );
+            $message->to('latiosaxe@gmail.com', 'Axel G')->subject( $data['name'] );
             $message->from($data['email'], $data['name']);
         });
 
