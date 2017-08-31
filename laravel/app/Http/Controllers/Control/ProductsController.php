@@ -150,7 +150,7 @@ class ProductsController extends Controller
                 $fileURl = $this->aws($request, 'file_ficha', $slug);
                 $ficha = DB::table('files')->insert([
                     'uid' => $uid,
-                    'name' => $name.' Ficha',
+                    'name' => $request->input('file_ficha-name','Ficha '.$name),
                     'file' => $fileURl
                 ]);
                 $fichaRelation = DB::table('products_files')->insert([
@@ -166,7 +166,7 @@ class ProductsController extends Controller
                 $fileURl = $this->aws($request, 'file_folleto', $slug);
                 $ficha = DB::table('files')->insert([
                     'uid' => $uid,
-                    'name' => $name.' Folleto',
+                    'name' => $request->input('file_folleto-name','Folleto '.$name),
                     'file' => $fileURl
                 ]);
                 $fichaRelation = DB::table('products_files')->insert([

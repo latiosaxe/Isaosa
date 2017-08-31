@@ -3,6 +3,9 @@
 <div class="col-md-8">
     <div class="row">
         <div class="col-md-6">
+            <input type="text" class="form-control" id="{{$slug}}-name">
+        </div>
+        <div class="col-md-6">
             <input type="file" class="form-control file_url" id="{{$slug}}">
         </div>
         <div class="col-md-6">
