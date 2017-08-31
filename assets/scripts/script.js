@@ -268,7 +268,7 @@ ISAOSA.main = (function(){
                                console.log(value);
                                 if(value.length > 0){
                                     var single = value.split(",");
-                                    $("#hereDownload").append('<li><a target="_blank" href="/public/fileman/Uploads/'+single[0]+'">'+single[1]+'<img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>');
+                                    $("#hereDownload").append('<li><a target="_blank" href="'+single[0]+'">'+single[1]+'<img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>');
                                 }
                             });
 

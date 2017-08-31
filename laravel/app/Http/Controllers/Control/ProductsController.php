@@ -17,10 +17,12 @@ class ProductsController extends Controller
         }else{
             $categories = DB::table('products_category')->orderBy('parentcategory_id', 'asc')->get();
             $products = DB::table('products')->orderBy('name', 'asc')->get();
+            $file = '';
             $data = [
                 'products'  => $products,
                 'categories'  => $categories,
-                'user_level' => $user_level
+                'user_level' => $user_level,
+                'file' => $file
             ];
             return view('control.products.index', $data);
         }
@@ -45,10 +47,14 @@ class ProductsController extends Controller
     public function store(Request $request){
         $status = 400;
         $data = (object)['message' => ''];
+
+
+        $name = $request->input('name', '');
+        $slug = str_slug($name);
         try {
             $product = DB::table('products')->insert([
                 'uid' => $request->input('uid', ''),
-                'name' => $request->input('name', ''),
+                'name' => $name,
                 'formula' => $request->input('formula', ''),
                 'description' => $request->input('description', ''),
                 'body' => $request->input('body', ''),
@@ -79,7 +85,7 @@ class ProductsController extends Controller
                 'position' => $request->input('position', 0),
                 'active' => $request->input('active', 1),
             ]);
-            $status = 200;
+//            $status = 200;
         }catch(\Exception $e){
             $data->message = $e->getMessage();
         }
@@ -127,14 +133,52 @@ class ProductsController extends Controller
             'active' => $request->input('active', 1),
         ];
 
-        if($request->input('img_thumb')){ $updates['img_thumb'] = $this->aws($request, 'img_thumb', $slug); }
-        if($request->input('img')){ $updates['img'] = $this->aws($request, 'img', $slug); }
 
         try{
             $product = DB::table('products')
                 ->where('id', $id)
                 ->update($updates)
             ;
+
+
+            if($request->input('img_thumb')){ $updates['img_thumb'] = $this->aws($request, 'img_thumb', $slug); }
+            if($request->input('img')){ $updates['img'] = $this->aws($request, 'img', $slug); }
+
+
+            if($request->input('file_ficha')){
+                $uid = base_convert(time(),10,26);
+                $fileURl = $this->aws($request, 'file_ficha', $slug);
+                $ficha = DB::table('files')->insert([
+                    'uid' => $uid,
+                    'name' => $name.' Ficha',
+                    'file' => $fileURl
+                ]);
+                $fichaRelation = DB::table('products_files')->insert([
+                    'file_id' => DB::getPdo()->lastInsertId(),
+                    'product_id' => $id,
+                    'icon' => 'ficha',
+                    'position' => 1,
+                    'active' => 1,
+                ]);
+            }
+            if($request->input('file_folleto')){
+                $uid = base_convert(time(),10,26);
+                $fileURl = $this->aws($request, 'file_folleto', $slug);
+                $ficha = DB::table('files')->insert([
+                    'uid' => $uid,
+                    'name' => $name.' Folleto',
+                    'file' => $fileURl
+                ]);
+                $fichaRelation = DB::table('products_files')->insert([
+                    'file_id' => DB::getPdo()->lastInsertId(),
+                    'product_id' => $id,
+                    'icon' => 'folleto',
+                    'position' => 1,
+                    'active' => 1,
+                ]);
+            }
+
+
 
             $data['status'] = 'ok';
             $status = 200;

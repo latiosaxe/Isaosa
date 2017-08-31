@@ -25,6 +25,17 @@ TC.main = (function(){
                 sweetAlert("Oops...", "El archivo no es valido, por favor intenta con un archivo PNG o JPG", "error");
             }
         });
+
+        $(".file_url").on('change', function () {
+            var file = $(this).val().split('.').pop();
+            console.log(file);
+            if(file=='pdf' || file=='PDF'){
+                $(this).addClass('newFile');
+            } else{
+                $(this).val('');
+                sweetAlert("Oops...", "El archivo no es valido, por favor intenta con un archivo PDF", "error");
+            }
+        });
     };
 
     var _createElement = function _createElement(array, url) {
@@ -47,6 +58,10 @@ TC.main = (function(){
                     formData.append(value, $("#"+value)[0].files[0]);
                     console.log($("#"+value)[0].files[0])
                 }
+                if($("#"+value).hasClass('newFile')){
+                    formData.append(value, $("#"+value)[0].files[0]);
+                    console.log($("#"+value)[0].files[0])
+                }
                 if($("#"+value).hasClass('image_url')){
                     console.log(value);
                 }else{
@@ -66,7 +81,8 @@ TC.main = (function(){
                 dataType : 'JSON',
                 contentType: false,
                 processData: false
-            }).success(function(){
+            }).success(function(data){
+                console.log(data);
                 document.location.href = TC.control_url + url
             }).error(function(data){
                 console.log(data);
@@ -98,6 +114,11 @@ TC.main = (function(){
                     formData.append(value, $("#"+value)[0].files[0]);
                     console.log($("#"+value)[0].files[0])
                 }
+
+                if($("#"+value).hasClass('newFile')){
+                    formData.append(value, $("#"+value)[0].files[0]);
+                    console.log($("#"+value)[0].files[0])
+                }
                 if($("#"+value).hasClass('image_url')){
                     console.log(value);
                 }else{
@@ -118,7 +139,8 @@ TC.main = (function(){
                 dataType : 'JSON',
                 contentType: false,
                 processData: false
-            }).success(function(){
+            }).success(function(data){
+                console.log(data);
                 document.location.href = TC.control_url + url;
             }).error(function(data){
                 console.log(data);

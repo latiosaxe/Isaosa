@@ -49,6 +49,12 @@
             </div>
 
             <div class="form-group">
+                @include('control.partials._file', ['item'=>$product,'slug'=>'file_ficha','name'=>'Descaga Ficha'])
+            </div>
+            <div class="form-group">
+                @include('control.partials._file', ['item'=>$product,'slug'=>'file_folleto','name'=>'Descaga Folleto'])
+            </div>
+            <div class="form-group">
                 @include('control.partials._image', ['item'=>$product,'slug'=>'img_thumb','name'=>'Preview'])
             </div>
             <div class="form-group">
@@ -112,6 +118,7 @@
 @section('javascript')
     <script>
         var elements = ['id','name', 'formula', 'description', 'category_id', 'body', 'characteristics','img_thumb', 'img', 'active', 'position',
+                'file_ficha', 'file_folleto',
                 'table_1','table_2','table_3','table_4','table_5','table_6','table_7','table_8','table_9', 'table_10',
                 'table_1_copy','table_2_copy','table_3_copy','table_4_copy','table_5_copy','table_6_copy','table_7_copy','table_8_copy','table_9_copy', 'table_10_copy'],
                 url = 'productos'
