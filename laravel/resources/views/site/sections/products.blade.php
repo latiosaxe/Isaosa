@@ -154,11 +154,11 @@
                             <div class="row articles">
                                 @foreach($random as $single)
                                     <div class="col-md-3">
-                                        <a href="#">
+                                        <a href="#" class="shomeMeAnother" data-id="{{ $single->id }}">
                                             <div class="image" style="background-image: url('{{ $single->img  }}')"></div>
-                                        <span class="title">
-                                            {{ $product->name }}
-                                            {{ $product->formula }}
+                                            <span class="title">
+                                                <strong style="display: block;">{{ $single->name }}</strong>
+                                                {!! $single->formula !!}
                                             </span>
                                         </a>
                                     </div>

@@ -30,6 +30,7 @@ ISAOSA.main = (function(){
         _$product_list,
         _$product_result,
         _$product_return,
+        _$showAnotherProduct,
 
         _$mobile_carousel
 
@@ -103,6 +104,7 @@ ISAOSA.main = (function(){
         _$product_list = $(".productos .result-list");
         _$product_result = $(".productos .single-element-view");
         _$product_return = $(".return_btn .btn, .also_return");
+        _$showAnotherProduct = $(".shomeMeAnother");
 
         _$goToButton = $(".goToButton");
 
@@ -157,6 +159,12 @@ ISAOSA.main = (function(){
                 _$tabs.find('.body ul li').removeClass('active');
                 _$tabs.find('.body ul li').eq($(this).index()).addClass('active');
             });
+        }
+        if(_$showAnotherProduct){
+            _$showAnotherProduct.on('click', function (event) {
+                event.preventDefault();
+                $(".site .section-site.productos .result-list .element[data-id='"+$(this).data('id')+"']").trigger('click');
+            })
         }
 
         if(_$servicios_tab){
@@ -256,24 +264,25 @@ ISAOSA.main = (function(){
 
 
                         var elementsString = _$this.data('files');
-                        console.log(elementsString);
-                        if(elementsString.length > 0){
+                        if (typeof(elementsString) !== 'undefined') {
+                            if(elementsString.length > 0){
+                                var elements = elementsString.split("|");
+                                $("#productDownload").removeClass('hidden');
+                                $("#hereDownload").html();
+                                $.each(elements, function (index, value) {
+                                   console.log(value);
+                                    if(value.length > 0){
+                                        var single = value.split(",");
+                                        $("#hereDownload").append('<li><a target="_blank" href="'+single[0]+'">'+single[1]+'<img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>');
+                                    }
+                                });
 
-                            var elements = elementsString.split("|");
-
-                            $("#productDownload").removeClass('hidden');
-                            $("#hereDownload").html();
-
-                            $.each(elements, function (index, value) {
-                               console.log(value);
-                                if(value.length > 0){
-                                    var single = value.split(",");
-                                    $("#hereDownload").append('<li><a target="_blank" href="'+single[0]+'">'+single[1]+'<img src="/assets/images/icons/down-clean.svg" alt="Descargar"></a></li>');
-                                }
-                            });
-
+                            }else{
+                                $("#productDownload").addClass('hidden');
+                            }
                         }else{
                             $("#productDownload").addClass('hidden');
+                            $("#hereDownload").html();
                         }
                     }, 1000);
 
