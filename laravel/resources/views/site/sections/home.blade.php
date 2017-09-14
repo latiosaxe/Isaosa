@@ -2,8 +2,8 @@
 @section ('content')
 <section class="home-section">
     <div class="home-carousel">
+        <?php $i = 1 ?>
         @foreach($cards as $card)
-            <?php $i = 0 ?>
             <div class="carousel-card">
                 <div class="container">
                     <div class="vertical-align">
@@ -111,7 +111,7 @@
             <ul>
                 @foreach($cards as $card)
                     <li>
-                        <span href="#">{{ $card->title }}</span>
+                        <span>{{ $card->title }}</span>
                     </li>
                 @endforeach
 

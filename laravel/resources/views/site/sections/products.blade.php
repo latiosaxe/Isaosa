@@ -215,7 +215,9 @@
         console.log(type);
         setTimeout(function () {
             if(type>0){
-                $(".site .section-site.productos .sec-menu > ul > li").eq(type-1).find('span').trigger('click');
+                var tempList = $(".site .section-site.productos .sec-menu > ul > li").eq(type-1);
+                tempList.find('span:first').trigger('click');
+                tempList.find('ul li span:first').trigger('click');
             }
         }, 300);
 

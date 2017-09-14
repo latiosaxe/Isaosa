@@ -700,6 +700,16 @@ body{
         .slick-next{
             right: 20px;
         }
+        .carousel-card .container .vertical-align .read-more{
+            span{
+                opacity: 1;
+            }
+            &:hover{
+                span{
+                    color: $color-primary;
+                }
+            }
+        }
     }
     .blog-carousel{
         height: 350px;

@@ -85,7 +85,7 @@ class ProductsController extends Controller
                 'position' => $request->input('position', 0),
                 'active' => $request->input('active', 1),
             ]);
-//            $status = 200;
+            $status = 200;
         }catch(\Exception $e){
             $data->message = $e->getMessage();
         }
