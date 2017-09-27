@@ -21,7 +21,7 @@
                     <ul>
                         @foreach($categories as $category)
                         <li>
-                            <span>{{ $category->name }}</span>
+                            <span data-slug="{{ $category->slug }}">{{ $category->name }}</span>
                             <ul>
                                 @foreach($products as $product)
                                     @if($category->id == $product->category_id)
@@ -38,7 +38,7 @@
                 <div class="row result-list ">
 {{--                    {{ dd($products) }}--}}
                     @foreach($products as $product)
-                        <div class="col-md-3 element" data-id="{{ $product->id }}" data-image="{{ $product->img  }}" data-description="{{ $product->description }}" data-body="{{ $product->body }}"
+                        <div class="col-md-3 element" data-slug="{{ $product->product_category->slug }}" data-id="{{ $product->id }}" data-image="{{ $product->img  }}" data-description="{{ $product->description }}" data-body="{{ $product->body }}"
                          @if( !is_null( $product->files ) )
                             data-files="@foreach($product->files as $file){{ $file->file }},{{ $file->name }},{{ $file->file_type }}|@endforeach"
                          @endif
@@ -195,6 +195,11 @@
                 $(".site .section-site.productos .sec-menu > ul > li").removeClass('active');
                 $(this).closest('li').addClass('active');
             }
+
+            var slug = $(".site .section-site.productos .sec-menu > ul > li.active").find('>span').data('slug');
+            $(".site .section-site.productos .result-list .element").hide();
+            $(".site .section-site.productos .result-list .element[data-slug='"+slug+"']").show();
+
         });
 
 
@@ -216,8 +221,11 @@
         setTimeout(function () {
             if(type>0){
                 var tempList = $(".site .section-site.productos .sec-menu > ul > li").eq(type-1);
+                console.log(tempList.find('>span').data('slug'));
                 tempList.find('span:first').trigger('click');
-                tempList.find('ul li span:first').trigger('click');
+//                $(".site .section-site.productos .result-list .element").hide();
+//                $(".site .section-site.productos .result-list .element[data-slug='"+tempList.find('>span').data('slug')+"']").show();
+//                tempList.find('ul li span:first').trigger('click');
             }
         }, 300);
 
@@ -232,3 +240,19 @@
         }
     </script>
 @endsection
+
+
+<script>
+    var add = function (TACOS_AL_PASTOR, CHILAQUILES) {
+        return TACOS_AL_PASTOR + CHILAQUILES;
+    };
+    console.log( add(9824,777) )
+
+
+
+
+    var count_spaces = function (string) {
+        return string.split(" ").length-1
+    }
+    console.log(count_spaces('Hola Ana, eres muy linda'))
+</script>

@@ -14,6 +14,10 @@ class ProductController extends Controller
         $categories = DB::table('products_category')->where('active', 1)->orderBy('position', 'asc')->get();
         $relations = DB::table('products_files')->where('active', 1)->orderBy('position', 'asc')->get();
 
+        foreach($categories as $category){
+            $category->slug = str_slug($category->name);
+        };
+
         foreach($products as $product){
 //            $product->file = array();
 //            $product->file_type = array();
@@ -32,6 +36,10 @@ class ProductController extends Controller
             }else{
                 $product->files = null;
             }
+
+            $product->product_category = DB::table('products_category')->where('id', $product->category_id)->first();
+            $product->product_category->slug = str_slug($product->product_category->name);
+
 //            if(count($product->files) == 0){
 //                $product->hasfiles = null;
 //            }else{
